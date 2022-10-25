@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marcy Lab | Interview Questions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" media="none" onload="this.media='all'" />
+  </head>
+  <body>
+<main>
+<article>
+<h1>Interview Questions </h1>
+<h2 id='sub-title'>Do your best!</h2>
+<div id="question-1">
+
+<h3>Question 1: greet()</h3>
+<blockquote>
+  <p>Write a function <code class="snip">greet</code> that takes a <code class="snip">String</code> argument, <code class="snip">name</code>.
+The function should <em>RETURN</em> the string "Hello, [DYNAMIC-NAME], how are you?"
+  </p></blockquote>
+
+<table>
+  <caption>Argument Info</caption>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>name</td>
+      <td>String</td>
+      <td>The person's name</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pattern aside-border">
+  <aside>
+    <h2 class="aside-header">Example Code</h2>
+    <hr />
+    <p>When you enter this code:</p>
+    <pre><code class="language-js">console.log(greet('Tom'))
+console.log(greet('Jerry'))</code></pre>
+    <p>You should see this in the console:</p>
+    <pre class="code-output">Hello Tom, how are you?
+Hello Jerry, how are you?</pre>
+  </aside>
+</div>
+</div>
+<hr class="divider" />
+<div id="question-2">
+
+  <h3>Question 2: getRating()</h3>
+  <blockquote>
+    <p>Write a function <code class="snip">getRating</code> that takes 2 arguments: a <code class="snip">String</code> argument, <code class="snip">movieTitle</code>, and a <code class="snip">String</code> argument, <code class="snip">review</code>. The function should <em>LOG</em> two lines. On the first line should be either stars or "???", depending on the review, and the second line should be a string "Movie: [DYNAMIC-MOVIE-TITLE]".
+    </p>
+    <p>The function has no return value.</p>
+    Here's how to decide what stars to show:
+    <ul>
+      <li>'bad' or 'awful': ☆</li>
+      <li>'good': ☆☆</li>
+      <li>'great': ☆☆☆</li>
+      <li>Literally anything other string: '???'</li>
+    </ul>
+    <p>Feel free to copy the emojis for the stars, or use an asterisk *</p>
+  </blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>movieTitle</td>
+        <td>String</td>
+        <td>The title of the movie</td>
+      </tr>
+      <tr>
+        <td>review</td>
+        <td>String</td>
+        <td>A single word opinion on the film</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <p>Below are some functions and their output</p>
+      <pre><code class="language-js">getRating('Cats', 'bad')</code></pre>
+      <pre class="code-output">☆
+Movie: Cats</pre>
+      <pre><code class="language-js">getRating('Cars', 'good')</code></pre>
+      <pre class="code-output">☆☆
+Movie: Cars</pre>
+      <pre><code class="language-js">getRating('Gravity', 'odd')</code></pre>
+<pre class="code-output">???
+Movie: Gravity</pre>
+
+    </aside>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div id="question-3">
+
+  <h3>Question 3: hideAndSeekCounter()</h3>
+  <blockquote>
+    <p>Write a function <code class="snip">hideAndSeekCounter</code> that takes a <code class="snip">Number</code> argument, <code class="snip">endNumber</code>, which will be bigger than 0.
+  The function should <em>LOG</em> several strings. First, it should count up to the given number starting from 1, with "..." after each number. Then, on the final number, it should add "!" to it instead. Finally, one last line of "Ready or not, here I come!"
+    </p>
+    <p>See the code examples below if you're confused</p>
+  </blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>endNumber</td>
+        <td>Number</td>
+        <td>A number greater than 0</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <pre><code class="language-js">hideAndSeekCounter(4)</code></pre>
+      <pre class="code-output">1...
+2...
+3...
+4!
+Ready or not, here I come!</pre>
+    </aside>
+  </div>
+</div>
+
+<hr class="divider" />
+
+<div id="question-4">
+
+  <h3>Question 4: cheer()</h3>
+  <blockquote>
+    <p>Write a function <code class="snip">cheer</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>.</p>
+  <p>The function should <em>LOG</em> several strings. For every letter of <code class="snip">word</code> make a line print: "Give me a [UPPERCASED-LETTER]", where the letter has been uppercased. Once the entire word has been shouted, print the line "What's it spell?" and then one last line, where you repeat the word three times, each with an exclamation point and all uppercase.
+    </p>
+    <p>See the code examples below if you're confused</p>
+  </blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>word</td>
+        <td>String</td>
+        <td>A lowercase word with no spaces or punctuation</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <pre><code class="language-js">cheer('win')</code></pre>
+      <pre class="code-output">Give me a W!
+Give me a I!
+Give me a N!
+What's it spell?
+WIN! WIN! WIN!</pre>
+    </aside>
+  </div>
+  <h3>Question 5: cheer() <em>IMPROVED</em></h3>
+  <p>
+    That output looks a little odd right? "Give me a I!" Wouldn't that sound better as "Give me <em>an</em> I!" Your challenge, should you choose to accept it, is to use "an" instead of "a" on the following letters: <em>aefhilmnorsx</em>. If your curious <i>why</i> those letters, fun fact it's because when pronouncing them, they start with a vowel sound.
+
+    <pre><code class="language-js">cheer('victory')</code></pre>
+    <pre class="code-output">Give me a V!
+Give me an I!
+Give me a C!
+Give me a T!
+Give me an O!
+Give me an R!
+Give me a Y!
+What's it spell?
+VICTORY! VICTORY! VICTORY!</pre>
+  </p>
+</div>
+
+<hr class="divider" />
+<h3>A Little Advice</h3>
+<p>
+  For many of you, this is your first time dealing with a technical challenge. It will seem overwhelming, but believe it or not, you already know everything you need to solve these puzzles.
+</p>
+<p>
+  Read over the questions and then take a minute. Remember, before attempting to solve any of these with code, solve them with your words. Feel free to go back over the previous lessons (especially the final one on problem solving), this is open book!
+</p>
+<p>
+  Remember, this test is not about memorization, it's about problem solving. It's not about having the BEST answer, it's about finding <em>any</em> answer. If you get stuck, feel free to Google. However, we want to know what <i>you</i> know, not what the internet knows. If you copy code into your answers (which is allowed!) just make sure that you can explain what it does when your interviewer asks you about it.
+</p>
+<p>
+  The only wrong answer is the answer you can't exlpain. So, take another breath, think before your code, and good luck!
+</p>
+</article>
+</main>
+<nav id="bottom-nav">
+  <a href="./index.html">Home</a>
+</nav>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

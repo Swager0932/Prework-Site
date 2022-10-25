@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Marcy Lab | 1. What are variables?</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" media="none" onload="this.media='all'" />
+  </head>
+  <body>
+<main>
+<article>
+
+<h1>Lesson 1: Variables</h1>
+<h2 id='sub-title'>Where to put your stuff</h2>
+<p>
+In programming, we need ways to save information. One way to do that is to take a small piece of data and store it in what we call a <code>variable</code> a variable must have a name, this is how you will reference it in your code. When declaring a variable in JS you have 2 choices
+</p>
+
+<pre><code class="language-js">let myNumber = 100</code></pre>
+
+<p>
+In programming, we need ways to save information. One way to do that is to take a small piece of data and store it in what we call a "variable". a variable must have a name, this is how you will reference it in your code. When declaring a variable in JS you have 2 choices
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><clipPath id="b"><rect width="1920" height="1080"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1920" height="1080" fill="#1e1e1e"/><text transform="translate(133 488)" fill="#679ad1" font-size="136" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">let</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#aadafb">myMood</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#d4d4d4">=</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#c5947c">“Happy”</tspan></text><g transform="translate(130 338)" fill="none" stroke="#679ad1" stroke-width="7"><rect width="266" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="259" height="200" rx="42.5" fill="none"/></g><g transform="translate(429 338)" fill="none" stroke="#aadafb" stroke-width="7"><rect width="553" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="546" height="200" rx="42.5" fill="none"/></g><g transform="translate(1179 338)" fill="none" stroke="#c5947c" stroke-width="7"><rect width="612" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="605" height="200" rx="42.5" fill="none"/></g><line y2="77.5" transform="translate(263 546.25)" fill="none" stroke="#679ad1" stroke-linecap="round" stroke-width="5"/><text transform="translate(59 724)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Use the </tspan><tspan y="0" fill="#679ad1" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic">let</tspan><tspan y="0" xml:space="preserve"> or </tspan><tspan y="0" fill="#679ad1" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic">const</tspan><tspan y="0" fill="#679ad1"> </tspan><tspan x="0" y="98">keyword to declare </tspan><tspan x="0" y="196">a variable </tspan></text><line y1="86" transform="translate(710.5 252)" fill="none" stroke="#aadafb" stroke-width="5"/><text transform="translate(278 136)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Every variable needs a</tspan><tspan fill="#aadafb" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic"><tspan x="0" y="98">name</tspan><tspan y="98" xml:space="preserve" fill="#fff" font-family="ArialMT, Arial" font-weight="400" font-style="normal"> in order to use it</tspan></tspan></text><line y2="77.5" transform="translate(1484.5 546.25)" fill="none" stroke="#c5947c" stroke-linecap="round" stroke-width="7"/><text transform="translate(1090 713)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Every variable has a</tspan><tspan fill="#c5947c" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic"><tspan x="0" y="98">value</tspan><tspan y="98" fill="#fff" font-family="ArialMT, Arial" font-weight="400" font-style="normal">, here it’s the </tspan></tspan><tspan x="0" y="196">string of text “Happy”</tspan></text><rect width="985" height="88" transform="translate(0 995)" fill="#251f1d"/><g transform="translate(-850.628 -21.721)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(863.628 1062.721)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(863.628 995.721)" fill="#a3d882"/><rect width="88" height="15" transform="translate(855.628 1012.721)" fill="#251f1d"/><rect width="89" height="11" transform="translate(850.628 1090.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(884.628 1075.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(903.628 1044.721) rotate(180)" fill="#251f1d"/></g><text transform="translate(91 1062)" fill="#a3d882" font-size="65" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">1.1 Declare a Variable</tspan></text><path d="M1756.5,978.5l81.337,89.223H1756.5Z" transform="translate(-778.751 12)" fill="#251f1d"/><line x2="977.249" transform="translate(0.5 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="81" y1="89" transform="translate(977.749 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g></svg>
+
+
+
+
+<p>
+In programming, we need ways to save information. One way to do that is to take a small piece of data and store it in what we call a "variable". a variable must have a name, this is how you will reference it in your code. When declaring a variable in JS you have 2 choices
+</p>
+
+<div class="pattern aside-border">
+  <aside>
+    <h2 class="aside-header">Variable Naming Rules</h2>
+    <hr />
+    <p>Here are some starter rules for naming your variables</p>
+    <ul>
+      <li>Names can <em>only</em> include letters, numbers, and underscores</li>
+      <li>You can't start names with numbers</li>
+      <li>No spaces allowed</li>
+      <li>When using multiple words, use camelCase, which means each new word is capitalized (except the first)</li>
+    </ul>
+    <pre><code class="language-js">let thisIsHowToCamelCase = ✅
+let no spaces = ❌
+let 1badExample = ❌
+let goodNumberExample2 = ✅
+let technicallyallowedbutconfusing = 😒</code></pre>
+
+  </aside>
+</div>
+<p>
+      In programming, we need ways to save information. One way to do that is to take a small piece of data and store it in what we call a "variable". a variable must have a name, this is how you will reference it in your code. When declaring a variable in JS you have 2 choices
+</p>
+</article>
+</main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>
