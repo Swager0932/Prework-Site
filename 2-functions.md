@@ -2,8 +2,6 @@
   - Basics
   - arguments
   - return values
-  - built in functions (console.log)
-  - dot notation
   - errors
 
 

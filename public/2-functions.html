@@ -59,24 +59,223 @@ But you know what? We can <i>finally</i> do better than written examples. Let's 
 <h2>Calling Functions</h2>
 
 <p>
-  Before we bother defining our own functions, let's just go through how to call some of the pre-existing functions that JavaScript gives us. In order to <code>call</code> (or "run" or "activiate" or "invoke") a function, you simply tack a pair of () onto the end of the function's name.
+  Before we bother defining our own functions, let's just go through how to call some of the pre-existing functions that JavaScript gives us. In order to <code>call</code> (or "run" or "activiate" or "invoke") a function, you simply tack a pair of <code>()</code> onto the end of the function's name. If the function needs extra pieces of information (called <code>Arguments</code>) to work, you put those pieces in between the <code>()</code>.
 </p>
 
+<h3>console.log in depth</h3>
 
+<p>
+  So, as we already explained, we're accessing the <code>log</code> function on the <code>console</code> object. The console.log function takes any number of <code>aguments</code> and then logs them to the screen.
+</p>
 
-<h2>Defining Functions</h2>
-A function
+<pre><code class="language-js">// This is the function name
+console.log
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1407"><defs><clipPath id="b"><rect width="1920" height="1407"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1920" height="1407" fill="#1e1e1e"/><g transform="translate(0 325)"><rect width="932" height="88" transform="translate(0 995)" fill="#251f1d"/><g transform="translate(-850.628 -21.721)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(863.628 1062.721)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(863.628 995.721)" fill="#a3d882"/><rect width="88" height="15" transform="translate(855.628 1012.721)" fill="#251f1d"/><rect width="89" height="11" transform="translate(850.628 1090.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(884.628 1075.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(903.628 1044.721) rotate(180)" fill="#251f1d"/></g><text transform="translate(91 1062)" fill="#a3d882" font-size="65" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">2.1 Define a Function</tspan></text><path d="M1756.5,978.5l76.948,89.223H1756.5Z" transform="translate(-831.511 12)" fill="#251f1d"/><line x2="924.516" transform="translate(0.473 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="76.629" y1="89" transform="translate(924.989 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g><text transform="translate(226.789 399.016)" fill="#679ad1" font-size="85" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">const </tspan><tspan y="0" fill="#dcdcaf">add</tspan><tspan y="0"> </tspan><tspan y="0" fill="#d4d4d4">=</tspan><tspan y="0"> </tspan><tspan y="0" fill="#f8d949">(</tspan><tspan y="0" fill="#aadafb">num1, num2</tspan><tspan y="0" fill="#f8d949">)</tspan><tspan y="0" xml:space="preserve"> =&gt; </tspan><tspan y="0" fill="#f8d949">{</tspan><tspan fill="#74985d"><tspan x="0" y="150" xml:space="preserve">  // some more code here</tspan></tspan><tspan fill="#bc89bd"><tspan x="0" y="300" xml:space="preserve">  return</tspan><tspan y="300" fill="#679ad1"> </tspan><tspan y="300" fill="#aadafb">num1</tspan><tspan y="300" xml:space="preserve" fill="#fff"> +</tspan><tspan y="300" fill="#679ad1"> </tspan><tspan y="300" fill="#aadafb">num2</tspan></tspan><tspan fill="#f8d949"><tspan x="0" y="450">}</tspan></tspan></text><path d="M3615.664,1556.727v86.582c0,35.9-37.152,35.557-37.152,35.557H2223.326s-38.115-3.665-38.115,35.8v356.459c0,22.378,0,36.226,38.362,36.226,0,0,1433.032.911,1471.048,0s37.9-36.174,37.9-36.174l-2.089-515.019s.671-36.171-37.954-36.171h-38.721C3614.733,1519.984,3615.664,1556.727,3615.664,1556.727Z" transform="translate(-1981.211 -1220.484)" fill="none" stroke="#f8d949" stroke-linejoin="round" stroke-width="8"/><g transform="translate(664.727 607.016)" fill="none" stroke="#bc89bd" stroke-width="8"><rect width="623" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="615" height="119" rx="18" fill="none"/></g><g transform="translate(828.727 307.016)" fill="none" stroke="#aadafb" stroke-width="8"><rect width="641" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="633" height="119" rx="18" fill="none"/></g><line y1="59" transform="translate(1149.5 248.5)" fill="none" stroke="#aadafb" stroke-linecap="round" stroke-width="8"/><g transform="translate(508.5 307.016)" fill="none" stroke="#dcdcaf" stroke-width="8"><rect width="210" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="202" height="119" rx="18" fill="none"/></g><line y1="95" transform="translate(618.5 210.5)" fill="none" stroke="#dcdcaf" stroke-linecap="round" stroke-width="8"/><text transform="translate(42 87)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">name</tspan><tspan y="0" xml:space="preserve"> of the function</tspan><tspan x="0" y="86">is what we use to </tspan><tspan y="86" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">call</tspan><tspan y="86" xml:space="preserve"> it</tspan></text><text transform="translate(1885 127)" fill="#aadafb" font-size="75" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-812.988" y="0">Parameters</tspan><tspan y="0" xml:space="preserve" fill="#fff" font-family="ArialMT, Arial" font-weight="400"> are how we</tspan><tspan fill="#fff" font-family="ArialMT, Arial" font-weight="400"><tspan x="-875.61" y="86">pass data into the function</tspan></tspan></text><line y2="48" transform="translate(348.5 887.5)" fill="none" stroke="#f8d949" stroke-linecap="round" stroke-width="8"/><text transform="translate(29 1004)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#f8d949" font-family="Arial-BoldMT, Arial" font-weight="700">body</tspan><tspan y="0" xml:space="preserve"> of the function is </tspan><tspan x="0" y="86">anything between the </tspan><tspan y="86" fill="#f8d949">{ }</tspan><tspan y="86">. </tspan><tspan x="0" y="172">It is what runs when the </tspan><tspan x="0" y="258">function is </tspan><tspan y="258" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">called</tspan></text><path d="M3274.87,1847.053H3391.7c22.929,0,20.775,34.584,20.775,34.584V2151" transform="translate(-1990 -1177)" fill="none" stroke="#bc89bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/><text transform="translate(1032 1042)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#bc89bd" font-family="Arial-BoldMT, Arial" font-weight="700">return value</tspan><tspan y="0" xml:space="preserve"> is </tspan><tspan x="0" y="86">what’s next to the return </tspan><tspan x="0" y="172">keyword. It’s how we can </tspan><tspan x="0" y="258">get data out of a function</tspan></text></g></svg>
-<p class="codepen" data-height="218" data-default-tab="js,result" data-slug-hash="wvjVXZv" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
+// we call it by adding ()
+console.log()
+
+// finally, let's add an argument
+console.log('Hello!')
+
+// Comma separated Arguments get
+// printed with spaces in between
+console.log('Hello', "there", "friend")
+</code></pre>
+
+<p>
+  console.log is going to be your best friend while you learn how to program JavaScript. The ability to log multiple things makes debugging, or fixing, your programs a lot easier. By using a string argument as a label, you can pass in a variable as a second object to make sure it is what you think it's supposed to be.
+</p>
+
+<pre><code class="language-js">let city = undefined
+console.log('City:', city)
+
+// Thanks to our log, we can easily see
+// that variable is wrong
+// can you please fix it?
+</code></pre>
+
+<p class="codepen" data-height="225" data-default-tab="js,result" data-slug-hash="XWYWXqG" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
   <span>
     To run this codepen, make sure you're connected to the internetinternet.
-    <a href="https://codepen.io/MostlyFocusedMike">Console.log Practice</a>
+    <a href="https://codepen.io/MostlyFocusedMike/pen/XWYWXqG">Debugging Practice</a>
+</p>
+<p>
+  The label is really helpful because if a value is ever undefined, console.log simply won't print it anything <i>unless</i> you include another argument. Plus, you'll likely have a lot of console.logs while you're working (I certainly do), so the labels keep things organized. Just a little tip from a pro for ya!
+</p>
+
+<h2>Defining Functions</h2>
+Ok now that we know how to call existing functions, let's learn how to write our own. There are basically 4 parts to any function:
+<ul>
+  <li><em>Name:</em> How we call the function</li>
+  <li><em>Parameters:</em> The Argument definitions</li>
+  <li><em>Body:</em> The code that gets run with each call</li>
+  <li><em>Return Value:</em> The data we <i>out</i> of a function</li>
+</ul>
+
+<p>
+  You can see the four parts labeled in the diagram below
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1407"><defs><clipPath id="b"><rect width="1920" height="1407"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1920" height="1407" fill="#1e1e1e"/><g transform="translate(0 325)"><rect width="932" height="88" transform="translate(0 995)" fill="#251f1d"/><g transform="translate(-850.628 -21.721)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(863.628 1062.721)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(863.628 995.721)" fill="#a3d882"/><rect width="88" height="15" transform="translate(855.628 1012.721)" fill="#251f1d"/><rect width="89" height="11" transform="translate(850.628 1090.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(884.628 1075.721)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(903.628 1044.721) rotate(180)" fill="#251f1d"/></g><text transform="translate(91 1062)" fill="#a3d882" font-size="65" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">2.1 Define a Function</tspan></text><path d="M1756.5,978.5l76.948,89.223H1756.5Z" transform="translate(-831.511 12)" fill="#251f1d"/><line x2="924.516" transform="translate(0.473 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="76.629" y1="89" transform="translate(924.989 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g><text transform="translate(226.789 399.016)" fill="#679ad1" font-size="85" font-family="Menlo-Regular, Menlo"><tspan x="0" y="0">const </tspan><tspan y="0" fill="#dcdcaf">add</tspan><tspan y="0"> </tspan><tspan y="0" fill="#d4d4d4">=</tspan><tspan y="0"> </tspan><tspan y="0" fill="#f8d949">(</tspan><tspan y="0" fill="#aadafb">num1, num2</tspan><tspan y="0" fill="#f8d949">)</tspan><tspan y="0" xml:space="preserve"> =&gt; </tspan><tspan y="0" fill="#f8d949">{</tspan><tspan fill="#74985d"><tspan x="0" y="150" xml:space="preserve">  // some more code here</tspan></tspan><tspan fill="#bc89bd"><tspan x="0" y="300" xml:space="preserve">  return</tspan><tspan y="300" fill="#679ad1"> </tspan><tspan y="300" fill="#aadafb">num1</tspan><tspan y="300" xml:space="preserve" fill="#fff"> +</tspan><tspan y="300" fill="#679ad1"> </tspan><tspan y="300" fill="#aadafb">num2</tspan></tspan><tspan fill="#f8d949"><tspan x="0" y="450">}</tspan></tspan></text><path d="M3615.664,1556.727v86.582c0,35.9-37.152,35.557-37.152,35.557H2223.326s-38.115-3.665-38.115,35.8v356.459c0,22.378,0,36.226,38.362,36.226,0,0,1433.032.911,1471.048,0s37.9-36.174,37.9-36.174l-2.089-515.019s.671-36.171-37.954-36.171h-38.721C3614.733,1519.984,3615.664,1556.727,3615.664,1556.727Z" transform="translate(-1981.211 -1220.484)" fill="none" stroke="#f8d949" stroke-linejoin="round" stroke-width="8"/><g transform="translate(664.727 607.016)" fill="none" stroke="#bc89bd" stroke-width="8"><rect width="623" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="615" height="119" rx="18" fill="none"/></g><g transform="translate(828.727 307.016)" fill="none" stroke="#aadafb" stroke-width="8"><rect width="641" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="633" height="119" rx="18" fill="none"/></g><line y1="59" transform="translate(1149.5 248.5)" fill="none" stroke="#aadafb" stroke-linecap="round" stroke-width="8"/><g transform="translate(508.5 307.016)" fill="none" stroke="#dcdcaf" stroke-width="8"><rect width="210" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="202" height="119" rx="18" fill="none"/></g><line y1="95" transform="translate(618.5 210.5)" fill="none" stroke="#dcdcaf" stroke-linecap="round" stroke-width="8"/><text transform="translate(42 87)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">name</tspan><tspan y="0" xml:space="preserve"> of the function</tspan><tspan x="0" y="86">is what we use to </tspan><tspan y="86" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">call</tspan><tspan y="86" xml:space="preserve"> it</tspan></text><text transform="translate(1885 127)" fill="#aadafb" font-size="75" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="-812.988" y="0">Parameters</tspan><tspan y="0" xml:space="preserve" fill="#fff" font-family="ArialMT, Arial" font-weight="400"> are how we</tspan><tspan fill="#fff" font-family="ArialMT, Arial" font-weight="400"><tspan x="-875.61" y="86">pass data into the function</tspan></tspan></text><line y2="48" transform="translate(348.5 887.5)" fill="none" stroke="#f8d949" stroke-linecap="round" stroke-width="8"/><text transform="translate(29 1004)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#f8d949" font-family="Arial-BoldMT, Arial" font-weight="700">body</tspan><tspan y="0" xml:space="preserve"> of the function is </tspan><tspan x="0" y="86">anything between the </tspan><tspan y="86" fill="#f8d949">{ }</tspan><tspan y="86">. </tspan><tspan x="0" y="172">It is what runs when the </tspan><tspan x="0" y="258">function is </tspan><tspan y="258" fill="#dcdcaf" font-family="Arial-BoldMT, Arial" font-weight="700">called</tspan></text><path d="M3274.87,1847.053H3391.7c22.929,0,20.775,34.584,20.775,34.584V2151" transform="translate(-1990 -1177)" fill="none" stroke="#bc89bd" stroke-linecap="round" stroke-linejoin="round" stroke-width="8"/><text transform="translate(1032 1042)" fill="#fff" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">The </tspan><tspan y="0" fill="#bc89bd" font-family="Arial-BoldMT, Arial" font-weight="700">return value</tspan><tspan y="0" xml:space="preserve"> is </tspan><tspan x="0" y="86">what’s next to the return </tspan><tspan x="0" y="172">keyword. It’s how we can </tspan><tspan x="0" y="258">get data out of a function</tspan></text></g></svg>
+
+<h3>Breaking it all down</h3>
+<p>
+  Right off the bat we can see that the first part with the name is just like our last lesson! That's on purpose. Think of a variable like a piece of twine on the wall. The variable name can point that line at anything it wants. It could be a piece of data, but it could also be a function. Though, if a variable points to a function, we just call it a function for simplicity. You don't have to say "my function variable" or anything like that, it's only a function.
+</p>
+
+<div class="pattern aside-border">
+  <aside>
+    <h2 class="aside-header">The New Hotness</h2>
+    <hr />
+    <p>
+      There's actually an older way to define a function using a special <code> function</code> keyword, but it has some secret bagage we don't want to deal with right now. So, we won't use it yet. But, in case you see the older syntax in online tutorials, here's how to convert it into the newer <em>Arrow Function</em> syntax.
+    </p>
+    <pre><code class="language-js">// Here's the old way
+function myOlderFunction (myParameter) {
+  return myParameter
+}
+
+// Which is the same as this
+const myNewFunction = (myParameter) => {
+  return myParamenter
+}</code></pre>
+    <p>
+      Fun fact, the new way is called an arrow function because we use a little arrow (<em>=></em>) when defining them.
+    </p>
+  </aside>
+</div>
+<p>
+  Now let's take a closer look at each part of the function
+</p>
+
+<h3>The Name</h3>
+<p>
+  Strictly speaking, this is the exact same logic as our variable lesson. However, you might notice here that I'm using const instead of <code>let</code>. That's on purpose. Since our variables <i>might</i> need to change, we just stick with <code>let</code> for simplicity. But a function should <i>never, ever</i> change. So, we're using <code>const</code> to keep those guardrails up. Think of it like easing into using <code>let</code> and <code>const</code> like the pros!
+</p>
+
+<h3>The Parameters</h3>
+<p>
+  When passing values into our called function, we call the data <em>Arguments</em>, but whe we're dealing with those values in our function definition, we call them <em>Parameters</em>. Think of <em>Parameters</em> like little mini variables that we only use in our function. They are not required, but they are the main way to get information into a function.
+</p>
+<pre><code class="language-js">// Here our parameters are
+// num1 and num2
+const add = (num1, num2) => {
+  return num1, num2
+}
+
+// which match the arguments 2 and 4
+add(2,4)
+</code></pre>
+<p>
+  Parameters need names, and they go inside the <code>()</code>. When there's more than one you separate them out with commas. Parameters can be any value, and you reference them by using their name, just like variables. Parameters only exist inside the function, you can't use them outside the function they are defined in.
+</p>
+
+<pre><code class="language-js">const add = (num1, num2) => {
+  return num1, num2
+}
+
+num1
+NO! BAD! THAT WILL BREAK!
+</code></pre>
+
+<p>
+  So what if you want a parameter value <i>outside</i> of a function? You just set it to be the function's <em>return value</em> (see below).
+</p>
+<h3>The Function Body</h3>
+<p>
+  This is the actual meat of the function, it's anything within the <code>{}</code>. When we call the function, any of the code inside will be activated and run. However, it won't do anything *until* you call it, so keep that in mind!
+</p>
+<p>
+  To tell what is or isn't inside a function, always indent one level (that means hit the <em>tab key</em> on your keyboard once). Most editors will do this for you when you press enter actually.
+</p>
+<h3>The Return Value</h3>
+
+<p>
+  Functions don't <i>have</i> to return anything, like console.log, but sometimes it's helpful if they do. The return value of a function is created by using the <code>return</code> keyword. Any value to the right of the <code>return</code> keyword will be what the function itself returns. This value can be used just like any of the other values we learned about in the previous lesson.
+</p>
+
+<pre><code class="language-js">const add = (num1, num2) => {
+  return num1 + num2
+}
+
+console.log(add(4,5))
+
+let oneHundred = add(50,50)
+console.log(oneHundred)</code></pre>
+
+<div class="pattern aside-border">
+  <aside>
+    <h2 class="aside-header">Implicit vs Explicit Returns</h2>
+    <hr />
+    <p>
+      When you do something "explicitly" it means "to do it obviously, stated clearly." The opposite is to do something "implicitly", which means it's implied, but not directly shown. Arrow functions can do that with their return values. You can "explicitly" return a value using the <code>return</code> keyword. However, if your entire function is only one line long, you can "implicitly" return a value by removing the <code>{}</code> from the function body.
+    </p>
+    <pre><code class="language-js">// explicit return
+const add = (num1, num2) => {
+  return myParamenter
+}
+
+// Here's the same thing, implicitly
+const add = (num1, num2) => num1 + num2
+</code></pre>
+    <p>
+      It's a neat little trick, but don't feel pressured to use it. I'm only bringing it up becuase it's a <i>popular</i> trick, and I don't want you to get confused if you see it in some other tutorials. Don't panic, they didn't forget the <code>{}</code>, they did it on purpose!
+    </p>
+  </aside>
+</div>
+
+<h2>Put it all together!</h2>
+<p>
+  Why don't you try defining a function that returns the "cube" a number (meaning multiply that number by itself 3 time), save that value into a variable called <code>cubed</code>, and then log it to the screen?
+</p>
+
+<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="ZEREWOd" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
+  <span>
+    To run this codepen, make sure you're connected to the internet
+    <a href="https://codepen.io/MostlyFocusedMike/pen/ZEREWOd">2.3 Cube Challenge</a>
   </span>
 </p>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
-<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
 
+<h2>Common Errors</h2>
+
+<p>
+  One last thing before we move on, I just want to mention some common errors that you should watch out for.
+</p>
+
+<h3>Call the function</h3>
+<p>
+  Don't forget the <code>()</code> to call a function!
+</p>
+
+<pre><code class="language-js">const sayHi = () => {
+  return "Hello there!"
+}
+
+let greeting = sayHi // WRONG
+</code></pre>
+
+<p>
+  The above code won't throw an error, it will just set the value of <code>greeting</code> as the function definition. Which, if you log it, looks like a big blob of text like "[Function: sayHi] native code", or something similar. Always call your function with <code>()</code>!
+</p>
+
+<h3>Missing arguments</h3>
+<p>
+  You would think that if you forget an argument when calling a function JavaScript would automatically break or something. Sadly, it does not. Instead, it just treats any missing arguments as if they had a value of undefined
+</p>
+<pre><code class="language-js">const add = (num1, num2) => num1 + num2
+
+let total = add(1)
+// this logs NaN
+</code></pre>
+
+<p>
+  Having something be <code>undefined</code> when you aren't expecting it can cause some...weird things to happen. Like for example, a number mixed with <code>undefined</code> will always become <code>NaN</code>, which means "Not a Number". If you ever see truly bizarre behavior coming from a function, make sure that you passed in the right arguments.
+</p>
+
+<h2>Next Up: Flow Control!</h2>
+<p>
+  Oh man, we're really booking it now! Are you excited? I am, I hope you are too. Because we're about to get to one of the most essential skills of programming. Currently, everything we do will just <i>always</i> happen. <code>add</code> will always just add 2 numbers together. But what if we could <em>change</em> our functions behavior based on some data? Let's find out how we can do just that by using <code>If/Else Statements</code>. Let's move!
+</p>
 </article>
 </main>
 <nav id="bottom-nav">
@@ -84,6 +283,17 @@ A function
   <a href="./index.html">Home</a>
   <a href="./3-flow-control.html">Flow Control &rarr;</a>
 </nav>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<div id="resources">
+<h2>More Resources</h2>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">The Official Docs for Arrow functions (Article)</a>
+  <a href="https://www.youtube.com/watch?v=h33Srr5J9nY">WebDevSimplified's Arrow Function tutorial (Video)</a>
+  <a href="https://dev.to/samanthaming/es6-arrow-functions-cheatsheet-1cn">An Arrow Function Cheat Sheet (Article)</a>
+  <a href="https://www.youtube.com/watch?v=mrYMzpbFz18">A Deep Dive on Arrow Functions (Video)</a>
+
+  <h3>More Advanced Topics</h3>
+  <a href="https://betterprogramming.pub/difference-between-regular-functions-and-arrow-functions-f65639aba256">The Differences Between Arrow and "Regular" Functions (Article)</a>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
   </body>
 </html>

@@ -2,8 +2,8 @@ body {
   margin: 0;
   padding: 0;
   background: #1e1e1e;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
+  font-size: 1.35rem;
+  line-height: 1.65rem;
 }
 
 h1,h2,h3 {
@@ -11,7 +11,7 @@ h1,h2,h3 {
 }
 
 h1 {
-  line-height: 2.5rem;
+  line-height: 3rem;
 }
 
 main {
@@ -201,4 +201,44 @@ hr.divider {
   border: 2px solid;
   margin: 1rem 0;
   padding: 1rem;
+}
+
+ul {
+  margin: 1rem auto;
+  width: 90%;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -20px;
+}
+
+li {
+  margin-top: 0.25rem;
+}
+
+#resources {
+  text-align: right;
+  width: 80%;
+  max-width: 25rem;
+  background-color: white;
+  padding: 1rem;
+  margin: 1rem auto;
+}
+
+#resources h2, #resources h3 {
+  margin: 10px 0 1px;
+}
+
+#resources a {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+#resources a:hover {
+  color: rgb(27, 74, 9);
 }
