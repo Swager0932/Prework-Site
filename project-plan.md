@@ -26,15 +26,17 @@
   - errors
 
 - Lesson 3: Flow Control
+  - overview
+  - basic operators
+  - truthy and falsy
   - if conditions
   - else condition
   - else if condition
   - reassigning based off if
-  - truthy and falsy
   - OR
   - AND
 
-- Lesson 5: Strings
+- Lesson 4: Strings
   - template string
   - length
   - indexes, charAt vs []
@@ -45,7 +47,7 @@
   - the replace/replaceAll method and immutability
   - looping through strings
 
-- Lesson 4: Loops
+- Lesson 5: Loops
   - for loop
   - initializer
   - conditional

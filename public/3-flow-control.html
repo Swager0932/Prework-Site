@@ -12,15 +12,401 @@
 <article>
 
 <h1>Lesson 3: Flow Control</h1>
-<h2 id='sub-title'>If This Then What?</h2>
+<h2 id='sub-title'>If This, Then What?</h2>
+
+<p>
+  It's very common to have a program that changes its behavior based off of a set of different inputs. There are a bunch of ways to alter actions, but easily one of the most universal methods is the <code>If/Else Statement</code>. Check it out below, how do you think it works?
+</p>
+<pre><code class="language-js">const sayMood = (myMood) => {
+  if (myMood === "Happy") {
+    console.log("I'm feeling great!")
+  } else if (myMood === "Sad") {
+    console.log("I'm feeling pretty bummed")
+  } else {
+    console.log("I'm feeling...something")
+  }
+}
+
+sayMood('Happy')
+</code></pre>
+
+<p>
+  Don't worry, I'll explain it, but why not take a second just to explore and see what you can figure out on your own? If you're online, use Replit or the codepen to play with the code below. How would you make the function log <em>I'm feeling...something</em>? What do you think that <code>===</code> thing is doing?
+</p>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="400" data-default-tab="js,result" data-slug-hash="RwJwErb" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/RwJwErb"> 3.1 If/Else Example</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h2>Structure of If/Else</h2>
+
+<p>
+  Ok, done experimenting? Let's break it down then.
+</p>
+
+<ul>
+  <li>
+    An <code>If/Else Statement</code> can be made up of 3 kinds of checks: <code>if</code>, <code>else if</code>, and <code>else</code> checks
+  </li>
+  <li>
+    Each type of check will only fire if a certain condition evaluates to <code>true</code>
+  </li>
+  <li>
+    You can use only one <code>if</code> and <code>else</code> check per statement, but you can use as many <code>else if</code> checks as you want
+  </li>
+  <li>
+    <code>else</code> checks are optional, since sometimes you don't want a catch-all situation.
+  </li>
+</ul>
+
+<pre><code class="language-js">if (condition A) {
+  // Runs if Condition A is true
+} else if (condition B) {
+  // Runs if Condition B is true
+} else if (condition C) {
+  // Runs if Condition C is true
+} else {
+  // Runs if ALL of the conditions are false
+}
+</code></pre>
+
+<h2>Condtions and Comparisons</h2>
+
+<p>
+  Let's start simple with <i>just</i> an <code>if statement</code> to talk about <em>conditions</em>. By the way, it's perfectly valid (and common) to only use one <code>if statement</code> in your code. Anyway, a condition in JavaScript is any expression that evaluates to true or false. We do this by using the comparison operators:
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Operator</th><th>Name</th><th>Example</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>===</td><td>Equal To</td><td>'Hi' === 'Hi'</td>
+  </tr>
+  <tr>
+    <td>!==</td><td>Not Equal To</td><td>6 !== 7</td>
+  </tr>
+  <tr>
+    <td>&gt;</td><td>Greater Than</td><td>10 > 1</td>
+  </tr>
+  <tr>
+    <td>&lt;</td><td>Less Than</td><td>3 &lt; 5</td>
+  </tr>
+  <tr>
+    <td>&gt;=</td><td>Greater Than Or Equal To</td><td>5 &gt;= 5</td>
+  </tr>
+  <tr>
+    <td>&lt;=</td><td>Less Than Or Equal To</td><td>2 &lt;= 2</td>
+  </tr>
+</table>
+
+<p>
+  The bottom 4 are mainly for numbers, but the first two can be used with any values really. So what you would do is take 2 values, put a comparison between them, and then stick that whole thing in the <code>()</code> of the <code>if statement</code>. If the condition is true, then the code in the <code>{}</code> will execute. But if the condition is <code>false</code>, then the code is ignored. Try it out below by playing around with the values.
+</p>
+
+<pre><code class="language-js">let name = 'bob'
+let age = 32
+if (name !== 'jo') {
+  console.log('Hello, not Jo.')
+}
+</code></pre>
+
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="xxzxBOL" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/xxzxBOL">3.2 Conditional Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h3>Storing Conditionals</h3>
+<p>
+  Conditionals evaluate to booleans, which are just values. That means that you can store conditions as variables. This is <i>super</i> common. So common in fact, that there's a <em>Naming Convention</em> devoted to storing booleans in variables and returning them in functions.
+</p>
+
+<p>
+  If your variable is a boolean, it should start with "is, has, can, could, should". Honestly it's usually just "is" or "can". If it's a function that returns a variable, you can just put "get" in front of that. And yes, that can sometimes sounds a little weird, but that's ok.
+</p>
+
+<pre><code class="language-js">let name = 'bob'
+let age = 32
+let canVote = age >= 18
+
+console.log('canVote:', canVote)
+if (canVote) {
+  console.log("Let's go vote!")
+}
+
+const getCanVote = (personAge) => {
+  return personAge >= 18
+}
+
+if (getCanVote(17)) {
+  console.log("Let's go vote!")
+}
+</code></pre>
+
+<h3>Reversing Conditionals with <code>!</code></h3>
+<p>
+  One last thing on conditionals is that sometimes you want the <i>opposite</i> of one. If something is <code>true</code>, make it <code>false</code>. The way we do this is with the <code>!</code> operator (prounounced <em>bang</em>). By putting it next to a value, it will invert it. So <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>.
+</p>
+
+<pre><code class="language-js">let age = 32
+let canVote = age >= 18
+let cantVote = !canVote
+console.log("can't vote:", cantVote)
+
+// or directly on a conditional
+let alsoCantVote = !(age >= 18)
+console.log("alsoCantVote", alsoCantVote)
+</code></pre>
+
+<p>
+  You may notice that we used <code>()</code> in the second example. That's because we have to be careful with what we want to reverse. if we did <code>!age >= 18</code> then that would mean we <i>only</i> reversed the boolean value of <code>age</code>. Sometimes that's what we want, but when you want the entire conditional, wrap it up in a <code>()</code>.
+</p>
+
+<h2>Truthy and Falsy Values</h2>
+
+<p>
+  Pop quiz: what do you think would happen if we did this:
+</p>
+<pre><code class="language-js">if ("hi there") {
+  console.log('???')
+}</code></pre>
+
+<p>
+  We just put a non-boolean <code>String</code> into our conditonal. Does this break? No, actually. That's because when you put a non-boolean value into the conditional slot JavaScript converts it into <code>true</code> if the value is <em>truthy</em> and <code>false</code> if the value is <em>falsy</em>. Yes, those are real terms in programming.
+</p>
+
+<p>
+  So, what's truthy and what's falsy? Here are all the falsy values in the language
+</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Value</th>
+      <th>Example</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>Literal False</td><td>false</td>
+  </tr>
+  <tr>
+    <td>An Empty String</td><td>""</td>
+  </tr>
+  <tr>
+    <td>The Number Zero</td><td>0</td>
+  </tr>
+  <tr>
+    <td>The "Nothing" Values</td><td>null, undefined</td>
+  </tr>
+  <tr>
+    <td>Not a Number</td><td>NaN</td>
+  </tr>
+</table>
+
+<p>
+  That's it, <i>everything</i> else in JavaScript is a truthy value. All positive numbers are truthy, all negative numbers are truthy. All full strings are truthy, even strings made up of nothing but spaces like "  ". <em>EVERYTHING</em> else is truthy. Play around with truthy and falsy values below.
+</p>
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="MWXWxxo" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/MWXWxxo"> 3.3 Truthy and Falsy</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h2><code>else if</code> and <code>else</code></h2>
+<p>
+  Now that we fully understand conditionals, let's get back to building our <code>If/Else Statement</code>. If our question boils down to "Do this or that", then we'll just need an <code>else</code> statement.
+</p>
+
+<pre><code class="language-js">let chanceOfRain = 72;
+if (chanceOfRain >= 70) {
+  console.log('Bring an umbrella.')
+} else {
+  console.log('No umbrella!')
+}
+</code></pre>
+
+<p>
+  An <code>else</code> is used when <i>all</i> other cases should result in that code block running. That's why there's no conditional next to the else. All you're saying is, "If the main conditional is false, run the <code>else</code> block." But this is binary, what if we have a second, third or many more options? That's where the <code>else if</code> conditions come in
+</p>
+
+<p>
+  An <code>else if</code> condition allows you to specify for more conditionals.
+</p>
+
+<pre><code class="language-js">let pet = 'cat'
+
+if (pet === 'cat') {
+  console.log("My favorite pet!")
+} else if (pet === "dog") {
+  console.log("My 2nd favorite pet!")
+} else if (pet === "snake") {
+  console.log("Hard pass.")
+} else if (pet === "turtle") {
+  console.log("Love 'em!")
+} else {
+  console.log("Your pet is meh.")
+}
+</code></pre>
+
+<p>
+  Remember, each <code>If statement</code> starts a new chain. And in each chain, only <em>one</em> code block can execute. So, it helps to be specific like this sometimes.
+</p>
+
+<h2>Reassigning variables</h2>
+<p>
+  Look again at that above example. That's a lot of <code>console.log</code>s, right? What if we just saved a variable called <code>msg</code> (that's a universal shorthand for "message"), and then logged that only at the end?
+</p>
+<pre><code class="language-js">let pet = "cat"
+let msg = ""
+
+if (pet === "cat") {
+  msg = "My favorite pet!"
+} else if (pet === "dog") {
+  msg = "My 2nd favorite pet!"
+} else if (pet === "snake") {
+  msg = "Hard pass."
+} else if (pet === "turtle") {
+  msg = "Love 'em!"
+} else {
+  msg = "Your pet is meh."
+}
+console.log(msg);
+</code></pre>
+
+<p>
+  That's a little cleaner, but it looks like we added lines. Well we aren't done yet. See, if we use a variable, instead of using an empty value, we can set its initial value as the <code>else</code> value. Then we can remove <code>else</code> section.
+</p>
+
+<pre><code class="language-js">let pet = "cat"
+let msg = "Your pet is meh."
+
+if (pet === 'cat') {
+  msg = "My favorite pet!"
+} else if (pet === "dog") {
+  msg = "My 2nd favorite pet!"
+} else if (pet === "snake") {
+  msg = "Hard pass."
+} else if (pet === "turtle") {
+  msg = "Love 'em!"
+}
+console.log(msg);
+</code></pre>
+
+<p>
+  There, our code now does exactly the same thing, but it's easier on the eyes! When you change the way code is written, but still leave it's functionality alone, that's called <em>refactoring</em>.
+</p>
+
+<h2>Multiple condtionals</h2>
+<p>
+  So we have one conditional per block, yes, but what about a second condtional? Don't you worry, we have special operators to deal with combinations.
+</p>
+
+<h3>The OR operator <code>||</code></h3>
+<p>
+  If you want something to happen as long as at least <em>one</em> condition is true, you should use the <em>OR</em> operator. It's just two "pipe" characters <code>||</code>. On most keyboards you get that by holding shift and the "\" key, which is usually one above the enter key. Here's how you use it:
+</p>
+
+<pre><code class="language-js">let pet = "cat"
+let msg = "Your pet is meh."
+
+if (pet === 'cat' || pet === 'dog') {
+  msg = "I love your pet!"
+}
+console.log(msg);
+</code></pre>
+
+<p>
+  That doesn't seem terribly intuitive, I know that I wished it was like:
+</p>
+
+<pre><code class="language-js">if (pet === 'cat' || 'dog') {
+  msg = "I love your pet!"
+}
+NO THAT'S WRONG
+</code></pre>
+
+<p>
+  But what you have to remember is conditionals are each their own boolean, so the <em>OR</em> operator is saying either <i>conditional</i>, not either <i>value</i>.
+</p>
+
+<h3>The AND operator <code>&&</code></h3>
+
+<p>
+  If you want <i>every single</i> condition to be true, then you need the <em>AND</em> operator, which is just two ampersands.
+</p>
+
+<pre><code class="language-js">let pet = "dog"
+let name = "fido"
+let msg = "You are creative"
+if (name === "fido" && pet === "dog") {
+  msg = "Ya basic"
+}
+console.log(msg)
+</code></pre>
+
+<p>
+  So, if your pet is a dog but it's name isn't "fido", then that <code>if statement</code> won't fire.
+</p>
+
+<h3>Give it a whirl!</h3>
+<p>
+  Can you make the first message run if <code>age</code> is over 18 AND <code>hasCar</code> is true? Then, can you log the second message if eiter <code>isFunny</code> or <code>isFamous</code> is true?
+</p>
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="350" data-default-tab="js,result" data-slug-hash="mdKdgMe" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 350px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/mdKdgMe">3.4 AND and OR Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h2>Next up: Advanced Strings</h2>
+<p>
+  Now that we have optional programming down, why don't we try to do some more interesting things with our messages. We barely understand how strings work and we can't even make them dynamic yet. Let's change that and learn how manipulate strings like absolute wizards!
+</p>
 
 </article>
 </main>
 <nav id="bottom-nav">
   <a href="./2-functions.html">&larr; Functions</a>
   <a href="./index.html">Home</a>
-  <a href="./4-loops.html">Loops &rarr;</a>
+  <a href="./4-strings.html">Strings &rarr;</a>
 </nav>
+<div id="resources">
+  <h2>More Resources</h2>
+  <a href="https://www.w3schools.com/js/js_comparisons.asp">W3 Schools Comparisons Table (Article)</a>
+  <a href="https://www.w3schools.com/js/js_if_else.asp">W3 School's If/Else tutorial (Article)</a>
+  <a href="https://www.youtube.com/watch?v=_5SgikgFf0U">If Else Beginner Tutorial (Video)</a>
+  <h3>More Advanced Topics</h3>
+  <a href="https://www.youtube.com/watch?v=EumXak7TyQ0">Why Not To Use Else Blocks (Video)</a>
+  <a href="https://www.freecodecamp.org/news/javascript-switch-case-js-switch-statement-example/">Switch Case: The If/Else alternative(Article)</a>
+  <a href="https://medium.com/p/5edf4415a09d">Ternary Operator: A One Line If/Else (Article)</a>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
   </body>
 </html>

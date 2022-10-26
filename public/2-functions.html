@@ -45,13 +45,16 @@ console.log('I live in', city)</code></pre>
 
 But you know what? We can <i>finally</i> do better than written examples. Let's use an interactive codepen!
 
-<p class="codepen" data-height="340" data-default-tab="js,result" data-slug-hash="bGKGEeq" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
-  <span>
-    To run this codepen, make sure you're connected to the internet
-    <a href="https://codepen.io/MostlyFocusedMike/pen/bGKGEeq">Console.log example</a>
-  </span>
-</p>
-
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="340" data-default-tab="js,result" data-slug-hash="bGKGEeq" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 340px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/bGKGEeq">Console.log example</a>
+      </span>
+    </p>
+  </div>
+</div>
 <p>
   Like you learned about in lesson 0, feel free to modify the code on the left, and see the output change in the "Result" window. It should auto run on changes, but you can also hit the "Rerun" button if you don't see your changes. Just be sure to be connected to the internet!
 </p>
@@ -94,11 +97,16 @@ console.log('City:', city)
 // can you please fix it?
 </code></pre>
 
-<p class="codepen" data-height="225" data-default-tab="js,result" data-slug-hash="XWYWXqG" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
-  <span>
-    To run this codepen, make sure you're connected to the internetinternet.
-    <a href="https://codepen.io/MostlyFocusedMike/pen/XWYWXqG">Debugging Practice</a>
-</p>
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="225" data-default-tab="js,result" data-slug-hash="XWYWXqG" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 225px;">
+      <span>
+        To run this codepen, make sure you're connected to the internetinternet.
+        <a href="https://codepen.io/MostlyFocusedMike/pen/XWYWXqG">Debugging Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
 <p>
   The label is really helpful because if a value is ever undefined, console.log simply won't print it anything <i>unless</i> you include another argument. Plus, you'll likely have a lot of console.logs while you're working (I certainly do), so the labels keep things organized. Just a little tip from a pro for ya!
 </p>
@@ -203,6 +211,29 @@ console.log(add(4,5))
 let oneHundred = add(50,50)
 console.log(oneHundred)</code></pre>
 
+<p>
+  Also, once you <code>return</code> something, that's it, that's the end of the function. Any code written after <code>return</code> simply wont be run.
+</p>
+
+<pre><code class="language-js">const testReturn = () => {
+  console.log("I run!")
+  return true
+  console.log("I do not!")
+}
+
+testReturn()</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="qBKBwxG" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/qBKBwxG">Return Bail Example</a>
+      </span>
+    </p>
+  </div>
+</div>
+
 <div class="pattern aside-border">
   <aside>
     <h2 class="aside-header">Implicit vs Explicit Returns</h2>
@@ -229,13 +260,16 @@ const add = (num1, num2) => num1 + num2
   Why don't you try defining a function that returns the "cube" a number (meaning multiply that number by itself 3 time), save that value into a variable called <code>cubed</code>, and then log it to the screen?
 </p>
 
-<p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="ZEREWOd" data-preview="true" data-editable="true" data-user="MostlyFocusedMike">
-  <span>
-    To run this codepen, make sure you're connected to the internet
-    <a href="https://codepen.io/MostlyFocusedMike/pen/ZEREWOd">2.3 Cube Challenge</a>
-  </span>
-</p>
-
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="ZEREWOd" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/ZEREWOd">2.3 Cube Challenge</a>
+      </span>
+    </p>
+  </div>
+</div>
 <h2>Common Errors</h2>
 
 <p>
@@ -284,7 +318,7 @@ let total = add(1)
   <a href="./3-flow-control.html">Flow Control &rarr;</a>
 </nav>
 <div id="resources">
-<h2>More Resources</h2>
+  <h2>More Resources</h2>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">The Official Docs for Arrow functions (Article)</a>
   <a href="https://www.youtube.com/watch?v=h33Srr5J9nY">WebDevSimplified's Arrow Function tutorial (Video)</a>
   <a href="https://dev.to/samanthaming/es6-arrow-functions-cheatsheet-1cn">An Arrow Function Cheat Sheet (Article)</a>
