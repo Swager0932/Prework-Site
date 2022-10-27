@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Marcy Lab | 1. What are variables?</title>
+    <title>Marcy Lab 4: Strings</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="./style.css" rel="stylesheet">
@@ -13,7 +13,350 @@
 
 <h1>Lesson 4: Strings</h1>
 <h2 id='sub-title'>Say Something Good</h2>
+<p>
+  String manipulation is one of the cornerstones of programming. Which makes sense since so much of what we do on the internet is just some kind of text. In this lesson we'll learn how to deal with strings and do some very useful things. Like, how to make them dynamic!
+</p>
 
+<h2>Template Strings</h2>
+<p>
+  So often you'll only want a <i>piece</i> of a string to change. You can use something called concatenation to literally add strings together, but that's old and boring. Instead we use <em>Template Strings</em>, which allow us to <em>interpolate</em> (meaning "insert") data directly. <em>Template Strings</em> can also called <em>Template Literals</em> if you're pretentious.
+</p>
+<p>
+  When creating a template string instead of using "" or '', you surround your text with backticks ``. You get those by hitting shift and the key above your tab key with your left pinky.
+</p>
+
+<pre><code class="language-js">let greeting = `Hello!`</code></pre>
+
+<p>
+  That's technically a template string, it's simply very boring. To spice it up, let's add some dynamic info to our greeting. Perhaps a name? In order to insert a chunk of code into the template, you have to wrap it inside a <code>${ }</code> operator. You'll know you did it right if the inside code is a different color.
+</p>
+
+<pre><code class="language-js">let name = "Jay"
+let greeting = `Hello ${name}!`</code></pre>
+
+<p>
+  You can interpolate multiple pieces into a single string, and I meant it when I said "chunks of code." You aren't limited to only variables. Another thing to note is how spaces work. Essentially, the string prints <i>exactly</i> as you write it, the only thing to disappear is the <code>${}</code> operator. Try playing around with some templates below to get the hang of it.
+</p>
+
+<pre><code class="language-js">let name = "Jay"
+let emphasis = "!"
+let greet = `Hello, ${name}${emphasis}`
+
+console.log(greet)
+
+let price = `$${4 + 2} dollars`
+console.log(price)
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="OJEPOxq" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/OJEPOxq">4.1 Template Strings</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<p>Some other cool things about templates is that you can use newlines in your code that won't show up in your final output. This can be handy when adding large chunks of text together. Also, since a template is enclosed by backticks, you can use regular quotes inside without issue. </p>
+
+<pre><code class="language-js">// Super handy trick
+let spaces = `Even though I'm
+on multiple lines
+I'll print as one,
+space-sepated line.`
+
+console.log(spaces)
+
+// NOT ALLOWED
+let broken = "This
+would not
+  work at all"
+
+let quotes = `Also, "Quotes are fine!"
+Fell free to 'mix and match too!'`
+console.log(quotes)
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="zYaxPyE" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/zYaxPyE"> Perfect spacing</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h2>The <code>length</code> Property</h2>
+
+<p>
+  Sometimes, (like in the next lesson) you'll want to know exactly how long a string is. JavaScript has you covered here, as every string has a built in property <code>length</code>. To use it, all you need to do is tack <code>.length</code> at the end of any string. Just make sure it's after the quote!
+</p>
+
+<pre><code class="language-js">console.log("hi".length) // 2
+console.log('hello'.length) // 5
+console.log(`hey`.length) // 3
+
+let str = "hey hey"
+console.log(str.length) // 7
+
+let name = 'bo'
+console.log(`hi ${name}`.length) // 5
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="WNybdew" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/WNybdew"> 4.3 Length Property</a>
+      </span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </div>
+</div>
+
+<p>
+  Take special note of that last template example. The length of the sting is the final string, not the pre-computed version with the code inside it. Also remember that it's counting the total number of <i>characters</i>, so spaces and punctuation count towards the total.
+</p>
+
+<h2>String Indexes</h2>
+<p>
+  So we talked about how we call text <em>strings</em> becuase it's like you're stringing a bunch of individual characters along. So it shouldn't surprise you to learn that JavaScript keeps track of the order of those characters. And we can access characters by referencing their <em>index</em>.
+</p>
+
+<p>
+  Each index is a number, and it only ever refers to a single character. Also, instead of starting at 1, indexes start at 0. So the 0th index is always the first character of the string.
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><style>.a{clip-path:url(#b);}.b,.g{fill:#fff;}.b,.e{font-size:100px;}.b{font-family:ArialMT, Arial;}.c,.d{font-family:Arial-BoldMT, Arial;}.c,.d,.e,.f,.g{font-weight:700;}.d,.e,.f{fill:#aadafb;}.e,.f,.g{font-family:CourierNewPS-BoldMT, Courier New;}.f{font-size:101px;letter-spacing:0.075em;}.g{font-size:205px;letter-spacing:0.05em;}.h,.i,.j,.k{font-size:208px;}.i{letter-spacing:0.07em;}.j{letter-spacing:0.045em;}.k{letter-spacing:0.03em;}.l,.m,.o{fill:none;}.l,.m{stroke:#c9c9c9;}.l{stroke-width:5px;}.m{stroke-width:7px;}.n{stroke:none;}.p{fill:#1e1e1e;}</style><clipPath id="b"><rect width="1920" height="1080"/></clipPath></defs><g id="a" class="a"><rect class="p" width="1920" height="1080"/><text class="b" transform="translate(954 803)"><tspan x="-616.04" y="0">But the last</tspan><tspan class="c" y="0"> </tspan><tspan class="d" y="0">index</tspan><tspan class="c" y="0"> </tspan><tspan y="0">is only 11</tspan><tspan x="-769.775" y="115">because the first</tspan><tspan class="c" y="115"> </tspan><tspan class="d" y="115">index</tspan><tspan class="c" y="115"> </tspan><tspan y="115">is always</tspan><tspan class="c" y="115"> </tspan><tspan y="115">0</tspan></text><text class="b" transform="translate(323 215)"><tspan x="0" y="0">The length of the string is 12</tspan></text><text class="e" transform="translate(1519 597)"><tspan x="0" y="0">10</tspan></text><text class="e" transform="translate(1658 597)"><tspan x="0" y="0">11</tspan></text><text class="f" transform="translate(120 597)"><tspan x="0" y="0" xml:space="preserve"> 0 1 2 3 4 5 6 7 8 9</tspan></text><text class="g" transform="translate(154 438)"><tspan x="0" y="0">H</tspan><tspan class="h" y="0">ell</tspan><tspan class="i" y="0">o</tspan><tspan class="j" y="0"> </tspan><tspan class="i" y="0">th</tspan><tspan class="k" y="0">e</tspan><tspan class="i" y="0">re!</tspan></text><g class="l" transform="translate(147 275)"><rect class="n" width="1640" height="394" rx="20"/><rect class="o" x="2.5" y="2.5" width="1635" height="389" rx="17.5"/></g><line class="l" y2="390" transform="translate(285.5 277.5)"/><line class="l" y2="390" transform="translate(420.5 276.5)"/><line class="l" y2="390" transform="translate(557.5 278.5)"/><line class="l" y2="390" transform="translate(693.5 278.5)"/><line class="l" y2="390" transform="translate(830.5 278.5)"/><line class="l" y2="390" transform="translate(966.5 278.5)"/><line class="l" y2="390" transform="translate(1101.5 278.5)"/><line class="l" y2="390" transform="translate(1239.5 278.5)"/><line class="l" y2="390" transform="translate(1375.5 278.5)"/><line class="l" y2="390" transform="translate(1511.5 278.5)"/><line class="l" y2="390" transform="translate(1647.5 278.5)"/><line class="m" x1="1633" transform="translate(147.5 471.5)"/></g></svg>
+
+<p>
+  Unlike properties, which we access via <em>dot notation</em>, indexes are accessed by <em>bracket notation</em> (sometimes also called <em>Subscript Notation</em> if you're coming from a math world). Which looks like this:
+</p>
+
+<pre><code class="language-js">let str = "hello"
+console.log(str[0]) // h
+console.log(str[2]) // l
+console.log(str[4]) // o
+
+// the index value can use any expression
+// as long as it evaluates to a number
+console.log(str[2]) // l
+console.log(str[1+1]) // l
+
+// you can access on a plain string too
+console.log("wow"[0]) // w
+</code></pre>
+
+<h3>Getting the last character</h3>
+<p>
+  Here's a fun trick. Since we know that the last index will always be 1 less than the length (because length starts counting from 1, and indexes start from 0), there's a clever bit we can do to get the last character of the string.
+</p>
+
+<pre><code class="language-js">const getLastChar = (str) => {
+  return str[str.length - 1]
+}
+
+console.log(getLastChar("Hey!")) // !
+console.log(getLastChar("Oh?")) // ?
+</code></pre>
+
+<div class="stripes aside-border">
+  <aside>
+    <h2 class="aside-header">Immutable Strings</h2>
+    <hr />
+    <p>
+      I don't want to get too in depth here, but strings themselves are <em>immutable</em>, meaning they can't be mutated or changed in any way. You can <em>reassign</em> a variable from one string to another, but you can't alter an existing string. For now, that means you can only use the indexes to <i>read</i> values, not <i>set</i> them.
+    </p>
+    <pre><code class="language-js">let str = "hello"
+str[0] = "Z"
+
+console.log(str)
+// still says hello, not Zello
+
+// but something like this is fine
+let newStr = "hi"
+newStr = `${newStr[0]}${newStr}${newStr[1]}`
+console.log(newStr) // hhii
+</code></pre>
+  </aside>
+</div>
+
+<p>
+  Play around with strings length and their index. Here's a fun challenge, how would you always find the <i>second</i> to last character in a string?
+</p>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="400" data-default-tab="js,result" data-slug-hash="ExRaEyN" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 400px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/ExRaEyN">4.4 String Indexes and Length Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h2>Common String Methods</h2>
+<p>
+  Strings have built in properties like <code>length</code>, but they also have built in functions too! You access them with <em>dot notation</em> just like you do with <em>length</em>. Just don't forget the parentheses!
+</p>
+
+<h3>.toUpperCase() and .toLowerCase()</h3>
+<p>
+  These two methods are for converting <i>entire</i> strings to upper or lower case.
+</p>
+<pre><code class="language-js">let greet = "hello"
+let shoutedGreet = greet.toUpperCase()
+console.log(shoutedGreet)
+// HELLO
+
+let loud = "AHHHH"
+let sigh = loud.toLowerCase()
+console.log(sigh)
+// ahhhh
+
+// remember, the originals are not changed
+console.log(greet) // hello
+console.log(loud) // AHHHH
+</code></pre>
+
+<p>
+  Some common use cases are, only capitalizing the first letter, and lowercasing 2 strings in order to check equality. Because remember, <code>===</code> <i>is</i> case sensitive, so <code>"Hello" !== "hello"</code>
+</p>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="350" data-default-tab="js,result" data-slug-hash="oNygqep" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 350">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/oNygqep">4.5 upper and lowercase</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h3>.slice()</h3>
+<p>
+  Sometimes you only want a <i>part</i> of a string, that's what slice does. It returns a copy of a string. You can specify both the starting index, which is inclusive, and optionally the ending index, which is exclusive. That means the value at the first index and everything up to <i>but not including</i> the end index get's copied. If no end index is given, slice will just automatically copy to the end of the string. and if <i>no</i> indexes are given, the entire string is copied.
+</p>
+
+<pre><code class="language-js">let str = "Here I Am"
+let copy = str.slice()
+let here = str.slice(0,4)
+let i = str.slice(5,6)
+let am = str.slice(7)
+
+console.log(copy) // Here I Am
+console.log(here) // Here
+console.log(i) // I
+console.log(am) // Am
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="BaVyrYe" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/BaVyrYe">4.6 Slice Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<p>
+  Now do you see why the <code>.slice()</code> method would work so well with the <code>capitalize()</code> function?
+</p>
+
+<h3>.includes()</h3>
+<p>
+  This method is returns a boolean, <code>true</code> if the argument string is in the owner string, and false otherwise.
+</p>
+
+<pre><code class="language-js">let str = "Look at me!"
+console.log(str.includes("Look")) // true
+console.log(str.includes("at me")) // true
+console.log(str.includes("ook ")) // true
+console.log(str.includes("us")) // false
+</code></pre>
+
+<p>
+  Just remember that this method is case sensitive, so when searching strings, it's a good idea to lowercase everything like before.
+</p>
+
+<pre><code class="language-js">const doesContain = (mainStr, searchStr) => {
+  return mainStr
+    .toLowerCase()
+    .includes(searchStr.toLowerCase())
+}
+
+let wonky = "DoEs ThIs WoRk?"
+let work = "work"
+let isTrue = doesContain(wonky, work)
+console.log(isTrue) // true
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="rNKadry" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/rNKadry">4.7 Includes Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<div class="pattern aside-border">
+  <aside>
+    <h2 class="aside-header">Chaining</h2>
+    <hr />
+    <p>
+      Now you may look at that last example and see this:
+    </p>
+    <pre><code class="language-js">return mainStr
+  .toLowerCase()
+  .includes(searchStr.toLowerCase())</code></pre>
+
+    <p>
+      And rightly wonder "What the hell is that??" It's a valid question, but it's a really cool answer. It's called <em>chaining</em>, it's like a combo from a video game. Essentially, all these methods can be called on strings. So if a method <i>returns</i> a string, we can immediately call another method on it. Here's the same logic, but spread out. And as for the new lines with each method, that's totally fine as long as you start each line with the dot.
+    </p>
+    <pre><code class="language-js">// With chaining
+const doesContain = (mainStr, searchStr) => {
+  return mainStr
+    .toLowerCase()
+    .includes(searchStr.toLowerCase())
+}
+
+// no chaining
+const doesContain = (mainStr, searchStr) => {
+  let lowMainStr = mainStr.toLowerCase()
+  let lowSearchStr = searchStr.toLowerCase()
+
+  return lowMainStr.includes(lowSearchStr)
+}
+</code></pre>
+  <p>
+    So close right? In all honesty, it comes down to a style preference. For a simple 2-3 chain, I'd probably recommend just making variables, however in the real world sometimes you can have quick 4-5 method chains full of inline functions, and it's just easier to chain things together.
+  </p>
+  <p>
+    The only <i>wrong-ish</i> choice is trying to one line something like that. That's just hard to read.
+  </p>
+  <pre><code class="language-js">const doesContain = (mainStr, searchStr) => mainStr.toLowerCase().includes(searchStr.toLowerCase())</code></pre>
+  </aside>
+</div>
+
+<h3>And Many More!</h3>
+<p>
+  Obviously, you can see that these methods can do some helpful things, but there's too many to list! If you have some extra time (after going through all the lessons of course), I recommend checking some of the other <a href="https://www.edureka.co/blog/javascript-string-functions/">JavaScript string methods</a>. There are a lot of helpful ones out there!
+</p>
+
+<h2>Finally, loops</h2>
+<p>
+  Alas, our little journey together is almost at an end. Only one more "code" lesson left, But I think I saved the best for last: Loops! Computers can do things millions of times a second, and one of the tools they use to do that is the <code>Loop</code>. With loops we can run things over and over again without having to type it all out. Let's go!
+</p>
 </article>
 </main>
 <nav id="bottom-nav">
@@ -21,6 +364,16 @@
   <a href="./index.html">Home</a>
   <a href="./5-loops.html">Loops &rarr;</a>
 </nav>
+<div id="resources">
+  <h2>More Resources</h2>
+  <a href="https://www.w3schools.com/js/js_string_templates.asp">W3 Template String Tutorial (Article)</a>
+  <a href="https://www.w3schools.com/jsref/jsref_obj_string.asp">W3 String Methods list (Article)</a>
+  <a href="https://www.youtube.com/watch?v=VRz0nbax0uI">20 String Methods in 7 Minutes (Video)</a>
+  <h3>More Advanced Topics</h3>
+  <a href="https://www.youtube.com/watch?v=q7wX-qb4yT4">String Manipulation Tricks (Video)</a>
+  <a href="https://www.youtube.com/watch?v=rhzKDrUiJVk">Regular Expressions (Video)</a>
+</div>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

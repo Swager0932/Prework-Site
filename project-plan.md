@@ -39,20 +39,18 @@
 - Lesson 4: Strings
   - template string
   - length
-  - indexes, charAt vs []
+  - indexes
   - popular string methods
-    - includes
     - upper lowercase
     - slice
-  - the replace/replaceAll method and immutability
-  - looping through strings
+    - includes
 
 - Lesson 5: Loops
   - for loop
   - initializer
   - conditional
   - incrementer
-  - while loop?
+  - looping through strings
 
 
 
