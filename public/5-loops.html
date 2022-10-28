@@ -14,6 +14,234 @@
 <h1>Lesson 5: Loops</h1>
 <h2 id='sub-title'>Do It Again And Again</h2>
 
+<p>
+  Sometimes we need our programs to do something over and over again. Like a game with multiple rounds, or filter through every student in a class. If you ever want a chunk of code to be run multiple times, you'll need some kind of a loop.  There are <i>lots</i> of looping options to choose from, but today we're going to focus on one of the classics: the <em>for loop</em>.
+</p>
+
+<h2>Structure of a for loop</h2>
+<p>
+  A for loop has 2 main sections: the head and the body. The body is simple, it's a chunk of code that we want to run with each iteration of the loop (a single step of a loop is called an <em>iteration</em>). The head is the more interesting part. It's made up of 3 sections, The initialization, the Condtion, and finally the Incrementor. The first two always have semi colons (<code>;</code>) after them, but the third does not.
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1203"><defs><clipPath id="b"><rect width="1920" height="1203"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1920" height="1203" fill="#1e1e1e"/><text transform="translate(84.347 476.5)" fill="#bc89bd" font-size="99" font-family="CourierNewPS-BoldMT, Courier New" font-weight="700"><tspan x="0" y="0">for</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#f8d949" letter-spacing="0.1em">(</tspan><tspan y="0" fill="#679ad1">let</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#aadafb">i</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#d4d4d4">=</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#bacdab">0</tspan><tspan y="0" fill="#d4d4d4">;</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#aadafb">i</tspan><tspan y="0" fill="#fff"> </tspan><tspan y="0" fill="#d4d4d4">&lt; </tspan><tspan y="0" fill="#bacdab">5</tspan><tspan y="0" fill="#d4d4d4">; </tspan><tspan y="0" fill="#aadafb">i</tspan><tspan y="0" fill="#d4d4d4">+</tspan><tspan y="0" fill="#d4d4d4" letter-spacing="0.1em">+</tspan><tspan y="0" fill="#f8d949">) {</tspan><tspan fill="#fff"><tspan x="0" y="149" xml:space="preserve">  </tspan><tspan y="149" fill="#aadafb">console</tspan><tspan y="149">.</tspan><tspan y="149" fill="#dcdcaf">log</tspan><tspan y="149" fill="#679ad1">(</tspan><tspan y="149" fill="#c5947c">&quot;i:&quot;</tspan><tspan y="149" fill="#d4d4d4">,</tspan><tspan y="149"> </tspan><tspan y="149" fill="#aadafb">i</tspan><tspan y="149" fill="#679ad1">)</tspan></tspan><tspan fill="#f8d949"><tspan x="0" y="298">}</tspan></tspan></text><g transform="translate(-14.653 13.5)"><text transform="translate(99 111)" fill="#c5947c" font-size="90" font-family="ArialMT, Arial"><tspan x="0" y="0">Initialization</tspan></text><text transform="translate(334 198)" fill="#fff" font-size="80" font-family="ArialMT, Arial"><tspan x="-175.664" y="0">where the</tspan><tspan x="-204.609" y="80">loop begins</tspan></text></g><g transform="translate(5.347 13.5)"><text transform="translate(744 111)" fill="#aadafb" font-size="90" font-family="ArialMT, Arial"><tspan x="0" y="0">Condition</tspan></text><text transform="translate(934 198)" fill="#fff" font-size="80" font-family="ArialMT, Arial"><tspan x="-224.512" y="0">if this is true,</tspan><tspan x="-226.855" y="80">keep looping</tspan></text></g><g transform="translate(-14.653 13.5)"><text transform="translate(1336 111)" fill="#bc89bd" font-size="90" font-family="ArialMT, Arial"><tspan x="0" y="0">Increment</tspan></text><text transform="translate(1576 198)" fill="#fff" font-size="80" font-family="ArialMT, Arial"><tspan x="-271.309" y="0">what to change</tspan><tspan x="-255.723" y="80">with each loop</tspan></text></g><g transform="translate(0 125.5)"><rect width="557.897" height="88" transform="translate(0 995)" fill="#251f1d"/><g transform="translate(0 991)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(13 50)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(13 -17)" fill="#a3d882"/><rect width="88" height="15" transform="translate(5)" fill="#251f1d"/><rect width="89" height="11" transform="translate(0 78)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(34 63)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(53 30) rotate(180)" fill="#251f1d"/></g><text transform="translate(91 1062)" fill="#a3d882" font-size="75" font-family="ArialMT, Arial"><tspan x="0" y="0">5.1 For Loops</tspan></text><path d="M1756.5,978.5l81.337,89.223H1756.5Z" transform="translate(-1198.603 8.777)" fill="#251f1d"/><line x2="557.734" transform="translate(0.5 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="81" y1="89" transform="translate(558.234 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g><path d="M3636.664,1556.156v77.153c0,35.9-41.152,35.557-41.152,35.557H1993.326s-38.115-3.665-38.115,35.8v210.459c0,22.378,0,36.226,38.362,36.226,0,0,1663.032.911,1701.048,0s37.9-36.174,37.9-36.174l-2.089-359.019s.671-36.171-37.954-36.171h-21.721C3631.733,1519.984,3636.664,1556.156,3636.664,1556.156Z" transform="translate(-1883.864 -1132.984)" fill="none" stroke="#f8d949" stroke-linejoin="round" stroke-width="8"/><g transform="translate(383.347 387)" fill="none" stroke="#c5947c" stroke-width="8"><rect width="613" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="605" height="119" rx="18" fill="none"/></g><g transform="translate(1017.347 387)" fill="none" stroke="#679ad1" stroke-width="8"><rect width="390" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="382" height="119" rx="18" fill="none"/></g><g transform="translate(1439.347 387)" fill="none" stroke="#bc89bd" stroke-width="8"><rect width="212" height="127" rx="22" stroke="none"/><rect x="4" y="4" width="204" height="119" rx="18" fill="none"/></g><path d="M2358.653,3044.325v-59.172H2116.247" transform="translate(-1928.026 -2657.325)" fill="none" stroke="#c5947c" stroke-linecap="round" stroke-width="8"/><path d="M2401.237,3044.325v-59.172h-284.99" transform="translate(-1329.002 -2657.325)" fill="none" stroke="#679ad1" stroke-linecap="round" stroke-width="8"/><path d="M3481.12,3050.719v-62.391h227.938" transform="translate(-1994.653 -2660.5)" fill="none" stroke="#bc89bd" stroke-linecap="round" stroke-width="8"/><g transform="translate(-306.653 864.5)"><text transform="translate(1361 111)" fill="#f8d949" font-size="90" font-family="ArialMT, Arial"><tspan x="0" y="0">Loop Body</tspan></text><text transform="translate(1576 198)" fill="#fff" font-size="80" font-family="ArialMT, Arial"><tspan x="-402.461" y="0">the code that runs with</tspan><tspan x="-449.199" y="80">each iteration of the loop </tspan></text></g><path d="M2436.471,3044.325v-59.172H2116.247" transform="translate(3538.706 3865.095) rotate(180)" fill="none" stroke="#f8d949" stroke-linecap="round" stroke-width="8"/></g></svg>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="BaVNKWd" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/BaVNKWd">5.1 For Loop Example</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<p>
+  If you ran the loop from the image (and codepen) above, you would see the following output in your console.
+</p>
+
+<pre class="code-output">i: 0
+i: 1
+i: 2
+i: 3
+i: 4
+</pre>
+
+<h2>How for Loops Work</h2>
+
+<p>
+  What's happening is that our loop first needs an <em>iterator value</em> to work. Due to tradition (and because programmers can't be bothered to type "iterator"), the iteration value is pretty much always just <code>i</code>.
+</p>
+
+<p>
+  The loop then uses that <code>i</code> to decide if it should run the loop's body or not by checking the <em>condtion</em>. If the condtion is <code>true</code>, the loop body runs once.
+</p>
+
+<p>
+  But, you may be wondering, how do we ever change the value of <code>i</code> so that our loop will <i>stop</i>? That's the job of the <em>increment</em> section. After each iteration is run, this chunk is exectuted and adds 1 to the <code>i</code> value. That's what that <code>++</code> operator does. It just adds 1 to whatever value it's next to. It would be the same as writing <code>i += 1</code>.
+</p>
+
+<p>
+  Then the cycle repeats! The condition is checked again, if it passes the body is executed, and then the iterator goes. The loop will finally stop once the condition is no longer true. Below is an image of this entire process (except it only goes to 2, not 5, so we don't repeat too much text).
+</p>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1920"><defs><clipPath id="c"><rect width="1920" height="1920"/></clipPath></defs><g id="d" clip-path="url(#d)"><rect width="1920" height="1920" fill="#1e1e1e"/><g transform="translate(0 6)"><rect width="959" height="88" rx="10" transform="translate(225 506)" fill="#6a9152"/><rect width="712" height="88" rx="10" transform="translate(321 305)" fill="#cca800"/><rect width="174" height="88" rx="10" transform="translate(1388 196)" fill="#bc89bd"/><rect width="322" height="88" rx="10" transform="translate(1033 196)" fill="#679ad1"/><rect width="513" height="88" rx="10" transform="translate(484 196)" fill="#c5947c"/><text transform="translate(235 265)" fill="#fff" font-size="83" font-family="CourierNewPS-BoldMT, Courier New" font-weight="700"><tspan x="0" y="0">for </tspan><tspan y="0" letter-spacing="0.1em">(</tspan><tspan y="0">let i = 0; i &lt; 2; i+</tspan><tspan y="0" letter-spacing="0.1em">+</tspan><tspan y="0">) {</tspan><tspan x="0" y="101" xml:space="preserve">  console.log(i)</tspan><tspan x="0" y="202">}</tspan><tspan x="0" y="303">console.log(&quot;Done&quot;)</tspan></text></g><g transform="translate(185 168)" fill="none" stroke="#679ad1" stroke-width="8"><rect width="1551" height="465" rx="30" stroke="none"/><rect x="4" y="4" width="1543" height="457" rx="26" fill="none"/></g><text transform="translate(667 114)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Given this loop:</tspan></text><g transform="translate(0 843)"><rect width="694.413" height="88" transform="translate(0 995)" fill="#251f1d"/><path d="M1756.5,978.5l81.337,89.223H1756.5Z" transform="translate(-1062.087 8.777)" fill="#251f1d"/><g transform="translate(0 991)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(13 50)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(13 -17)" fill="#a3d882"/><rect width="88" height="15" transform="translate(5)" fill="#251f1d"/><rect width="89" height="11" transform="translate(0 78)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(34 63)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(53 30) rotate(180)" fill="#251f1d"/></g><text transform="translate(91 1060)" fill="#a3d882" font-size="66" font-family="ArialMT, Arial"><tspan x="0" y="0">5.2 For Loop Stages</tspan></text><line x2="694.25" transform="translate(0.5 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="81" y1="89" transform="translate(694.75 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g><g transform="translate(65 118.328)"><g transform="translate(0.129)"><line x2="1696.143" transform="translate(46.936 979.106)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1077.117)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1174.176)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1271.234)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1368.293)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1466.303)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.936 1561.742)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.871 786.989)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/><line x2="1696.143" transform="translate(46.871 883.668)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="8"/></g><line y2="991.224" transform="translate(1293.5 680.672)" fill="none" stroke="#707070" stroke-width="8"/><line y2="991.224" transform="translate(652.5 680.672)" fill="none" stroke="#707070" stroke-width="8"/><text transform="translate(973 756)" fill="#aadafb" font-size="64" font-family="CourierNewPS-BoldMT, Courier New" font-weight="700"><tspan x="-96.016" y="0">i</tspan><tspan y="0" xml:space="preserve" fill="#d4d4d4"> = </tspan><tspan y="0" fill="#bacdab">0</tspan><tspan x="-96.016" y="98">i</tspan><tspan y="98" xml:space="preserve" fill="#d4d4d4"> &lt; </tspan><tspan y="98" fill="#bacdab">2</tspan><tspan x="-268.844" y="196">console</tspan><tspan y="196" fill="#d4d4d4">.</tspan><tspan y="196" fill="#dcdcaf">log</tspan><tspan y="196" fill="#d4d4d4">(</tspan><tspan y="196">i</tspan><tspan y="196" fill="#d4d4d4">)</tspan><tspan x="-57.609" y="294">i</tspan><tspan y="294" fill="#d4d4d4">++</tspan><tspan fill="#bacdab"><tspan x="-96.016" y="392">1</tspan><tspan y="392" xml:space="preserve" fill="#d4d4d4"> &lt; </tspan><tspan y="392">2</tspan></tspan><tspan x="-268.844" y="490">console</tspan><tspan y="490" fill="#d4d4d4">.</tspan><tspan y="490" fill="#dcdcaf">log</tspan><tspan y="490" fill="#d4d4d4">(</tspan><tspan y="490">i</tspan><tspan y="490" fill="#d4d4d4">)</tspan><tspan x="-57.609" y="588">i</tspan><tspan y="588" fill="#d4d4d4">++</tspan><tspan fill="#bacdab"><tspan x="-115.219" y="686">i</tspan><tspan y="686" xml:space="preserve" fill="#d4d4d4"> &lt; </tspan><tspan y="686">2</tspan><tspan y="686" fill="#d4d4d4"> </tspan></tspan><tspan fill="#d4d4d4"><tspan x="0" y="784"></tspan></tspan><tspan font-size="50"><tspan x="-285.046" y="882">console</tspan><tspan y="882" fill="#d4d4d4">.</tspan><tspan y="882" fill="#dcdcaf">log</tspan><tspan y="882" fill="#d4d4d4">(</tspan><tspan y="882" fill="#c5947c">&quot;Done&quot;</tspan><tspan y="882" fill="#d4d4d4">)</tspan></tspan></text><text transform="translate(1329 757)" fill="#fff" font-size="64" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">i is 0</tspan><tspan x="0" y="98">0 &lt; 2 is true</tspan><tspan x="0" y="196">Log 0</tspan><tspan x="0" y="294">i is now 1</tspan><tspan x="0" y="392">1 &lt; 2 is true</tspan><tspan x="0" y="490">Log 1</tspan><tspan x="0" y="588">i is now 2</tspan><tspan x="0" y="686">2 &lt; 2 is false</tspan><tspan x="0" y="784"></tspan><tspan x="0" y="882">Log &quot;Done&quot;</tspan></text><text transform="translate(76 757)" fill="#c5947c" font-size="64" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">initialization</tspan><tspan fill="#679ad1"><tspan x="0" y="98">conditional check</tspan></tspan><tspan fill="#f8d949"><tspan x="0" y="196">loop body</tspan></tspan><tspan fill="#bc89bd"><tspan x="0" y="294">increment</tspan></tspan><tspan fill="#679ad1"><tspan x="0" y="392">conditional check</tspan></tspan><tspan fill="#f8d949"><tspan x="0" y="490">loop body</tspan></tspan><tspan fill="#bc89bd"><tspan x="0" y="588">increment</tspan></tspan><tspan fill="#679ad1"><tspan x="0" y="686">conditional check</tspan></tspan><tspan fill="#fff"><tspan x="0" y="784">Leave loop</tspan></tspan><tspan fill="#a3d882"><tspan x="0" y="882">outside code</tspan></tspan></text></g><text transform="translate(304 745)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Here’s exactly what would happen:</tspan></text></g></svg>
+
+<h2>Versatile Loops</h2>
+<p>
+  Now that you undertsand the basic structure, know that it's extremely flexible! We can start on any number, end on any number, and even go up <i>or down</i> by any number!
+</p>
+
+<h3>Loop through a string</h3>
+<p>
+  If you were wondering why I started on 0, this is why! A lot of things in JavaScript are 0-indexed, for example, strings. So, by using <code>i</code> and <em>bracket notation</em>, and the string's <code>length</code> property, we can iterate through a string.
+</p>
+
+<pre><code class="language-js">let str = "Howdy"
+for (let i = 0; i < str.length; i++) {
+  console.log(str[i])
+}
+</code></pre>
+<pre class="code-output">H
+o
+w
+d
+y
+</pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="oNyXLRd" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px">
+      <span>
+        To run this codepen, make sure you're connected to the internet
+        <a href="https://codepen.io/MostlyFocusedMike/pen/oNyXLRd"> 5.2 Loop String</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<p>
+  And that logic will work on <i>any</i> string because every string index starts at 0, and the loop will always stop 1 before the <code>length</code> property. Why 1 before? Because we're using <code>&lt;</code>, not <code>&lt;=</code>. The reason why that's so important is becuase if you try to reference an index of a string that doesn't exist with brackets, you'll just get <code>undefined</code>.
+</p>
+
+<h3>Up and Down Faster!</h3>
+<p>
+  While almost 99% of the time our loops will just go up by 1, there's no rule. You can go up by any value you like. Lets start at 1, and go up by 2, so we can log every odd number from 1 to 10.
+</p>
+
+<pre><code class="language-js">for (let i = 1; i < 10; i += 2) {
+  console.log(i)
+}
+</code></pre>
+<pre class="code-output">1
+3
+5
+7
+9
+</pre>
+
+<p>
+  By that same token, there's no need to only go <i>up</i> either. The increment section can also be used to <em>decrement</em> as well. Since i++ goes up by one, <code>i--</code> goes down by one. And no, it's just those two, there's no other shorthand. For anything else just use <code>i -=</code>. But let's do a count down! Look at how we alter our start and stop points!
+</p>
+
+<pre><code class="language-js">for (let i = 3; i > 0; i--) {
+  console.log(i)
+}
+console.log('GO!')
+</code></pre>
+<pre class="code-output">3
+2
+1
+GO!
+</pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="NWzqRRx" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
+      <span>To run this codepen, make sure you're connected to the internet <a href="https://codepen.io/MostlyFocusedMike/pen/NWzqRRx">
+      5.3 Up and Down Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h3>Break, Continue</h3>
+<p>
+  And last but not least, for loops have the ability to bail. If you use the <code>continue</code> keyword, the iteration will skip whatever was left inside, and the loop will move to the next iteration. Look how we use <code>continue</code> to log everything but 3.
+</p>
+
+<pre><code class="language-js">for (let i = 1; i < 6; i++) {
+  console.log('hi')
+  if (i === 3) {
+    continue
+  }
+  console.log(i)
+}
+console.log('Done')
+</code></pre>
+<pre class="code-output">hi
+1
+hi
+2
+hi
+hi
+4
+hi
+5
+Done
+</pre>
+
+<p>
+  But sometimes that's not enough. If you want to completely abandon not only the spot in the current iteration, but <i>all</i> iterations after that too, use <code>break</code> instead. Lets look like we'll loop up to 10, but bail out at after 5 with the <code>break</code> keyword.
+</p>
+
+<pre><code class="language-js">for (let i = 1; i < 10; i++) {
+  if (i === 6) {
+    break
+  }
+  console.log(i)
+}
+console.log('Done')
+</code></pre>
+<pre class="code-output">1
+2
+4
+5
+Done
+</pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="425" data-default-tab="js,result" data-slug-hash="dyKopRa" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 425px;">
+      <span>
+        To run this codepen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/dyKopRa"> 5.4 Break and Continue Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
+
+<h3>Return</h3>
+<p>
+  You can of course use loops in a function, and if you use <code>return</code> in a loop, it behaves a lot like <code>break</code>. Except instead of just bailing on the loop, anything outside the loop in the function gets skipped. Below, note that neither the looped 5 nor the "I should not appear" message get logged. We only see the 5 because we are logging the variable it got stored in.
+</p>
+
+<pre><code class="language-js">const loopAndGive5 = () => {
+  for (let i = 1; i < 10; i++) {
+    if (i === 5) {
+      return i
+    }
+    console.log(i)
+  }
+  console.log("I should not appear")
+}
+
+let five = loopAndGive5()
+console.log('OUTSIDE!')
+console.log('five here:', five)
+</code></pre>
+<pre class="code-output">1
+2
+3
+4
+OUTSIDE!
+five here: 5
+</pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="350" data-default-tab="js,result" data-slug-hash="bGKdwop" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 350px;">
+      <span>  To run this codepen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/bGKdwop">
+      Untitled</a> </span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </div>
+</div>
+
+<h2>YOU DID IT!</h2>
+<p>
+  Congratulations!!! That's all the coding knowledge you need (and more) to complete the <em>Marcy Lab Code Challenges</em>! I know it seems like a <i>ton</i> right now, but everyone always feels overwhelmed when getting into coding. Feel free to go over any lessons that confused you, sometimes seeing something a second time after a break can be a big help. But once you feel ready, I would recommend checking out the last mini-lesson about problem solving. It has great strategies about how to tackle code challenges, and also has some great online resources for further learning.
+</p>
+
 </article>
 </main>
 <nav id="bottom-nav">
@@ -21,6 +249,16 @@
   <a href="./index.html">Home</a>
   <a href="./6-problem-solving.html">Problem Solving &rarr;</a>
 </nav>
+<div id="resources">
+  <h2>More Resources</h2>
+  <a href="https://www.programiz.com/javascript/for-loop">In Depth For Loop Tutorial (Video/Article)</a>
+  <a href="https://www.w3schools.com/js/js_loop_for.asp">W3 Shools For/While Loops Tutorial (Article)</a>
+  <h3>More Advanced Topics</h3>
+  <a href="https://www.javascripttutorial.net/javascript-array/">What are JavaScript Arrays</a>
+  <a href="https://www.freecodecamp.org/news/how-to-loop-through-an-array-in-javascript-js-iterate-tutorial/">How to iterate through an Array</a>
+  <a href="https://www.freecodecamp.org/news/nesting-for-loops-in-javascript/">Nested For Loops with Arrays</a>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
   </body>
 </html>

@@ -68,13 +68,13 @@ pre.code-output {
   color: rgb(229, 255, 222);
   background: rgb(0, 38, 4);
 }
-
+/*
 svg {
   display: block;
   padding: 0;
   border-radius: .25rem;
   margin: 1rem 0;
-}
+} */
 
 h1, #sub-title {
   font-family: 'Roboto Condensed', sans-serif;
