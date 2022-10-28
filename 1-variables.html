@@ -109,23 +109,23 @@ let technicallyallowedbutconfusing = 😒</code></pre>
 </code></pre>
 
 <p>
-  There's also a <i>real</i> handy trick when doing simple math operations. Take this example:
+  There's also a <i>real</i> handy trick when doing simple math operations. When making a variable bigger, a variable can reference itself to calculate a new value. Take this example:
 </p>
 
-<pre><code class="language-js">a = 5
+<pre><code class="language-js">let a = 5
 a = a + 10
 </code></pre>
 
 <p>
-  We can do the same exact thing with a special operator:
+  Our variable <code>a</code> is now 15. I know the "referencing itself" thing is weird, but you get used to it. Anyway, there's actually a shortcut to do that same exact thing.
 </p>
 
-<pre><code class="language-js">a = 5
+<pre><code class="language-js">let a = 5
 a += 10
 </code></pre>
 
 <p>
-  And it's not just addition. The <code>+=</code>, <code>-=</code>, <code>/=</code>, and <code>*=</code> assignment operators are a great way to increment or decrement values.
+  Once again, <code>a</code> is now 15. And it's not just addition. The <code>+=</code>, <code>-=</code>, <code>/=</code>, and <code>*=</code> assignment operators are a great way to increment or decrement values.
 </p>
 
 <p>Obviously, you can do a <i>lot</i> with math and numbers in programming, but for our purposes this is good enough for now.</p>

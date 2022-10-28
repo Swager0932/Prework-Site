@@ -14,8 +14,151 @@
 <h1>Lesson 0: Getting Started</h1>
 <h2 id='sub-title'>Intro to Replit and Coding</h2>
 
-explain terms
-Syntax
+<p>
+  Welcome to the Marcy Lab Code Challenge Prep Course! In these next 6 lessons we're going to go over the fundamentals of JavaScript programming. Each lesson will feature blogs, videos, images, interactive samples, and even more resources for you to check out! In this lesson we're going to go over getting started with Repl.it, how to use these lessons, and some basic jargon. If you already know programming a bit, feel free to skip straight to the lessons!
+</p>
+
+<p>
+  But first, I just want to answer a question we get every year...
+</p>
+<h2>Is Googling Cheating?</h2>
+<p>
+  Let me say this in the clearest terms I can.
+</p>
+
+<p id="shout">
+  GOOGLING THINGS IS TOTALLY OK!!!
+</p>
+
+<p>
+  If you're brand new to programming, you're going to have questions. I'm good, but I can't exactly answer <i>every</i> question you have. If a question hits you, feel free to do a quick search and look it up. In fact, the last lesson is all about how to Google efficiently!
+</p>
+<p>
+  But don't worry, these lessons have everything you need for the challenges, so Googling shouldn't be <i>required</i>. Nice, now that that's taken care of, let's begin.
+</p>
+
+<h2>Getting started with Replit</h2>
+<p>
+  In order to actually submit your code challenge, you'll need to use <a href="https://replit.com/">Repl.it</a>. Which might lead you to wonder, "What is that?" Repl.it is a really intuitive site that lets you write code in a browser, and then run it. That means any internet connected device will let you edit code. Laptops, tablets, even phones will all work, though I recommend using a laptop or tablet because we'll need to use special characters. Check out the video below about how to get started with the site.
+</p>
+
+<p>CUSTOM VIDEO TO COME</p>
+<div class="video-container">
+  <iframe class="embed-video" src="https://www.youtube.com/embed/ZAC0TQEU5gI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<p>
+  We're going to use Replit while going through the lessons, but you'll also see that we have embedded, interactive code sections in the lessons themselves. Those are called Codepens, but more on those later.
+</p>
+
+<h2>How The Lesons Work</h2>
+<p>
+  Each lesson is going to feature a primary article and video. They will largely cover the same topics, the videos are just to help those who prefer to learn from videos instead of blogs. The articles themselves are very straightforward. But they have some features I just want to quickly go over.
+</p>
+
+<h3>Code Screens and Outputs</h3>
+<p>
+  Whenever we write code, it'll appear in a mini screen like this.
+</p>
+<pre><code class="language-js">let greeting = "Hello there!"
+console.log(greeting)
+</code></pre>
+
+<p>
+  And the output of that code (if there is any) may appear in an output window like this.
+</p>
+
+<pre class="code-output">Hello there!</pre>
+
+<p>
+  Sometimes though, if the output is very tiny, it might just be put as a note next to the original code.
+</p>
+
+<h3>CodePens</h3>
+<p>
+  Those windows are nice, but you can't activate the code. Enter <a href="https://codepen.io">CodePens</a>!
+</p>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="200" data-default-tab="js,result" data-slug-hash="BaVNQQZ" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 200px;">
+      <span>  To run this codepen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/bGKdwop">
+      Untitled</a> </span>
+    </p>
+    <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+  </div>
+</div>
+
+<p>
+  These are snippets of code that you can read, edit, and run. Since they need an internet connection to use, any code written in them will also be written above in a code screen. To edit them, simply tap the big "Run Pen" button in the "Result" window. If you are on a phone, they'll collapse into a single screen, so you'll need to click "JS" to edit the code, and "Result" to see outputs.
+</p>
+<p>
+  The code should automatically rerun when you edit it, but you can also click the "Rerun" button if it doesn't update. Though, if you have an error it may not tell you, so be sure to double check your code for typos if it stops running!
+</p>
+
+
+<div class="stripes aside-border">
+  <aside>
+    <h2 class="aside-header">CodePens Don't Save!</h2>
+    <hr />
+    <p>
+     Your codepen work only exists in <i>your</i> browser. If you ever edit something cool, be sure to copy it out into a Replit or some other file! <em>Otherwise it will be lost when you leave the page!</em>
+    </p>
+  </aside>
+</div>
+
+<h3>Resources Section</h3>
+<p>
+  At the end of each lesson there will be links to further readings and videos. These are <i>completely</i> optional. They cover the same material as the main articles. They're just there if you get confused and want another vantage point. Also, if you want to go beyond the lesson, there's usually some more advanced links as well.
+</p>
+
+<h2>Jargon Definitions</h2>
+<p>
+  Feel free to skip this, as most words are defined in context in lessons, but here are the definitions of some more programmy-words that you might run into
+</p>
+
+<h3>Dynamic/Static/Hard Coded</h3>
+<p>
+  Dynamic usually refers to information that can change. Like a function that greets people, the ability to change the names of the people it greets means its a dynamic function. Static means just the opposite: unable to change. And if a piece of information is static because we are explicitly writing it to be that way, you would say that the information is "hard coded" into the program.
+</p>
+
+<h3>Syntax</h3>
+<p>
+  This isn't <i>quite</i> the same thing as grammar that your used to. In programming, syntax refers to the exact way a piece of code is written. It's important because every language does have the same ideas, but they are expressed with different words and symbols.
+</p>
+
+<pre><code class="language-js">console.log('hi!')
+</code></pre>
+
+<p>
+  In C++ the syntax for the same idea would be
+</p>
+
+<pre><code class="language-clike">#include <iostream>
+int main() {
+    std::cout << "Hello World!";
+    return 0;
+}
+</code></pre>
+
+<p>
+  As you can see, JavaScript Syntax is a <i>bit</i> friendlier to beginners.
+</p>
+
+<h3>Iterations</h3>
+<p>
+  We're going to learn about loops. In a programming loop, if you want to do something 3 times, each of those individual chunks are called iterations. So you'd say the first iteration, then second iteration, and the third iteration would be the last.
+</p>
+
+<h3>Mutable/Immutable</h3>
+<p>
+  Mutable comes from the word Mutation, and it is a fancy pants way to say "something has the ability to change." If a piece of information is unable to change, it's said to be "immutable."
+</p>
+
+<h2>Are You Ready?</h2>
+<p>
+  That more than covers it! Let's get you started on your coding journey with Variables! Just use the links at the bottom to go to the next lesson. Let's GOOOOOOOOOOOOO!
+</p>
 
 </article>
 </main>
