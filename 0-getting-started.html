@@ -34,12 +34,12 @@
   If you're brand new to programming, you're going to have questions. I'm good, but I can't exactly answer <i>every</i> question you have. If a question hits you, feel free to do a quick search and look it up. In fact, the last lesson is all about how to Google efficiently!
 </p>
 <p>
-  But don't worry, these lessons have everything you need for the challenges, so Googling shouldn't be <i>required</i>. Nice, now that that's taken care of, let's begin.
+  But don't worry, these lessons have everything you need for the challenges, so Googling shouldn't be <i>required</i>. With taken care of, let's begin.
 </p>
 
 <h2>Getting started with Replit</h2>
 <p>
-  In order to actually submit your code challenge, you'll need to use <a href="https://replit.com/">Repl.it</a>. Which might lead you to wonder, "What is that?" Repl.it is a really intuitive site that lets you write code in a browser, and then run it. That means any internet connected device will let you edit code. Laptops, tablets, even phones will all work, though I recommend using a laptop or tablet because we'll need to use special characters. Check out the video below about how to get started with the site.
+  In order to actually submit your code challenge, you'll need to use <a href="https://replit.com/">Repl.it</a>. Which might lead you to wonder, "What is that?" Replit is a site that lets you write and "run" (that means activate) your code in a browser. Laptops, tablets, even phones will all work since it's browser based. Check out the video below about how to get started with the site.
 </p>
 
 <p>CUSTOM VIDEO TO COME</p>
@@ -47,13 +47,9 @@
   <iframe class="embed-video" src="https://www.youtube.com/embed/ZAC0TQEU5gI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </div>
 
+<h2>How The Lessons Work</h2>
 <p>
-  We're going to use Replit while going through the lessons, but you'll also see that we have embedded, interactive code sections in the lessons themselves. Those are called Codepens, but more on those later.
-</p>
-
-<h2>How The Lesons Work</h2>
-<p>
-  Each lesson is going to feature a primary article and video. They will largely cover the same topics, the videos are just to help those who prefer to learn from videos instead of blogs. The articles themselves are very straightforward. But they have some features I just want to quickly go over.
+  Each lesson is going to feature a primary article and video. They will largely cover the same topics, the videos are just to help those who prefer to learn from videos instead of blogs. Real quick though, I want to introduce some article features.
 </p>
 
 <h3>Code Screens and Outputs</h3>
@@ -90,7 +86,7 @@ console.log(greeting)
 </div>
 
 <p>
-  These are snippets of code that you can read, edit, and run. Since they need an internet connection to use, any code written in them will also be written above in a code screen. To edit them, simply tap the big "Run Pen" button in the "Result" window. If you are on a phone, they'll collapse into a single screen, so you'll need to click "JS" to edit the code, and "Result" to see outputs.
+  These are snippets of code that you can read, edit, and run. Since they need an internet connection to use, any code written in them will also be written above in a code screen as well. To edit CodePens, simply tap the big "Run Pen" button in the "Result" window. If you are on a phone, they'll collapse into a single screen, so you'll need to click "JS" to edit the code, and "Result" to see outputs.
 </p>
 <p>
   The code should automatically rerun when you edit it, but you can also click the "Rerun" button if it doesn't update. Though, if you have an error it may not tell you, so be sure to double check your code for typos if it stops running!
@@ -102,36 +98,31 @@ console.log(greeting)
     <h2 class="aside-header">CodePens Don't Save!</h2>
     <hr />
     <p>
-     Your codepen work only exists in <i>your</i> browser. If you ever edit something cool, be sure to copy it out into a Replit or some other file! <em>Otherwise it will be lost when you leave the page!</em>
+     Your CodePen work only exists in <i>your</i> browser. If you ever edit something cool, be sure to copy it out into a Replit or some other file! <em>Otherwise it will be lost when you leave the page!</em>
     </p>
   </aside>
 </div>
 
 <h3>Resources Section</h3>
 <p>
-  At the end of each lesson there will be links to further readings and videos. These are <i>completely</i> optional. They cover the same material as the main articles. They're just there if you get confused and want another vantage point. Also, if you want to go beyond the lesson, there's usually some more advanced links as well.
+  At the end of each lesson there will be links to articles and videos. These are <i>completely</i> optional. They cover the same material as the main articles. They're just there if you get confused and want another vantage point. Also, if you want to go beyond the lesson, there's usually some more advanced links as well.
 </p>
 
 <h2>Jargon Definitions</h2>
 <p>
-  Feel free to skip this, as most words are defined in context in lessons, but here are the definitions of some more programmy-words that you might run into
-</p>
-
-<h3>Dynamic/Static/Hard Coded</h3>
-<p>
-  Dynamic usually refers to information that can change. Like a function that greets people, the ability to change the names of the people it greets means its a dynamic function. Static means just the opposite: unable to change. And if a piece of information is static because we are explicitly writing it to be that way, you would say that the information is "hard coded" into the program.
+  Most words are defined in context in their lessons, but here are the definitions of some more "programmy" words you might be unfamiliar with.
 </p>
 
 <h3>Syntax</h3>
 <p>
-  This isn't <i>quite</i> the same thing as grammar that your used to. In programming, syntax refers to the exact way a piece of code is written. It's important because every language does have the same ideas, but they are expressed with different words and symbols.
+  This isn't <i>quite</i> the same thing as grammar version that you know. In programming, syntax refers to the exact way a piece of code is structured. It's important because every language does have the same ideas, but they are expressed with different words and symbols. Here's a JavaScript example:
 </p>
 
 <pre><code class="language-js">console.log('hi!')
 </code></pre>
 
 <p>
-  In C++ the syntax for the same idea would be
+  And that exact same code in In C++ has this syntax instead:
 </p>
 
 <pre><code class="language-clike">#include <iostream>
@@ -142,17 +133,32 @@ int main() {
 </code></pre>
 
 <p>
-  As you can see, JavaScript Syntax is a <i>bit</i> friendlier to beginners.
+  As you can see, JavaScript Syntax is a <i>bit</i> better for beginners.
+</p>
+
+<h3>The Console</h3>
+<p>
+  We need somewhere to see our programs' output. Since we're only making text based programs, the output wont be something like a website. Instead it will be the "Console." As far as we're concerned the console is just a screen to print things onto. Replit and CodePen both have screens to show you exactly what you print.
+</p>
+
+<h3>Debug</h3>
+<p>
+  Most of programming is actually just fixing broken programs. When we are trying to figure out why something isn't working, that's called "debugging." You will spend a <i>vast</i> majority of your time debugging if you become a developer.
+</p>
+
+<h3>Dynamic/Static/Hard Coded</h3>
+<p>
+  "Dynamic" refers to information that can change. Like a function that greets people, its ability to change the names of the people it greets means its a dynamic function. "Static" means the opposite: unable to change. And if a piece of information is static because we are explicitly writing it to be that way, you would say that the information is "hard coded" into the program.
 </p>
 
 <h3>Iterations</h3>
 <p>
-  We're going to learn about loops. In a programming loop, if you want to do something 3 times, each of those individual chunks are called iterations. So you'd say the first iteration, then second iteration, and the third iteration would be the last.
+  In a programming loop, if you want to do something 3 times, each of those individual steps are called "iterations". So you'd say the first iteration, then the second iteration, and the third iteration would be the last.
 </p>
 
 <h3>Mutable/Immutable</h3>
 <p>
-  Mutable comes from the word Mutation, and it is a fancy pants way to say "something has the ability to change." If a piece of information is unable to change, it's said to be "immutable."
+  "Mutable" comes from the word mutation, and it is a fancy way to say "something has the ability to change." If a piece of information is unable to change, it's said to be "immutable" instead.
 </p>
 
 <h2>Are You Ready?</h2>

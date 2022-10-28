@@ -15,7 +15,7 @@
 <h2 id='sub-title'>How To Save Actions</h2>
 
 <p>
-  When it comes to actually <i>doing</i> something with programming, you're going to need a <code>Function</code>. A function is simply a reusable chunk of code that carries out some action. You can write your own like this:
+  When it comes to actually <i>doing</i> something with programming, you're going to need a <code>Function</code>. A function is simply a reusable chunk of code that carries out some action. You can put any code you want into a function, and you write them like this:
 </p>
 
 <pre><code class="language-js">// First, we define it
@@ -25,10 +25,11 @@ const square = (number) => {
 
 // then we call it!
 square(4)
-// This gives us 16</code></pre>
+// This gives us 16
+</code></pre>
 
 <p>
-  Or, you can use pre-defined functiona provided by JavaScript. Let's start by logging something to our console output using the <code>console</code> object's <code>log</code> function (using the dot notation we just learned about)!
+  Or, you can use pre-defined functions provided by JavaScript. Let's start by logging something to our console using the <code>console</code> object's <code>log</code> function (using the dot notation we just learned about)!
 </p>
 
 <pre><code class="language-js">// We can log raw values
@@ -36,14 +37,14 @@ console.log('Hello there!')
 console.log(12)
 console.log(true)
 
-// we can also log variables!
+// we can also log variables
 let city = 'New York City'
 console.log(city)
 
-// Print multilpe values by using commas
+// Print multiple values by using commas
 console.log('I live in', city)</code></pre>
 
-But you know what? We can <i>finally</i> do better than written examples. Let's use an interactive codepen!
+But you know what? We can <i>finally</i> do better than just code screens. Let's use an interactive CodePen!
 
 <div class="codepen-container">
   <div class="codepen-spacer">
@@ -55,20 +56,21 @@ But you know what? We can <i>finally</i> do better than written examples. Let's 
     </p>
   </div>
 </div>
+
 <p>
-  Like you learned about in lesson 0, feel free to modify the code on the left, and see the output change in the "Result" window. It should auto run on changes, but you can also hit the "Rerun" button if you don't see your changes. Just be sure to be connected to the internet!
+  Like you learned about in lesson 0, feel free to modify the code on the left, and see the output change in the "Result" window. It should auto run on changes, but you can also hit the "Rerun" button if you don't see your changes.
 </p>
 
 <h2>Calling Functions</h2>
 
 <p>
-  Before we bother defining our own functions, let's just go through how to call some of the pre-existing functions that JavaScript gives us. In order to <code>call</code> (or "run" or "activiate" or "invoke") a function, you simply tack a pair of <code>()</code> onto the end of the function's name. If the function needs extra pieces of information (called <code>Arguments</code>) to work, you put those pieces in between the <code>()</code>.
+  Before we bother defining our own functions, let's go through how to call some of the pre-existing functions that JavaScript gives us. In order to <code>call</code> (or "run" or "invoke") a function, you simply tack a pair of <code>()</code> onto the end of the function's name. If the function needs extra pieces of information, called <code>Arguments</code>, you put those pieces in between the <code>()</code>.
 </p>
 
 <h3>console.log in depth</h3>
 
 <p>
-  So, as we already explained, we're accessing the <code>log</code> function on the <code>console</code> object. The console.log function takes any number of <code>aguments</code> and then logs them to the screen.
+  So, as we already explained, we're accessing the <code>log</code> function on the <code>console</code> object. The console.log function takes any number of <code>arguments</code> and then logs each one to the screen.
 </p>
 
 <pre><code class="language-js">// This is the function name
@@ -86,7 +88,7 @@ console.log('Hello', "there", "friend")
 </code></pre>
 
 <p>
-  console.log is going to be your best friend while you learn how to program JavaScript. The ability to log multiple things makes debugging, or fixing, your programs a lot easier. By using a string argument as a label, you can pass in a variable as a second object to make sure it is what you think it's supposed to be.
+  console.log is going to be your best friend while you learn how to program. The ability to log multiple things makes debugging, or fixing, your programs a lot easier. By using a string argument as a label, you can pass in a variable as a second object to make sure it is what you think it's supposed to be.
 </p>
 
 <pre><code class="language-js">let city = undefined
@@ -101,14 +103,14 @@ console.log('City:', city)
   <div class="codepen-spacer">
     <p class="codepen" data-height="225" data-default-tab="js,result" data-slug-hash="XWYWXqG" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 225px;">
       <span>
-        To run this codepen, make sure you're connected to the internetinternet.
+        To run this codepen, make sure you're connected to the internet.
         <a href="https://codepen.io/MostlyFocusedMike/pen/XWYWXqG">Debugging Practice</a>
       </span>
     </p>
   </div>
 </div>
 <p>
-  The label is really helpful because if a value is ever undefined, console.log simply won't print it anything <i>unless</i> you include another argument. Plus, you'll likely have a lot of console.logs while you're working (I certainly do), so the labels keep things organized. Just a little tip from a pro for ya!
+  The label is really helpful because if a value is ever <code>undefined</code>, console.log simply won't print anything. <i>Except</i> when you include another argument. Plus, you'll likely have a lot of console.logs while you're working (I certainly do), so the labels keep things organized.
 </p>
 
 <h2>Defining Functions</h2>
@@ -128,7 +130,7 @@ Ok now that we know how to call existing functions, let's learn how to write our
 
 <h3>Breaking it all down</h3>
 <p>
-  Right off the bat we can see that the first part with the name is just like our last lesson! That's on purpose. Think of a variable like a piece of twine on the wall. The variable name can point that line at anything it wants. It could be a piece of data, but it could also be a function. Though, if a variable points to a function, we just call it a function for simplicity. You don't have to say "my function variable" or anything like that, it's only a function.
+  Right off the bat we can see that the first part with the name is just like our last lesson! That's on purpose. Think of a variable like a piece of twine on the wall. The variable name can point that line at anything it wants. It could be a piece of data, but it could also be a function. If a variable points to a function, we just call it a function for simplicity. You don't have to say "my function variable" or anything like that.
 </p>
 
 <div class="pattern aside-border">
@@ -136,34 +138,34 @@ Ok now that we know how to call existing functions, let's learn how to write our
     <h2 class="aside-header">The New Hotness</h2>
     <hr />
     <p>
-      There's actually an older way to define a function using a special <code> function</code> keyword, but it has some secret bagage we don't want to deal with right now. So, we won't use it yet. But, in case you see the older syntax in online tutorials, here's how to convert it into the newer <em>Arrow Function</em> syntax.
+      There's an older way to define a function using a special <code> function</code> keyword, but it has some secret baggage we don't want to deal with right now. So, we won't use it yet. But, in case you see the older syntax in online tutorials, here's how to convert it into the modern <em>Arrow Function</em> syntax.
     </p>
-    <pre><code class="language-js">// Here's the old way
-function myOlderFunction (myParameter) {
+    <pre><code class="language-js">function myOlderFunction (myParameter) {
   return myParameter
 }
 
 // Which is the same as this
 const myNewFunction = (myParameter) => {
-  return myParamenter
+  return myParameter
 }</code></pre>
     <p>
-      Fun fact, the new way is called an arrow function because we use a little arrow (<em>=></em>) when defining them.
+      Fun fact, it's called an arrow function because we use a little arrow (<em>=></em>) when defining them.
     </p>
   </aside>
 </div>
+
 <p>
-  Now let's take a closer look at each part of the function
+  Let's take a closer look at each part of the function.
 </p>
 
 <h3>The Name</h3>
 <p>
-  Strictly speaking, this is the exact same logic as our variable lesson. However, you might notice here that I'm using const instead of <code>let</code>. That's on purpose. Since our variables <i>might</i> need to change, we just stick with <code>let</code> for simplicity. But a function should <i>never, ever</i> change. So, we're using <code>const</code> to keep those guardrails up. Think of it like easing into using <code>let</code> and <code>const</code> like the pros!
+  You might notice here that I'm using const instead of <code>let</code>. That's on purpose. Since our variables <i>might</i> need to change, we just stick with <code>let</code> for simplicity. But a function assignment should never, <i> ever</i> change. So, we're using <code>const</code> to keep those guardrails up. Think of it like easing into using <code>let</code> and <code>const</code> like the pros.
 </p>
 
 <h3>The Parameters</h3>
 <p>
-  When passing values into our called function, we call the data <em>Arguments</em>, but whe we're dealing with those values in our function definition, we call them <em>Parameters</em>. Think of <em>Parameters</em> like little mini variables that we only use in our function. They are not required, but they are the main way to get information into a function.
+  When passing values into our called function, we call the data <em>Arguments</em>, but when we're dealing with those values in our function <i>definition</i>, we call them <em>Parameters</em>. Think of <em>Parameters</em> like mini variables that we only use in our function. They are not required, but they are the main way to get information into a function.
 </p>
 <pre><code class="language-js">// Here our parameters are
 // num1 and num2
@@ -175,7 +177,7 @@ const add = (num1, num2) => {
 add(2,4)
 </code></pre>
 <p>
-  Parameters need names, and they go inside the <code>()</code>. When there's more than one you separate them out with commas. Parameters can be any value, and you reference them by using their name, just like variables. Parameters only exist inside the function, you can't use them outside the function they are defined in.
+  Parameters need names, and they go inside the <code>()</code>. When there's more than one you separate them out with commas. Parameters can be any data type. Parameters only exist inside the function, you can't use them outside the function they are defined in.
 </p>
 
 <pre><code class="language-js">const add = (num1, num2) => {
@@ -191,15 +193,15 @@ NO! BAD! THAT WILL BREAK!
 </p>
 <h3>The Function Body</h3>
 <p>
-  This is the actual meat of the function, it's anything within the <code>{}</code>. When we call the function, any of the code inside will be activated and run. However, it won't do anything *until* you call it, so keep that in mind!
+  This is the actual meat of the function, it's anything within the <code>{}</code>. When we call the function, it's the code that runs. On the flip side, it won't do anything <i>until</i> you call it either.
 </p>
 <p>
-  To tell what is or isn't inside a function, always indent one level (that means hit the <em>tab key</em> on your keyboard once). Most editors will do this for you when you press enter actually.
+  To tell what is or isn't inside a function, always indent one level (that means hit the <em>tab key</em> on your keyboard once). Most editors will automatically do this for you when you press enter.
 </p>
-<h3>The Return Value</h3>
 
+<h3>The Return Value</h3>
 <p>
-  Functions don't <i>have</i> to return anything, like console.log, but sometimes it's helpful if they do. The return value of a function is created by using the <code>return</code> keyword. Any value to the right of the <code>return</code> keyword will be what the function itself returns. This value can be used just like any of the other values we learned about in the previous lesson.
+  Functions don't <i>have</i> to return anything, but sometimes it's helpful if they do. The return value of a function is created by using the <code>return</code> keyword. Any value to the right of the <code>return</code> keyword will be what the function itself returns. This value can be used just like any of the other values we learned about in the previous lesson.
 </p>
 
 <pre><code class="language-js">const add = (num1, num2) => {
@@ -250,7 +252,7 @@ const add = (num1, num2) => {
 const add = (num1, num2) => num1 + num2
 </code></pre>
     <p>
-      It's a neat little trick, but don't feel pressured to use it. I'm only bringing it up becuase it's a <i>popular</i> trick, and I don't want you to get confused if you see it in some other tutorials. Don't panic, they didn't forget the <code>{}</code>, they did it on purpose!
+      It's a neat little trick, but don't feel pressured to use it. I'm only bringing it up because it's a <i>popular</i> trick, and I don't want you to get confused if you see it in some other tutorials. Don't panic, they didn't forget the <code>{}</code>, they did it on purpose.
     </p>
   </aside>
 </div>
