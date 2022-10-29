@@ -46,7 +46,6 @@ em {
 }
 
 pre code {
-  /* these should be overriden but default if styles can't be loaded */
   display: inline-block;
   padding: 0.1rem;
   color: white;
