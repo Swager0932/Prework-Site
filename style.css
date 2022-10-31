@@ -20,6 +20,7 @@ ul {
   top: 0;
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: 1000;
 }
 /* Logo */
 .logo{
@@ -35,6 +36,7 @@ ul {
   width: 100%;
   height: fit-content;
   position: fixed;
+  top: 3rem;
   background-color: var(--black);
   overflow: hidden;
   max-height: 0;
@@ -91,24 +93,24 @@ ul {
 .side-menu:checked ~ nav{
   max-height: 100%;
 }
-.side-menu:checked ~ .hamb .hamb-line {
+.side-menu:checked + .hamb .hamb-line {
   background: transparent;
 }
-.side-menu:checked ~ .hamb .hamb-line::before {
+.side-menu:checked + .hamb .hamb-line::before {
   transform: rotate(-45deg);
   top:0;
 }
-.side-menu:checked ~ .hamb .hamb-line::after {
+.side-menu:checked + .hamb .hamb-line::after {
   transform: rotate(45deg);
   top:0;
 }
-.hid-nav {
+.mobl-nav {
   display: block;
 }
 
 /* Laptop styles */
 @media (min-width: 768px) {
-  .hid-nav {
+  .mobl-nav {
     display: none;
   }
   .nav{
@@ -154,7 +156,7 @@ h1 {
 
 main {
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   max-width: 45rem;
 }
 
@@ -261,6 +263,10 @@ aside {
   border-radius: .25rem;
 }
 
+article a {
+  text-decoration: underline;
+}
+
 .stripes {
   background: repeating-linear-gradient(
     45deg,
@@ -327,6 +333,7 @@ hr.divider {
 #bottom-nav {
   background: white;
   margin: 1rem 0;
+  text-decoration: underline;
   padding: 1rem 0;
   text-align: center;
   font-size: 1.25rem;
