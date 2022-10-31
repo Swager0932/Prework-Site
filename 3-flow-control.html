@@ -337,6 +337,32 @@ console.log(msg);
   There, our code now does exactly the same thing, but it's easier on the eyes! When you change the way code is written, but still leave it's functionality alone, that's called <em>refactoring</em>.
 </p>
 
+<h2>Return vs else</h2>
+<p>
+  There's a another case were we don't need an <code>else</code> statement and that's when we're returning in a function. As you know, the <code>return</code> keyword causes us to skip whatever was left in the function. So if you are returning conditionally, then you may not need an <code>else</code>.
+</p>
+
+<pre><code class="language-js">const petOpinion = (pet) => {
+  if (pet === 'cat') {
+    return "My favorite pet!"
+  } else {
+    return "Your pet is meh."
+  }
+}
+
+// that's the same as:
+const petOpinion = (pet) => {
+  if (pet === 'cat') {
+    return "My favorite pet!"
+  }
+  return "Your pet is meh."
+}
+</code></pre>
+
+<p>
+  We don't need the <code>else</code> statement in this case because if we hit the <code>return</code> in the "cat" conditional, we're getting out of the function anyway. It just keeps our function a little cleaner.
+</p>
+
 <h2>Multiple conditionals</h2>
 <p>
   So we have one conditional per block, yes, but what about a second conditional? Don't you worry, we have special operators to deal with combinations.

@@ -31,7 +31,276 @@
 <article>
 
 <h1>Lesson 6: Problem Solving</h1>
-<h2 id='sub-title'>How To Get Unstuck</h2>
+<h2 id='sub-title'>Code Challenge Tutorial</h2>
+<p>
+  It would be safe to assume that most of you have never had to solve a coding challenge before. This lesson is going to step through a problem from start to finish. We'll go over how to Google questions, as well as explain what kind of resources you should be looking for, along with some good sites to get you started. We're using a code challenge as a frame of reference, but all these strategies will work on any coding problem you face.
+</p>
+
+<h2>What do you get?</h2>
+<p>
+  When it comes to code challenges, they can vary quite a bit. But <i>usually</i> you will get something along the lines of:
+</p>
+
+<ul class="list">
+  <li><em>Description:</em> The problem explained in words.</li>
+  <li><em>Argument info:</em> What data will you be supplied with</li>
+  <li><em>Return request:</em> What is your function returning?</li>
+  <li><em>Examples:</em> A few sample input to try and understand what's happening</li>
+</ul>
+
+<p>
+  Sometimes the first three are squashed together, sometimes you don't get examples. Every company is different in the real world, but all of the above are what we're providing for this challenge, so you should be all set. Let's take a look at our sample problem below now.
+</p>
+
+<h2>The Problem</h2>
+<div id="question-1">
+
+  <h3>Question 1: Ouija()</h3>
+  <blockquote>
+    Write a function <code class="snip">ouija</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>.
+  The function should <em>RETURN</em> a random letter character from the given word each time. The case from the word character should be match in the return value. If a string has no valid return characters, return an empty string.</blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>word</td>
+        <td>String</td>
+        <td>A string consisting of <i>only</i> upper and lowercase letters</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <p>When you enter this code:</p>
+      <pre><code class="language-js">console.log(ouija('Spooky'))
+console.log(ouija('Spooky'))
+console.log(ouija('Spooky'))
+console.log(ouija('Spooky'))
+console.log(ouija(''))
+console.log(ouija('A'))
+console.log(ouija('A'))</code></pre>
+      <p>You should see something like this</p>
+      <pre class="code-output">o
+y
+o
+S
+
+A
+A</pre>
+    </aside>
+  </div>
+  </div>
+
+<h2>Step 1: The Question</h2>
+<p>
+  The key to solving any problem is to make sure you understand the problem. Whenever you are given a task, always read it at least twice. Before moving on, make sure you understand <i>exactly</i> what is being asked of you. The test to see if you understand a problem is to restate it using your own words. So for this problem, I would say:
+</p>
+
+<blockquote>
+  We're going to write a function called Ouija, and it only takes in a single word as an argument. It will return a single random character from the string, and it will match the case. So if the string is all capitals, the return will always be capital, and vice-versa. If the word passed in is an empty string, then that's what we return, an empty string. We aren't going to worry about punctuation or spaces because the prompt argument data said the string will only be letters.
+</blockquote>
+
+<p>
+  Remember, if you do not understand the question, you can never come up with the solution. This step sets us up for success.
+</p>
+
+<h2>Step 2: Solve as human</h2>
+<p>
+  Now that we know the problem, it's time to try and find <i>a</i> solution. And that's important. Not <i>the</i> solution, just <em>any</em> solution. When solving a question for the first time, it's much easier to improve a working answer than it is to theoretically come up with the <i>best</i> answer the first time.
+</p>
+<p>
+  We are just going to focus on coming up with any logically working strategy by using our words. <em>Do not code yet</em>. Think about how you would solve the problem as a human first. What I mean by that is, if I literally told you to do this without a computer what would you do?
+</p>
+<h3>The human solution</h3>
+<p>
+  If I was asked by someone to look at a word and say a random letter, how would I do it?  If I was handed an empty word, I'd just say nothing. But if I got a real word, I would look at each letter of the word, and then to "randomize" it, I would just sort of ping-pong between them for a bit, and then I would just say one. Here are the steps I would do:
+</p>
+
+<ul class="list">
+  <li>Read the word</li>
+  <li>if it's empty, say nothing</li>
+  <li>otherwise, I'd look at the letters and randomly pick one</li>
+  <li>I would then say that letter</li>
+</ul>
+
+<h2>Step 3: Convert to pseudo-code</h2>
+<p>
+  OK! That previous step is <i>critical</i> because it means that if we as a human could come up with an answer, then so could a robot! They just have some limitations. Now all we have to do is think about the steps we took as a human. We still aren't coding yet, just sort of using words as pseudo code. No need for syntax, only rough, logical ideas.
+</p>
+
+<h3>"Read the word"</h3>
+<p>
+  Computers don't read with their eyes, but they can take in arguments for their functions. So this is the part where we pass in the argument. Ok, so step one is "pass in the word as an argument."
+</p>
+
+<h3>"If it's empty..."</h3>
+<p>
+  Alright, so how does a computer know a word is empty? Well, all strings have length right? So, an empty string probably has a length of 0. Alright, so we check if the string has a length of 0 and if it does, then lets "say nothing" by returning an empty string. That's what the prompt asked for, and the return lets us avoid the rest of the function.
+</p>
+
+<h3>"Read it an pick a random letter"</h3>
+<p>
+  Ok, so here's our first real sort of limitation. Computers can't just load in a word and "know" where all the letters are. They would have to iterate through it letter by letter. But that seems like a waste of time. I just need to pick a single, random letter. So what if we could pick a random index (ie a number) and then return whatever character is there? Ah, but I can't just pick <i>any</i> random number, if I overshoot the last index, I'll return <code>undefined</code>. So, it sounds like what I would need is the ability to pick a random number from 0 to the last index of the word.
+</p>
+<p>
+  Hm. We didn't teach that you that did we? That's ok though, because the ability to: "pick a random number between 0 and the last index" seems like something a computer could absolutely do. So let's assume it can for now, and move on.
+</p>
+<h3>"Say the letter"</h3>
+<p>
+  This is easy, whatever number we picked randomly, we'll just return the value at that index of the string. Done! Ok, so let's see our "code" answer below:
+</p>
+
+<table>
+  <thead>
+    <th>Human solution</th>
+    <th>Robot solution</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Read the word</td>
+      <td>Pass in the word as an argument</td>
+    </tr>
+    <tr>
+      <td>if it's empty, say nothing</td>
+      <td>If the string has no length, return the string</td>
+    </tr>
+    <tr>
+      <td>Otherwise, look at the letters and randomly pick one</td>
+      <td>Otherwise, find a random number from 0 to the last index of the string</td>
+    </tr>
+    <tr>
+      <td>Say the letter</td>
+      <td>Return the value at the random index of the string</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>Move on to solving</h3>
+<p>
+  There you go! That's more than enough to get us going. It's ok that we don't even know how to actually solve that, because we can just Google things for this challenge. The whole point of this strategy is to have a game plan, something to focus on enacting.
+</p>
+
+<h2>Step 3: Make Checkpoints</h2>
+<p>
+  Now that we have a plan, we need to set some markers so we know we're making progress. This is important because we want to show our interviewer that even if we didn't make it to the end, at least we were on some path.
+</p>
+<p>
+  When determining a checkpoint, you want each one to build on the last, and possibly answering questions along the way. Each checkpoint must return or log some concrete value. The goal of each checkpoint is direct progress or answering a question.
+</p>
+
+<table>
+  <thead>
+    <th>Checkpoint</th>
+    <th>Goal</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Call the function, and always return the word</td>
+      <td>We see a return value of the word</td>
+    </tr>
+    <tr>
+      <td>Return "" for empty words, <code>false</code> otherwise</td>
+      <td>We know our conditional statement is correct</td>
+    </tr>
+    <tr>
+      <td>console.log a random, valid index if the word exists</td>
+      <td>Figure out how random works with JavaScript</td>
+    </tr>
+    <tr>
+      <td>Return random letter</td>
+      <td>Last check point means we're done!</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Step 4: Code!</h2>
+<p>
+  Pretty crazy that we don't touch the keyboard until step 4 right? Well that's because, if you do it right, the coding isn't usually that actual hard part. If you come up with a logical solution, then the coding is just translating and debugging.
+</p>
+
+<h3>Check 1</h3>
+<p>
+  To prove it, let's knock off our first checkpoint. We'll call the function with some different inputs so we can make sure we spelled everything correctly and have some info for the later steps.
+</p>
+
+<pre><code class="language-js">const ouija = (word) => {
+  return word
+}
+
+console.log(ouija("abc")) // a lowercase letter
+console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("")) // ""
+console.log(ouija("A")) // A
+</code></pre>
+
+<p>
+  There, now to start off, some of our examples may be outputting the wrong thing, but we've got good edgecases to text with. Also, I put the comments there since this is a tutorial, but don't feel like you have to literally write things down if you don't want. There's only 4 tests so it should be easy to track outputs.
+</p>
+
+<h3>check 2</h3>
+<p>
+  Now, let's add a conditional check to only return the word if there's no length and <code>false</code> otherwise. That's a wrong return value, but that's ok, it's not sticking around. We just need to see that we log "" (which looks like nothing) correctly, compared to false.
+</p>
+
+<pre><code class="language-js">const ouija = (word) => {
+  if (!word.length) {
+    return word
+  }
+  return false
+}
+
+console.log(ouija("abc")) // a lowercase letter
+console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("")) // ""
+console.log(ouija("A")) // A
+</code></pre>
+
+<p>
+  Does that answer make sense to you? <code>word.length</code> will only be 0 if it's empty. That's also the only <code>falsy</code> number. Conditionals only fire for <code>true</code> though, so that's why we use the bang operator to flip it. If that's confusing to you, go check out lesson 3 again. Specifically: truthy and falsy numbers, inverting boolean values, and not needing else cases with return.
+</p>
+
+<h3>check 3</h3>
+<p>
+  We'll have to put a pin in this, because this is the checkpoint were we don't know what to do! So now it's time to Google! Obviously, if you were in an interview where Googling is not allowed, then you'd have to find another solution. But for Marcy, as stated, GOOGLING IS TOTALLY FINE. You may not need it for the application questions, but you it's still a crucial skill to have, so let's talk about it!
+</p>
+
+<h2>How to Google Questions</h2>
+<p>
+  When it comes to googling questions, the name of the game is specificity. You want to ask very focused questions, so that you don't get lost in the internet. So let's talk about formatting. If our question in normal-speak is:
+</p>
+
+<blockquote>How do I make a random number in javascript between 0 and one less than the final length of the sting?</blockquote>
+
+<p>
+  So let's edit that. Our final goal is this format:
+</p>
+
+<pre><code class="language-js">[Language] | how to | short question</code></pre>
+
+<p>
+  The trickiest part is "shortening" our question. So "how do I make a random number" becomes "get random number", ditch the "in javascript" because we put that at the start. And "between 0 and one less than the length of the string" needs some work. Let's think about it. Technically, "one less than the length of the string" just boils down to a number. so what we're really asking is "Between 0 and another number." And actually, we don't care about 0 either. Yes, we know that we'll need it for our problem, but if we can find a random number between 2 numbers, then we could just swap the first for 0 and the second for length - 1. So we <i>really</i> only need "between 2 numbers.""
+</p>
+<p>
+  Whew! Ok let's see what we got:
+</p>
+<pre><code class="language-js">js how to get random number between 2 numbers</code></pre>
+
+<p>
+  Look how much shorter that is! And just a little tip from a pro: between 2 numbers has a fancy name in programming, it's called <em>a range</em>. So, if we really wanted we'd do:
+</p>
+
+<pre><code class="language-js">js how to get random number from range </code></pre>
 
 </article>
 </main>
