@@ -238,9 +238,14 @@ h3 {
 aside h2 {
   font-size: 1.5rem;
 }
+
 article {
   background: white;
   padding: 1.5rem ;
+}
+
+article p {
+  line-height: 1.75rem;
 }
 
 aside {
