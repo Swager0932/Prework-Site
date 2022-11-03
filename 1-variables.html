@@ -34,18 +34,18 @@
 <h1>Lesson 1: Variables</h1>
 <h2 id='sub-title'>How To Save Information</h2>
 <p>
-In programming, we need ways to save and reuse pieces of information. Like a character's name or their age. One way we can store data is by using a <em>variable</em>. Here is an example of a variable called <code>myMood</code> that has a value of <code>Happy</code>:
+In programming, we need ways to save and reuse pieces of info. One way we can store data is by using a <em>variable</em>. Here is an example of a variable called <code>myMood</code> that has a value of <code>Happy</code>:
 </p>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080"><defs><clipPath id="b"><rect width="1920" height="1080"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1920" height="1080" fill="#1e1e1e"/><text transform="translate(133 480)" fill="#679ad1" font-size="136" font-family="CourierNewPS-BoldMT, Courier New" font-weight="700"><tspan x="0" y="0">let</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#aadafb">myMood</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#d4d4d4">=</tspan><tspan y="0" fill="#707070"> </tspan><tspan y="0" fill="#c5947c">“Happy”</tspan></text><g transform="translate(130 338)" fill="none" stroke="#679ad1" stroke-width="7"><rect width="266" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="259" height="200" rx="42.5" fill="none"/></g><g transform="translate(429 338)" fill="none" stroke="#aadafb" stroke-width="7"><rect width="553" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="546" height="200" rx="42.5" fill="none"/></g><g transform="translate(1179 338)" fill="none" stroke="#c5947c" stroke-width="7"><rect width="612" height="207" rx="46" stroke="none"/><rect x="3.5" y="3.5" width="605" height="200" rx="42.5" fill="none"/></g><line y2="77.5" transform="translate(263 546.25)" fill="none" stroke="#679ad1" stroke-linecap="round" stroke-width="5"/><text transform="translate(59 724)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Use the </tspan><tspan y="0" fill="#679ad1" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic">let</tspan><tspan y="0" xml:space="preserve"> or </tspan><tspan y="0" fill="#679ad1" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic">const</tspan><tspan y="0" fill="#679ad1"> </tspan><tspan x="0" y="98">keyword to declare </tspan><tspan x="0" y="196">a variable </tspan></text><line y1="86" transform="translate(710.5 252)" fill="none" stroke="#aadafb" stroke-width="5"/><text transform="translate(278 136)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Every variable needs a</tspan><tspan fill="#aadafb" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic"><tspan x="0" y="98">name</tspan><tspan y="98" xml:space="preserve" fill="#fff" font-family="ArialMT, Arial" font-weight="400" font-style="normal"> in order to use it</tspan></tspan></text><line y2="77.5" transform="translate(1484.5 546.25)" fill="none" stroke="#c5947c" stroke-linecap="round" stroke-width="7"/><text transform="translate(1090 713)" fill="#fff" font-size="85" font-family="ArialMT, Arial"><tspan x="0" y="0">Every variable has a</tspan><tspan fill="#c5947c" font-family="Arial-BoldItalicMT, Arial" font-weight="700" font-style="italic"><tspan x="0" y="98">value</tspan><tspan y="98" fill="#fff" font-family="ArialMT, Arial" font-weight="400" font-style="normal">, here it’s the </tspan></tspan><tspan x="0" y="196">string of text “Happy”</tspan></text><g transform="translate(0 991)"><path d="M30.5,0C47.345,0,61,13.208,61,29.5S0,45.792,0,29.5,13.655,0,30.5,0Z" transform="translate(13 50)" fill="#a3d882"/><path d="M61,29.5C61,45.792,47.345,59,30.5,59S0,45.792,0,29.5,61,13.208,61,29.5Z" transform="translate(13 -17)" fill="#a3d882"/><rect width="88" height="15" transform="translate(5)" fill="#1e1e1e"/><path d="M0,0H89V11H0Z" transform="translate(0 78)" fill="#1e1e1e"/><path d="M9.5,0,19,17H0Z" transform="translate(34 63)" fill="#251f1d"/><path d="M9.5,0,19,17H0Z" transform="translate(53 29) rotate(180)" fill="#251f1d"/></g><text transform="translate(93 1066)" fill="#a3d882" font-size="80" font-family="ArialMT, Arial"><tspan x="0" y="0">1.1 Declare a Variable</tspan></text><line x2="878.163" transform="translate(0.5 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="81" y1="89" transform="translate(878.663 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g></svg>
 
 <p>
-  As you can see, the name of the variable is <code>myMood</code> and then we set it equal to <code>"Happy"</code> using the <code>=</code> symbol. But what's that <code>let</code> doing out in the front? In JavaScript, in order to <em>declare</em>, or "create", a variable you have to use a special keyword first. The modern options are <code>let</code> or <code>const</code>.
+  See how we set the value of <code>myMood</code> by using the <code>=</code> operator. But what's that <code>let</code> doing out in the front? In JavaScript, in order to <em>declare</em>, or "create", a variable you have to use a special keyword first. The two modern options are <code>let</code> or <code>const</code>.
 </p>
 
-<h3><code>let</code> Allows Change</h3>
+<h3><code>let</code> allows change</h3>
 <p>
-  If we don't mind if the variable changes its value, for example <code>100</code> to <code>101</code>, then we use the <code>let</code> keyword.
+  If it's ok for the variable to change its value, for example <code>100</code> to <code>101</code>, then we use the <code>let</code> keyword.
 </p>
 
 <pre><code class="language-js">let myNumber = 100
@@ -53,24 +53,25 @@ myNumber = 101
 </code></pre>
 
 <p>
-  Notice that when we change the variable's value, we do <b>not</b> use another let keyword. We only use the <code>let</code> keyword once.
+  Notice that when we changed the variable's value, we <b>didn't</b> use another <code>let</code> keyword. We only use the <code>let</code> keyword once.
 </p>
 
-<h3><code>const</code> Means Constant</h3>
+<h3><code>const</code> means constant</h3>
 <p>
   If we want to lock the value in and never change it, we would use the <code>const</code> keyword.
 </p>
 
 <pre><code class="language-js">const myNumber = 100
 myNumber = 101
-THIS WILL THROW AN ERROR IT WILL NOT WORK
+THIS WILL THROW AN ERROR
 </code></pre>
 
-<h3>So which to use <code>let</code> or <code>const</code>?</h3>
+<h3>So which to use?</h3>
 <p>
-  My personal recommendation is to take it easy on yourself and mostly stick to <code>let</code> when your starting out. <code>const</code> errors from reassigning aren't hard to spot, but when starting out "simple" problems can still get annoying. Once you're more comfortable, you can start using <code>const</code> properly, but don't worry if you want to use <code>let</code> exclusively for now.
+  I recommend you stick to <code>let</code> when you're starting out. <code>const</code> reassigning errors aren't hard to spot, but "simple" problems are still annoying. Once you're more comfortable, you can start using <code>const</code> properly, but <code>let</code> is ok for variables now.
 </p>
 
+<h3>No using before declaring!</h3>
 <p>
   Regardless of <code>let</code> or <code>const</code>, don't forget that you can't reference a variable <i>before</i> you've actually created it!
 </p>
@@ -105,13 +106,13 @@ let technicallyallowedbutconfusing = 😒</code></pre>
 <h2>Data Types</h2>
 
 <p>
-  So far we've only used numbers or text for our variables, but that's not the only things we can store. In Programming, there are many different kinds of <em>data types</em> that we can store, but here are some of the simple ones to start us off.
+  So far we've only used numbers or text for our variables, but those aren't the only things we can store. There are many different kinds of <em>data types</em> in JavaScript, but here are some of the simple ones to start us off.
 </p>
 
 <h3>Numbers</h3>
 
 <p>
-   Unlike other programming languages, JavaScript has one main <code>Number</code> type. It doesn't care if a number is a whole number (called an "Integer") or a decimal (sometimes referred to as a "Float"). That's great for us!
+  JavaScript only has one main <code>Number</code> type. Both whole numbers (called "Integers") and decimals (called "Float") are just <code>Numbers</code>.
 </p>
 
 <pre><code class="language-js">12
@@ -119,7 +120,7 @@ let technicallyallowedbutconfusing = 😒</code></pre>
 </code></pre>
 
 <p>
-  You can also do math with JavaScript, here are some of the basic operations:
+  You can also do math with JavaScript. Here are some of the basic operations:
 </p>
 
 <pre><code class="language-js">+ = addition
@@ -129,7 +130,7 @@ let technicallyallowedbutconfusing = 😒</code></pre>
 </code></pre>
 
 <p>
-  There's also a <i>real</i> handy trick when doing simple math operations. When making a variable bigger, a variable can reference itself to calculate a new value.
+  But unlike math, variables can reference themselves. When making a variable bigger, it can check its current value to calculate a new value.
 </p>
 
 <pre><code class="language-js">let a = 5
@@ -137,7 +138,7 @@ a = a + 10
 </code></pre>
 
 <p>
-  Our variable <code>a</code> is now 15. I know the "referencing itself" thing is weird, but you get used to it. Anyway, there's a shortcut to do that same exact thing.
+  Our variable <code>a</code> is now 15. I know the "referencing itself" thing is weird, but you get used to it. It's so common, there's a special shortcut operator.
 </p>
 
 <pre><code class="language-js">let a = 5
@@ -145,15 +146,13 @@ a += 10
 </code></pre>
 
 <p>
-  Once again, <code>a</code> is now 15. Basically, The <code>+=</code>, <code>-=</code>, <code>/=</code>, and <code>*=</code> assignment operators are a great way to increment or decrement values efficiently.
+  Once again, <code>a</code> is now 15. Basically, The <code>+=</code>, <code>-=</code>, <code>/=</code>, and <code>*=</code> assignment operators are a great way to increment or decrement values.
 </p>
-
-<p>Obviously, you can do a <i>lot</i> with math and numbers in programming, but for our purposes this is good enough for now.</p>
 
 <h3>Strings</h3>
 
 <p>
-  In JavaScript a piece of text is called a <code>String</code>. A string is a weird name for text, but think about it like a piece of text is a bunch of individual characters "strung" along one after the other. Strings are created by putting anything between either double (") or single quotes('). Either one is fine, just make sure they match!
+  In JavaScript a piece of text is called a <code>String</code>. It's a "string" because a piece of text is like a bunch of individual characters "strung" together. Strings are created by putting anything between double (") or single quotes('). Either is fine, just make sure they match!
 </p>
 
 <pre><code class="language-js">let string = "I am a string"
@@ -161,48 +160,39 @@ let otherString = 'So Am I'
 </code></pre>
 
 <p>
-  The only tricky thing with strings at this stage is dealing with words like "don't". Be sure to use double quotes for the whole string so JavaScript will know you don't want the string to end at the apostrophe.
+  The only tricky thing with strings at this stage is dealing with words like "don't". Be sure to use double quotes for the whole string so JavaScript doesn't end it at the apostrophe.
 </p>
-
-
-<pre><code class="language-js">let tricky = "I'm using double quotes"</code></pre>
-
-<div class="pattern aside-border">
-  <aside>
-    <h2 class="aside-header">There Is Another...</h2>
-    <hr />
-    <p>Using quotes is great, but there's a problem. What if we wanted to put a piece of data into a string that <i>changes</i>? There's actually a <i>another</i> way to make strings with dynamic parts, but you'll learn about that later. Stay tuned!</p>
-  </aside>
-</div>
 
 <h3>Booleans</h3>
 
 <p>
-  That is a wonky name, but it's just what we call <code>true</code> and <code>false</code> in programming. Also called a "bool" for short. In JavaScript, bools are lowercase. And don't put them in quotes, they aren't text, they're actual values.
+  That is a wonky name, but it's just what we call <code>true</code> and <code>false</code>. Also called a "bool" for short. In JavaScript, bools are lowercase. Don't put them in quotes, they aren't text, they're actual values.
 </p>
 
 <pre><code class="language-js">let myBoolean = true
 myBoolean = false</code></pre>
 
 <p>
-  Booleans are primarily used for something called <em>Flow Control</em>, which is how a program decides whether or not to do something.
+  Bools are for something called <em>Flow Control</em>, but more on that in Lesson 3!
 </p>
 
 <h3>Undefined and Null</h3>
 
 <p>
-  Sometimes the value we want to save is ...no value. Just like with numbers, where it's useful to have a value for nothing (0), with variables you sometimes want to explicitly say a value is nothing. Not 0, but actually nothing. That's what <code>undefined</code> and <code>null</code> are. There is a difference between them, but it's irrelevant for now.
+  Sometimes the value we want to save is ...no value. That's what <code>undefined</code> and <code>null</code> are. There is a difference between them, but it's irrelevant for now.
 </p>
 
 <pre><code class="language-js">let nothing = undefined
 let alsoNothing = null
 </code></pre>
+
+<h3>Undefined errors</h3>
 <p>
-  At this stage in the game, we likely aren't going to intentionally use either of them, however it's good for you to know about <code>undefined</code>. Sometimes when JavaScript expects something but gets nothing, the value will show up as <code>undefined</code>. This is your hint that something is going wrong in your program and you should investigate further.
+  Sometimes when JavaScript expects something but gets nothing, the value will show up as <code>undefined</code>. This is your hint that something is going wrong in your program and you should investigate further.
 </p>
 
 <h3>Comments</h3>
-<p>These aren't really a <i>data type</i> exactly, but they are useful. A <code>comment</code> is a chunk of text that is not seen by the program. It's useful for writing notes to yourself or your team members. Comments are an excellent way to keep relevant information about the program next to the source code, just be careful not to overdo it.
+<p>These aren't really a <i>data type</i> exactly, but they are useful. A <code>comment</code> is a chunk of text that is not seen by the program. It's useful for writing notes to yourself or your team members.
 </p>
 
 <pre><code class="language-js">// I am a single line comment
@@ -216,21 +206,19 @@ let alsoNothing = null
 // you can also stack
 // single line comments
 // together like this
-// (This is more common)
+// (This is more precise)
 </code></pre>
-
-If you're wondering why the stacked single line comments are more common, it's a good question. The reason is because most code editing programs have a special command to comment out highlighted code, and going line by line allows for much more precision.
 
 <div class="pattern aside-border">
   <aside>
     <h2 class="aside-header">A Quick Peek Ahead</h2>
     <hr />
     <p>
-      There are 2 slightly more complex data types called <code>Objects</code> and <code>Arrays</code>. An <code>Array</code> is simply a list of things.
+      There are 2 slightly more complex data types called <code>Objects</code> and <code>Arrays</code>. An <code>Array</code> is a list of things.
     </p>
     <pre><code class="language-js">let people = ['Bob', 'Sara', 'Jake']</code></pre>
     <p>
-      They're great, but we don't need them yet. The one we will <i>kind</i> of need is the          <code>Object</code>. An <code>Object</code> is a bunch of key and value pairs. Where a <em>key</em> (usually called a <em>property</em>) points to a specific <em>value</em>.
+      They're great, but we don't need them yet. The one we will <i>kind</i> of need is the <code>Object</code>. An <code>Object</code> is a bunch of key and value pairs. Where a <em>key</em> (usually called a <em>property</em>) points to a specific <em>value</em>.
     </p>
     <p>
       Or to put it another way, use <em>dot notation</em> with a <em>property name</em> to get a <em>value</em>.
@@ -247,14 +235,139 @@ bob.age
 bob.isCool
 // and of course this would be true</code></pre>
     <p>
-      We will not be writing any objects ourselves just yet, however, we will be using some properties of objects that JavaScript gives us. All you really need to know is: <em>to access a value on an object, put a "." and then the property name</em>. Don't worry, you'll understand better when we need to use them for real later on.
+      We will not be writing any objects ourselves just yet, we'll only read some built in objects that JS gives us. Remember, <em>to access a value on an object, put a "." and then the property name</em>.
     </p>
   </aside>
 </div>
 <br>
 <h2>Moving on: Functions!</h2>
 <p>
-  Now that know how to save values, but what about saving actions? Let's learn about <code>Functions</code> next! This lesson was boring, I know, but once we have functions at our fingertips, we can use interactive examples. This was easily the most boring lesson, but it's over now!
+  Now that know how to save values, but what about saving actions? Let's learn about <code>Functions</code> next! In fact, maybe try using the <code>console.log</code> function below with the practice problems?
+</p>
+
+<h3>Optional Practice Problems</h3>
+<p>
+  Try to solve these problems! Copy the following code into a new Replit (that way you'll keep them as notes) and give them a try!
+</p>
+<div class="stripes aside-border">
+  <aside>
+    <h2 class="aside-header">console.log</h2>
+    <hr />
+    <p>
+      Heads up! Lesson 2 covers the <code>console.log</code> function, but for now, just know that any variable inside the <code>()</code> gets written to the console output. We'll need it to actually see our variables!
+    </p>
+    <pre><code class="language-js">let example = "Just like this!"
+console.log(example)</code></pre>
+  </aside>
+</div>
+
+
+<pre><code class="language-js">/*
+------------------------------
+Use const to make a variable called myName
+set it to a String of your own name
+then log it to the screen
+*/
+
+console.log() // console.log(myName)
+
+/*
+------------------------------
+Use let to create a variable
+called isCool and set it to false,
+then on a new line, reassign it to true
+log the final value to the screen
+*/
+
+console.log() // console.log(isCool)
+
+/*
+------------------------------
+Look at the commented out code
+Remove the // and you will see:
+
+"TypeError: Assignment to constant variable."
+
+How can we fix this?
+*/
+
+// const isError = false
+// isError = true
+
+/*
+------------------------------
+Look at the commented out code.
+Remove the // and you will see:
+
+"ReferenceError: Cannot access
+'backwards' before initialization"
+
+What order should these lines be in?
+*/
+
+// console.log(backwards)
+// let backwards = 'Uh oh.'
+
+/*
+------------------------------
+Look at this commented out code,
+we're getting an error:
+
+"SyntaxError: Unexpected identifier"
+
+How can we fix the variable name?
+*/
+
+// let my cat = "Henry"
+
+/*
+------------------------------
+Use let to create a variable
+myNumber that's equal to a number
+and log it to the screen
+*/
+
+console.log()
+
+/*
+------------------------------
+Using a += operator,
+make the given variable twelve
+actually equal 12
+then log it out
+*/
+let twelve = 5
+
+console.log(twelve)
+
+/*
+------------------------------
+Set a variable equal to the String:
+
+Well, aren't I complicated?
+
+and log it to the screen
+*/
+
+console.log()
+
+/*
+------------------------------
+BONUS CHALLENGE
+Given this object, log ONLY
+the "model" property to the screen
+*/
+
+let myCar = {
+  company: 'Toyota',
+  model: 'Corolla',
+  isHybrid: true,
+  year: 2021,
+}
+
+console.log(myCar)</code></pre>
+<p>
+  After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-1-Practice-Set#index.js">the answer Replit</a>
 </p>
 </article>
 </main>
