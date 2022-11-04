@@ -470,6 +470,28 @@ console.log(msg)
   If your pet is a dog but it's name isn't "fido", then that <code>if statement</code> won't fire.
 </p>
 
+<h3>Number ranges</h3>
+<p>
+  You'll probably need at least 1 <code>&&</code> operator when starting number ranges. For example: we want "low" if the number is between 0 and 100, "med" if it's between 100 and 200, "high" if it's 200 and 300, and then "off scale" for all bigger or negative numbers
+</p>
+
+<pre><code class="language-js">if (num >= 0 && num < 101) {
+  console.log('low')
+} else if (num < 201) {
+  console.log('med')
+} else if (num < 301) {
+  console.log('high')
+} else {
+  console.log('off scale')
+}</code></pre>
+
+<p>
+  We need the <code>&&</code> in the first block to knock out negative numbers, but then we only need the exclusive ends for the other conditions. You certainly could do something like <code>num >= 100 && num < 201</code>, it's just redundant.
+</p>
+<p>
+  By the way, 0..101 is shorthand for "include the first number and go up to but <i>don't</i> include the second."
+</p>
+
 <h3>Give it a whirl!</h3>
 <p>
   In the CodePen below, can you make the first message run if <code>age</code> is over 18 AND <code>hasCar</code> is true? Then, can you log the second message if either <code>isFunny</code> or <code>isFamous</code> is true?
@@ -489,6 +511,136 @@ console.log(msg)
 <p>
   Now that we have optional programming down, why don't we try to do some more interesting things with our messages. We barely understand how strings work and we can't even make them dynamic yet. Let's change that and learn how manipulate strings!
 </p>
+
+
+<h3>Optional Practice Problems</h3>
+<p>
+Copy the following code into a new Replit and give them a try!
+</p>
+
+<pre><code class="language-js">/*
+---------------------------
+Build a statement that logs
+"Hello" if time equals "morning"
+and "Goodbye" otherwise
+*/
+
+let time = "morning"
+
+/*
+---------------------------
+Build a statement that logs
+"My buddy" if myName is 'Bart',
+"My friend" if myName is 'Lisa', and
+"Stranger Danger!" otherwise
+*/
+
+let myName = 'greg'
+
+/*
+---------------------------
+Make it so that the variable
+willClean is true if
+messLevel is bigger than 50
+or myMood is "clean"
+*/
+
+let messLevel = 73
+let myMood = "hungry"
+
+let willClean
+console.log('willClean', willClean)
+
+/*
+---------------------------
+Make it so that the variable
+isNiceDay is true if
+humidity is below 75 and
+workLoad is "light"
+*/
+
+let humidity = 68
+let workLoad = "light"
+
+let isNiceDay
+console.log('isNiceDay', isNiceDay)
+
+/*
+---------------------------
+In this function, how could
+we remove the else statement?
+*/
+
+const getGreeting = (time) => {
+  if (time === 'morning') {
+    return 'Good Morning!'
+  } else {
+    return 'Hello!'
+  }
+}
+
+console.log(getGreeting('night'))
+
+/*
+---------------------------
+What's the if condition we'd need
+to make it so that myMood
+is "happy" UNLESS the weather
+is rainy?
+*/
+
+let mood = 'happy'
+let weather = 'rainy'
+if () {
+
+}
+console.log('mood', mood)
+
+/*
+---------------------------
+How can we achieve the same
+effect, but only use console.log
+once? Maybe...a variable?
+*/
+
+let day = 'monday'
+
+if (day === 'monday') {
+  console.log("Oof.")
+} else if (day === "tuesday") {
+  console.log("Not the worst")
+} else if (day === "wednesday") {
+  console.log("Halfway there.")
+} else if (day === "thursday") {
+  console.log("Underrated day.")
+} else {
+  console.log("It's a good day!")
+}
+
+/*
+---------------------------
+Make it so that the variable
+isFaveNumbers is true if
+number is between 1 and 10,
+or 1..11
+*/
+
+let number = 7
+let isFaveNumber
+
+console.log('isFaveNumber', isFaveNumber)
+/*
+---------------------------
+Build a statement that logs
+"low" if num is 1..4,
+"med" if num is 4..7,
+"high" if num is 7..11, and
+"off scale" otherwise
+*/
+
+let num = 3
+</code></pre>
+After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-3-Practice-Set#index.js" target="_blank" rel="noopener noreferrer">the answer Replit</a>.
 
 </article>
 </main>
