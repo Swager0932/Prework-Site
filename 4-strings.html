@@ -306,9 +306,34 @@ console.log(am) // Am
   </div>
 </div>
 
+<h3>Negative numbers and slice</h3>
 <p>
-  Now do you see why the <code>.slice()</code> method would work so well with the <code>capitalize()</code> function?
+  What happens if you use a negative number as an index? With normal brackets, you get <code>undefined</code>, but with slice, you count backwards.
 </p>
+
+<pre><code class="language-js">let str = 'word'
+str.slice(-1) // d
+str.slice(-2) // rd
+str.slice(-3) // ord
+str.slice(-4) // word
+
+// great for not including
+// end characters
+str.slice(0, -1) // wor
+str.slice(0, -2) // wo
+str.slice(0, -3) // w
+str.slice(0, -4) // ''
+</code></pre>
+
+<div class="codepen-container">
+  <div class="codepen-spacer">
+    <p class="codepen" data-height="350" data-default-tab="js,result" data-slug-hash="abKZRQY" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 350px;">
+      <span>
+        To run this CodePen, make sure you're connected to the internet<a href="https://codepen.io/MostlyFocusedMike/pen/abKZRQY">Negative Slice Practice</a>
+      </span>
+    </p>
+  </div>
+</div>
 
 <h3>.includes()</h3>
 <p>
@@ -394,6 +419,110 @@ const doesContain = (mainStr, searchStr) => {
 <p>
   Alas, our little journey together is almost at an end. Only one more "code" lesson left, But I think I saved the best for last: Loops! Let's use them to do things over and over again, without typing!
 </p>
+
+<h3>Optional Practice Problems</h3>
+<p>
+Copy the following code into a new Replit and give them a try!
+</p>
+
+<pre><code class="language-js">/*
+---------------------------
+Write a template string
+that says "I love pizza!"
+using the food variable
+*/
+
+let food = "pizza"
+let lovePizza = ``
+console.log(lovePizza)
+
+/*
+---------------------------
+write a template string
+that says "Hello Sara and Jo!"
+using the friend variables
+*/
+
+let friend1 = "Sara"
+let friend2 = "Jo"
+let greeting = ``
+console.log(greeting)
+
+/*
+---------------------------
+complete the function getGreeting
+so that it takes in a name,
+and prints out "Hello [NAME]!"
+*/
+
+const getGreeting = () => {
+
+}
+
+getGreeting()
+
+/*
+---------------------------
+complete the function findLength
+that prints out the length of a
+passed in string
+*/
+
+const findLength = () => {
+
+}
+
+findLength("How long?")
+
+/*
+---------------------------
+complete the function getFirstChar
+that returns the first character
+of a passed in string
+*/
+
+const getFirstChar = () => {
+
+}
+
+console.log(getFirstChar('Flying'))
+
+/*
+---------------------------
+complete the function hasLaugh
+that returns true if the given
+string has 'haha' inside it.
+The given string is ALL LOWERCASE
+*/
+
+const hasLaugh = () => {
+
+}
+
+console.log('hahaha', hasLaugh('hahaha'))
+console.log('nope', hasLaugh('nope'))
+
+/*
+---------------------------
+complete the function weirdify
+which takes a string and
+- capitalizes the first and last letter
+- adds dashes between the middle of the
+  word and the first and last letter
+- a dash to the beginning and end
+- prints that to the screen
+
+so loOol prints "-L-oOo-L-"
+*/
+
+const weirdify = () => {
+}
+
+weirdify('loOol')
+weirdify('neat')
+
+</code></pre>
+After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-4-Practice-Set#index.js" target="_blank" rel="noopener noreferrer">the answer Replit</a>.
 </article>
 </main>
 <nav id="bottom-nav">
