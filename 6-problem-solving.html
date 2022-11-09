@@ -389,9 +389,100 @@ console.log(ouija("A")) // A
 
 <h3>Good Luck!</h3>
 <p>
-  And that's all we have for now! Feel free to check out the resources section for a list on good sites and videos, but you're ready for the challenges now!
+  And that's all we have for now! Feel free to check out the resources section for a list on good sites and videos, but you're ready for the challenges now! If you still want some more practice, give the problems below a try, and then check the answer Replit.
 </p>
 
+<h3>Practice Code Challenge</h3>
+<div id="question-1">
+  <h3>Question 1: overflowWord()</h3>
+  <blockquote>
+    <p>
+      Write a function <code class="snip">overflowWord</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>. if the <code>word</code> has <i>fewer than</i> 9 characters, RETURN the entire <code>word</code>. If the <code>word</code> is 9 characters or more, RETURN the first 8 characters and then "..." instead of the rest of the <code>word</code>.
+    </p></blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>word</td>
+        <td>String</td>
+        <td>A single word of upper and lowercase letters, without spaces</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <p>When you enter this code:</p>
+      <pre><code class="language-js">console.log(overflowWord('absolute'))
+console.log(overflowWord('Splendiferous'))</code></pre>
+      <p>You should see this in the console:</p>
+      <pre class="code-output">absolute
+Splendif...</pre>
+    </aside>
+  </div>
+</div>
+<hr class="divider" />
+
+<div id="question-2">
+  <h3>Question 2: triangleSlices()</h3>
+  <blockquote>
+    <p>
+      Write a function <code class="snip">triangleSlices</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>. This function should iterate through the word, and print a "triangle" of text. The way it will do this is starting with only the first character, each line will have one more character of the <code>word</code> printed. The last line will have the entire word.
+    </p></blockquote>
+
+  <table>
+    <caption>Argument Info</caption>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>word</td>
+        <td>String</td>
+        <td>A single word of upper and lowercase letters, without spaces</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="pattern aside-border">
+    <aside>
+      <h2 class="aside-header">Example Code</h2>
+      <hr />
+      <p>When you enter this code:</p>
+      <pre><code class="language-js">console.log(triangleSlices('Interesting'))</code></pre>
+      <p>You should see this in the console:</p>
+      <pre class="code-output">I
+In
+Int
+Inte
+Inter
+Intere
+Interes
+Interest
+Interesti
+Interestin
+Interesting</pre>
+    </aside>
+  </div>
+</div>
+<hr class="divider" />
+<p>
+  After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-6-Practice-Set#index.js" target="_blank" rel="noopener noreferrer">the answer Replit</a>.
+</p>
 </article>
 </main>
 
@@ -399,8 +490,12 @@ console.log(ouija("A")) // A
   <a href="./5-loops.html">&larr; Loops</a>
   <a href="./index.html">Home</a>
   <a href="./application-questions.html">Challenges &rarr;</a>
-
 </nav>
+<div id="resources">
+  <h2>More Resources</h2>
+  <a href="https://www.youtube.com/watch?v=vLL4mvVL8g0" target="_blank" rel="noopener noreferrer">5 Essential Debugging Tips</a>
+  <a href="https://www.youtube.com/watch?v=UFc-RPbq8kg&list=LL&index=3&t=331s" target="_blank" rel="noopener noreferrer">Problem-Solving for Developers</a>
+</div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>

@@ -34,6 +34,10 @@
 <h1>Lesson 2: Functions</h1>
 <h2 id='sub-title'>How To Save Actions</h2>
 
+<div class="video-container">
+  <iframe class="embed-video" src="https://www.youtube.com/embed/gw7BhDbuPv4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <p>
   When it comes to actually <i>doing</i> something with programming, you're going to need a <code>Function</code>. A function is simply a reusable chunk of code that carries out some action. You can put any code you want into a function, and you write them like this:
 </p>
@@ -193,7 +197,18 @@ const add = (num1, num2) => {
 add(2,4)
 </code></pre>
 <p>
-  Parameters go inside the <code>()</code>. When there's more than one you separate them out with commas. Parameters can be any data type, but they only exist inside the function.
+  Parameters go inside the <code>()</code>. When there's more than one you separate them out with commas. If there <i>are</i> no parameters, you still need to use <code>()</code> when defining and calling the function.
+</p>
+
+<pre><code class="language-js">const greet = () => {
+  console.log("Hey!")
+}
+
+greet()
+</code></pre>
+
+<p>
+  Parameters can be any data type, but they only exist inside the function.
 </p>
 
 <pre><code class="language-js">const add = (num1, num2) => {
@@ -460,7 +475,9 @@ const repeat = (message) => {
 
 console.log(repeat())
 </code></pre>
-After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-2-Practice-Set#index.js" target="_blank" rel="noopener noreferrer">the answer Replit</a>.
+<p>
+  After you give it a real try, check <a href="https://replit.com/@MostlyFocused/Lesson-2-Practice-Set#index.js" target="_blank" rel="noopener noreferrer">the answer Replit</a>.
+</p>
 </article>
 </main>
 <nav id="bottom-nav">

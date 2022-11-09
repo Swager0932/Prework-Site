@@ -65,3 +65,17 @@ const onlyOddsOrEvens = (number) => {
     console.log(i)
   }
 }
+
+const noVowels = (word) => {
+  let vowels = 'aeiouAEIOU'
+  for (let i = 1; i < word.length; i++) {
+    let character = word[i]
+    if (vowels.includes(character)) {
+      continue
+    }
+    console.log(character)
+  }
+}
+
+noVowels('Anyway')
+noVowels('Evidently')
