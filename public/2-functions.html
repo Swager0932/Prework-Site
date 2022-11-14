@@ -24,7 +24,6 @@
       <li class="mobl-nav"><a href="./3-flow-control.html" rel="noopener noreferrer">Lesson 3: Flow Control</a></li>
       <li class="mobl-nav"><a href="./4-strings.html" rel="noopener noreferrer">Lesson 4: Strings</a></li>
       <li class="mobl-nav"><a href="./5-loops.html" rel="noopener noreferrer">Lesson 5: Loops</a></li>
-      <li class="mobl-nav"><a href="./6-problem-solving.html" rel="noopener noreferrer">Lesson 6: Problem Solving</a></li>
       <li class="mobl-nav"><a href="./application-questions.html" rel="noopener noreferrer">Application Questions</a></li>
     </ul>
   </nav>
@@ -240,7 +239,7 @@ NO! BAD! THAT WILL BREAK!
 
 <h3>The Return Value</h3>
 <p>
-  Functions don't <i>have</i> to return anything, but they can. The return value of a function is created by using the <code>return</code> keyword. This returned value can be used like any of the other values we learned about in the previous lesson.
+  Sometimes we want to use a function to create a value and, instead of logging it, save it to a variable. In order to get values out of our functions, we need to use the <code>return</code> keyword. Look how we use <code>add()</code> to set the value of the <code>oneHundred</code> variable.
 </p>
 
 <pre><code class="language-js">const add = (num1, num2) => {
@@ -251,6 +250,10 @@ console.log(add(4,5))
 
 let oneHundred = add(50,50)
 console.log(oneHundred)</code></pre>
+
+<p>
+  The value is now saved to a variable, so we will have access to it <i>without</i> having to re-call the function. If we just did <code>console.log(add(50,50))</code>, we'd have to keep calling <code>add()</code> every time we wanted <code>100</code>. By returning a value, we can call <code>add()</code> once, and reference the stored variable instead.
+</p>
 
 <p>
   Once you use <code>return</code> that's it, that's the end of the function. Any code written after <code>return</code> simply wont run.
@@ -274,6 +277,10 @@ testReturn()</code></pre>
     </p>
   </div>
 </div>
+
+<p>
+
+</p>
 
 <div class="pattern aside-border">
   <aside>

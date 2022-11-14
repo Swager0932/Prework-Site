@@ -24,7 +24,6 @@
       <li class="mobl-nav"><a href="./3-flow-control.html" rel="noopener noreferrer">Lesson 3: Flow Control</a></li>
       <li class="mobl-nav"><a href="./4-strings.html" rel="noopener noreferrer">Lesson 4: Strings</a></li>
       <li class="mobl-nav"><a href="./5-loops.html" rel="noopener noreferrer">Lesson 5: Loops</a></li>
-      <li class="mobl-nav"><a href="./6-problem-solving.html" rel="noopener noreferrer">Lesson 6: Problem Solving</a></li>
       <li class="mobl-nav"><a href="./application-questions.html" rel="noopener noreferrer">Application Questions</a></li>
     </ul>
   </nav>
@@ -40,7 +39,7 @@
 </div>
 
 <p>
-  Most programs change their behavior based off of a set of different inputs. There are many ways to alter actions, but one of the most universal is the <code>If/Else Statement</code>.
+  Most programs change their behavior based off of a set of different inputs. There are many ways to alter actions, but one of the most universal is the <code>if/else statement</code>.
 </p>
 <pre><code class="language-js">const sayMood = (myMood) => {
   if (myMood === "Happy") {
@@ -78,7 +77,7 @@ sayMood('Happy')
 
 <ul class="list">
   <li>
-    An <code>If/Else Statement</code> can be made up of 3 kinds of checks: <code>if</code>, <code>else if</code>, and <code>else</code>
+    An <code>if/else statement</code> can be made up of 3 kinds of checks: <code>if</code>, <code>else if</code>, and <code>else</code>
   </li>
   <li>
     Each type of check will only fire if a certain condition evaluates to <code>true</code>
@@ -162,13 +161,8 @@ if (name !== 'jo') {
 
 <h3>Storing Conditionals</h3>
 <p>
-  Conditionals evaluate to booleans, which are just values. That means that you can store conditions as variables. If you do, there's a <em>Naming Convention</em> devoted to storing booleans in variables and returning them in functions.
+  Conditionals evaluate to booleans, which are just values. That means that you can store conditions as variables before using them in <code>if/else statements</code>.
 </p>
-
-<p>
-  The variable should start with "is, has, can, could, should". If it's a function that returns a bool, you can just put "get" in front of that. And yes, that looks weird, it's an optional convention.
-</p>
-
 <pre><code class="language-js">let name = 'bob'
 let age = 32
 let canVote = age >= 18
@@ -177,119 +171,11 @@ console.log('canVote:', canVote)
 if (canVote) {
   console.log("Let's go vote!")
 }
-
-const getCanVote = (personAge) => {
-  return personAge >= 18
-}
-
-if (getCanVote(17)) {
-  console.log("We can vote!")
-}
 </code></pre>
-
-<p>
-  What could we change to make "We can vote!" print to the screen?
-</p>
-
-<div class="codepen-container">
-  <div class="codepen-spacer">
-    <p class="codepen" data-height="400" data-default-tab="js,result" data-slug-hash="PoazpYJ" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 400px;">
-      <span>
-        To run this CodePen, make sure you're connected to the internet
-        <a href="https://codepen.io/MostlyFocusedMike/pen/PoazpYJ">3.2a Naming Conventions Practice</a>
-      </span>
-    </p>
-  </div>
-</div>
-
-<h3>Reversing Conditionals with <code>!</code></h3>
-<p>
-  Sometimes you want to flip a boolean. That's what the <em>Not</em> operator does. By putting a <code>!</code> next to a value, it will invert it. So <code>!true</code> is <code>false</code>, and <code>!false</code> is <code>true</code>.
-</p>
-
-<pre><code class="language-js">let age = 32
-let canVote = age >= 18
-let cantVote = !canVote
-console.log("can't vote:", cantVote)
-
-// or directly on a conditional
-let alsoCantVote = !(age >= 18)
-console.log("alsoCantVote", alsoCantVote)
-</code></pre>
-
-<div class="codepen-container">
-  <div class="codepen-spacer">
-    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="RwJRpwV" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
-      <span>
-        To run this CodePen, make sure you're connected to the internet
-        <a href="https://codepen.io/MostlyFocusedMike/pen/RwJRpwV">3.2b Not Operator Practice</a>
-      </span>
-    </p>
-  </div>
-</div>
-
-<p>
-  Notice we used <code>()</code> in the second example. If we did <code>!age >= 18</code> then that would mean we <i>only</i> reversed the boolean value of <code>age</code>. Sometimes that's what we want, but when you want the entire conditional, surround it with <code>()</code>.
-</p>
-
-<h2>Truthy and Falsy Values</h2>
-
-<p>
-  Pop quiz: what do you think would happen if we did this:
-</p>
-<pre><code class="language-js">if ("hi there") {
-  console.log('???')
-}</code></pre>
-
-<p>
-  We just put a non-boolean <code>String</code> in our conditional. Does this break? No, actually. That's because when you put a non-boolean value into the conditional check, JavaScript converts it into its <em>truthy</em> or <em>falsy</em> value. Yes, those are real terms in programming.
-</p>
-
-<p>
-  So, what's truthy and what's falsy? Here are all the falsy values:
-</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Value</th>
-      <th>Example</th>
-    </tr>
-  </thead>
-  <tr>
-    <td>Literal False</td><td>false</td>
-  </tr>
-  <tr>
-    <td>An Empty String</td><td>""</td>
-  </tr>
-  <tr>
-    <td>The Number Zero</td><td>0</td>
-  </tr>
-  <tr>
-    <td>The "Nothing" Values</td><td>null, undefined</td>
-  </tr>
-  <tr>
-    <td>Not a Number</td><td>NaN</td>
-  </tr>
-</table>
-
-<p>
-  That's it, <i>everything</i> else in JavaScript is a truthy value. All positive and negative numbers are truthy. All full strings are truthy, even strings made of spaces like "  ". EVERYTHING not listed above is truthy. Play around with truthy and falsy values below.
-</p>
-<div class="codepen-container">
-  <div class="codepen-spacer">
-    <p class="codepen" data-height="300" data-default-tab="js,result" data-slug-hash="MWXWxxo" data-preview="true" data-editable="true" data-user="MostlyFocusedMike" style="height: 300px;">
-      <span>
-        To run this CodePen, make sure you're connected to the internet
-        <a href="https://codepen.io/MostlyFocusedMike/pen/MWXWxxo"> 3.3 Truthy and Falsy</a>
-      </span>
-    </p>
-  </div>
-</div>
 
 <h2><code>else if</code> and <code>else</code></h2>
 <p>
-  Now that we fully understand conditionals, let's get back to building our <code>If/Else Statement</code>. If our question boils down to "Do this or that", then we'll just need an <code>else</code> statement.
+  Now that we fully understand conditionals, let's get back to building our <code>if/else statement</code>. If our question boils down to "Do this or that", then we'll just need an <code>else</code> statement.
 </p>
 
 <pre><code class="language-js">let chanceOfRain = 72;
@@ -324,11 +210,11 @@ if (pet === 'cat') {
 </code></pre>
 
 <p>
-  Remember, each <code>If statement</code> starts a new chain. And in each chain, only <em>one</em> code block can execute. So, it helps to be specific.
+  Remember, each <code>if statement</code> starts a new chain. And in each chain, only <em>one</em> code block can execute. So, it helps to be specific.
 </p>
 
 <p>
-  With the CodePen below, can you get it to print "No umbrella" and "Love 'em!" instead? Or try adding an <code>else if</code> statement to our rain example.
+  With the CodePen below, can you get it to print "No umbrella" and "Love 'em!" instead? Or try adding an <code>if/else</code> statement to our rain example.
 </p>
 
 <div class="codepen-container">
@@ -400,28 +286,6 @@ console.log(msg);
     </p>
   </div>
 </div>
-
-<h2>Return vs else</h2>
-<p>
-  There's a another case were we don't need an <code>else</code> statement and that's when we're returning in a function. As you know, the <code>return</code> keyword causes us to skip whatever was left in the function. So if you are returning conditionally, then you may not need an <code>else</code>.
-</p>
-
-<pre><code class="language-js">const petOpinion = (pet) => {
-  if (pet === 'cat') {
-    return "My favorite pet!"
-  } else {
-    return "Your pet is meh."
-  }
-}
-
-// that's the same as:
-const petOpinion = (pet) => {
-  if (pet === 'cat') {
-    return "My favorite pet!"
-  }
-  return "Your pet is meh."
-}
-</code></pre>
 
 <h2>Multiple conditionals</h2>
 <p>
@@ -572,26 +436,10 @@ console.log('isNiceDay', isNiceDay)
 
 /*
 ---------------------------
-In this function, how could
-we remove the else statement?
-*/
-
-const getGreeting = (time) => {
-  if (time === 'morning') {
-    return 'Good Morning!'
-  } else {
-    return 'Hello!'
-  }
-}
-
-console.log(getGreeting('night'))
-
-/*
----------------------------
 What's the if condition we'd need
 to make it so that myMood
-is "happy" UNLESS the weather
-is rainy?
+is "glum" ONLY when the weather
+is "rainy?"
 */
 
 let mood = 'happy'
