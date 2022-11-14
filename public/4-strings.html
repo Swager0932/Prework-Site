@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" integrity="sha512-mIs9kKbaw6JZFfSuo+MovjU+Ntggfoj8RwAmJbVXQ5mkAX5LlgETQEweFPI18humSPHymTb5iikEOKWF7I8ncQ==" crossorigin="anonymous" referrerpolicy="no-referrer" media="none" onload="this.media='all'" />
   </head>
   <body>
-<header class="header">
-  <a href="./index.html" class="logo">Marcy Lab Challenge</a>
+<header>
+  <a href="./index.html" class="logo">Marcy Lab</a>
   <input class="side-menu" type="checkbox" id="side-menu"/>
   <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
   <nav class="nav">
     <ul class="menu">
       <li><a href="./3-flow-control.html">&larr; Flow Control</a></li>
+      <li><a href="./index.html">Home</a></li>
       <li><a href="./5-loops.html">Loops &rarr;</a></li>
       <li class="mobl-nav"><a href="./0-getting-started.html" rel="noopener noreferrer">Lesson 0: Getting Started</a></li>
       <li class="mobl-nav"><a href="./1-variables.html" rel="noopener noreferrer">Lesson 1: Variables</a></li>
@@ -32,6 +33,11 @@
 
 <h1>Lesson 4: Strings</h1>
 <h2 id='sub-title'>Say Something Good</h2>
+
+<div class="video-container">
+  <iframe class="embed-video" src="https://www.youtube.com/embed/_0JmjCMXm3g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <p>
   String manipulation is one of the cornerstones of programming. Which makes sense since so much of what we do on the internet is just some kind of text.
 </p>
@@ -223,7 +229,7 @@ console.log(str) // hhii
 
 <h3>.toUpperCase() and .toLowerCase()</h3>
 <p>
-  These two methods are for converting <i>entire</i> strings to upper or lower case.
+  These are for returning <i>copies</i> of entire strings as upper or lower case.
 </p>
 <pre><code class="language-js">let greet = "hello"
 let shoutedGreet = greet.toUpperCase()
@@ -327,10 +333,10 @@ console.log(str.includes("us")) // false
   When searching strings, it's a good idea to lowercase everything.
 </p>
 
-<pre><code class="language-js">const doesContain = (mainStr, searchStr) => {
+<pre><code class="language-js">const doesContain = (mainStr, subStr) => {
   return mainStr
     .toLowerCase()
-    .includes(searchStr.toLowerCase())
+    .includes(subStr.toLowerCase())
 }
 
 let wonky = "DoEs ThIs WoRk?"
@@ -359,30 +365,30 @@ console.log(isTrue) // true
     </p>
     <pre><code class="language-js">return mainStr
   .toLowerCase()
-  .includes(searchStr.toLowerCase())</code></pre>
+  .includes(subStr.toLowerCase())</code></pre>
 
     <p>
        It's called <em>chaining</em>, it's like a combo from a video game. All these methods can be called on strings, right? So if a method <i>returns</i> a string, we can immediately call another method on it. Here's the same logic, but spread out. You can use multiple lines as long as you start each line with the dot.
     </p>
     <pre><code class="language-js">// With chaining
-const doesContain = (mainStr, searchStr) => {
+const doesContain = (mainStr, subStr) => {
   return mainStr
     .toLowerCase()
-    .includes(searchStr.toLowerCase())
+    .includes(subStr.toLowerCase())
 }
 
 // no chaining
-const doesContain = (mainStr, searchStr) => {
+const doesContain = (mainStr, subStr) => {
   let lowMainStr = mainStr.toLowerCase()
-  let lowSearchStr = searchStr.toLowerCase()
+  let lowSubStr = subStr.toLowerCase()
 
-  return lowMainStr.includes(lowSearchStr)
+  return lowMainStr.includes(lowSubStr)
 }
 </code></pre>
   <p>
     Either of these is fine, the only wrong<i>-ish</i> choice is using only one line.
   </p>
-  <pre><code class="language-js">const doesContain = (mainStr, searchStr) => mainStr.toLowerCase().includes(searchStr.toLowerCase())</code></pre>
+  <pre><code class="language-js">const doesContain = (mainStr, subStr) => mainStr.toLowerCase().includes(subStr.toLowerCase())</code></pre>
   </aside>
 </div>
 

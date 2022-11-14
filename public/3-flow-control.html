@@ -9,13 +9,14 @@
   </head>
 <body>
 
-<header class="header">
-  <a href="./index.html" class="logo">Marcy Lab Challenge</a>
+<header>
+  <a href="./index.html" class="logo">Marcy Lab</a>
   <input class="side-menu" type="checkbox" id="side-menu"/>
   <label class="hamb" for="side-menu"><span class="hamb-line"></span></label>
   <nav class="nav">
     <ul class="menu">
       <li><a href="./2-functions.html">&larr; Functions</a></li>
+      <li><a href="./index.html">Home</a></li>
       <li><a href="./4-strings.html">Strings &rarr;</a></li>
       <li class="mobl-nav"><a href="./0-getting-started.html" rel="noopener noreferrer">Lesson 0: Getting Started</a></li>
       <li class="mobl-nav"><a href="./1-variables.html" rel="noopener noreferrer">Lesson 1: Variables</a></li>
@@ -34,16 +35,20 @@
 <h1>Lesson 3: Flow Control</h1>
 <h2 id='sub-title'>If This, Then What?</h2>
 
+<div class="video-container">
+  <iframe class="embed-video" src="https://www.youtube.com/embed/7tcu64XiLxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 <p>
   Most programs change their behavior based off of a set of different inputs. There are many ways to alter actions, but one of the most universal is the <code>If/Else Statement</code>.
 </p>
 <pre><code class="language-js">const sayMood = (myMood) => {
   if (myMood === "Happy") {
-    console.log("I'm feeling great!")
+    console.log("I'm great!")
   } else if (myMood === "Sad") {
-    console.log("I'm feeling pretty bummed")
+    console.log("I'm pretty bummed.")
   } else {
-    console.log("I'm feeling...something")
+    console.log("I'm...something.")
   }
 }
 
@@ -93,7 +98,7 @@ sayMood('Happy')
 } else if (condition C) {
   // Runs if Condition C is true
 } else {
-  // Runs if ALL of the conditions are false
+  // Runs if ALL conditions are false
 }
 </code></pre>
 

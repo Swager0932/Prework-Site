@@ -14,7 +14,7 @@ ul {
   list-style: none;
 }
 
-.header{
+header {
   background-color: var(--black);
   position: sticky;
   top: 0;
@@ -129,7 +129,7 @@ ul {
 
   }
 
-  .hamb{
+  .hamb {
       display: none;
   }
 }
@@ -187,6 +187,11 @@ pre code {
   padding: 0.1rem;
   color: white;
   width: 99%;
+  font-size: 2.7vmin !important;
+}
+
+pre[class*=language-] {
+  padding: 0.75rem !important;
 }
 
 pre {
@@ -342,14 +347,10 @@ hr.divider {
 #bottom-nav {
   background: white;
   margin: 1rem 0;
-  text-decoration: underline;
   padding: 1rem 0;
   text-align: center;
   font-size: 1.25rem;
   font-family: Arial, Helvetica, sans-serif;
-}
-a {
-  text-decoration: none;
 }
 
 #bottom-nav a {
