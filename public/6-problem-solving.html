@@ -34,12 +34,12 @@
 <h1>Lesson 6: Problem Solving</h1>
 <h2 id='sub-title'>Code Challenge Tutorial</h2>
 <p>
-  This lesson is going to step through an example code challenge from start to finish. We'll go over how to break down questions so they can be solved, and learn about effective Googling. This lesson is by far the longest, but we really will solve everything exactly as if this were a real Marcy Challenge. If you're a beginner I really do recommend sticking through it.
+  This lesson is going to step through an example code challenge from start to finish. We'll go over how to break down questions so they can be solved, and learn about effective googling. If you're a beginner I really do recommend sticking through it.
 </p>
 
 <h2>What do you get?</h2>
 <p>
-  When it comes to code challenges, they can vary quite a bit. But <i>usually</i> you will get the following info:
+  When it comes to code challenges, they can vary quite a bit. But <i>usually</i> you get the following info:
 </p>
 
 <ul class="list">
@@ -50,7 +50,7 @@
 </ul>
 
 <p>
-  Every real world challenge is different, but each of those items will be given to you for this challenge. Let's take a look at our sample problem below.
+  Each of those items will be given to you for Marcy's challenges. Let's take a look at our sample problem below.
 </p>
 
 <h2>The Problem</h2>
@@ -59,7 +59,7 @@
   <h3>Question 1: Ouija()</h3>
   <blockquote>
     Write a function <code class="snip">ouija</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>.
-  The function should <em>RETURN</em> a random letter character from the given word each time. The case from the word character should match the return value. If a string has no valid return characters, return an empty string.</blockquote>
+  The function should <em>RETURN</em> a random character from the given word each time. The case from the word character should match the return value. If a string has no valid return characters, return an empty string.</blockquote>
 
   <table>
     <caption>Argument Info</caption>
@@ -105,41 +105,33 @@ A</pre>
 
 <h2>Problem Solving</h2>
 <p>
-  How should we tackle this problem? There are a <i>billion</i> different strategies, but here's my process.
+  How should we tackle this problem? There are a <i>billion</i> different strategies, but here's my process:
 </p>
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1448 1448"><defs><clipPath id="b"><rect width="1448" height="1448"/></clipPath></defs><g id="a" clip-path="url(#b)"><rect width="1448" height="1448" fill="#1e1e1e"/><g transform="translate(0 379.94)"><g transform="translate(0 990.956)"><path d="M27.846,0C43.224,0,55.691,12.058,55.691,26.933S0,41.807,0,26.933,12.467,0,27.846,0Z" transform="translate(11.869 45.649)" fill="#a3d882"/><path d="M55.691,28.437c0,14.875-12.467,26.933-27.846,26.933S0,43.311,0,28.437,55.691,13.562,55.691,28.437Z" transform="translate(11.869 -17.024)" fill="#a3d882"/><rect width="80.342" height="13.695" transform="translate(4.565)" fill="#251f1d"/><rect width="81.255" height="19.172" transform="translate(0 71.212)" fill="#251f1d"/><path d="M8.673,0l8.673,15.521H0Z" transform="translate(31.041 57.517)" fill="#251f1d"/><path d="M8.673,0l8.673,15.521H0Z" transform="translate(48.388 29.215) rotate(180)" fill="#251f1d"/></g><text transform="translate(88 1051.06)" fill="#a3d882" font-size="60" font-family="ArialMT, Arial"><tspan x="0" y="0">6.1 Problem Solving</tspan></text><line x2="627.106" transform="translate(0.456 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/><line x1="73.951" y1="81.255" transform="translate(627.563 990.5)" fill="none" stroke="#a2a2a2" stroke-linecap="round" stroke-width="5"/></g><rect width="1448" height="114" transform="translate(0 38)" fill="#be5151"/><rect width="1448" height="114" transform="translate(0 367)" fill="#882ea3"/><rect width="1448" height="114" transform="translate(0 696)" fill="#2e76a3"/><rect width="1448" height="114" transform="translate(0 1026)" fill="#2a8149"/><text transform="translate(724 451)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-664.492" y="0">2. FIND A SOLUTION WITH WORDS</tspan></text><text transform="translate(724 900)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-380.234" y="0">Small and achievable</tspan><tspan x="-315.723" y="92">Answer questions</tspan></text><text transform="translate(724 122)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-616.406" y="0">1. UNDERSTAND THE PROBLEM</tspan></text><text transform="translate(724 241)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-471.328" y="0">Restate in your own words</tspan><tspan x="-693.77" y="92">Ask questions and think of edge cases </tspan></text><text transform="translate(724 781)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-574.961" y="0">3. PLAN YOUR CHECKPOINTS</tspan></text><text transform="translate(724 1110)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-364.512" y="0">4. START CODING! </tspan></text><text transform="translate(724 570)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-635.84" y="0">First, solve the problem as a human</tspan><tspan x="-529.238" y="92">Then, convert to pseudo code</tspan></text><text transform="translate(724 1229)" fill="#f8f8f8" font-size="80" font-family="ArialMT, Arial"><tspan x="-555.801" y="0">Start with setting up some tests</tspan><tspan x="-331.27" y="92">Focus on progress</tspan></text></g></svg>
 
+<h2>Step 1: Understanding</h2>
 <p>
-  This "mental framework" gives you just enough guidance without getting in the way. Let's break the problem down with those steps!
-</p>
-
-<h2>Step 1: The Question</h2>
-<p>
-  The key to solving a problem is to make sure you <i>understand</i> the problem. Whenever you are given a task, always read it at least twice. Don't start working until you understand <i>exactly</i> what is being asked of you. If you can restate the problem using your own words, you can move on. For this problem, I would say:
+  The key to solving a problem is to make sure you <i>understand</i> the problem. Whenever you are given a task, always read it at least twice. Don't move on until you understand <i>exactly</i> what is being asked of you. Your goal here is to restate the problem in your own words. For this problem, I would say:
 </p>
 
 <blockquote>
-  We're going to write a function called Ouija, and it only takes a single word as an argument. It will return a single random character directly from the word. If the string is all capitals, the return will always be capital, same with lowercase. If the word passed in is an empty string, then we just return it.
+  We're going to write a function called Ouija, and it only takes a single word as an argument. It will return a single random character directly from the word. If the string is all capitals, the return will be a capital, same with lowercase. If the word passed in is an empty string, then we just return it.
 </blockquote>
-
-<p>
-  If you do not understand the question, you won't find the solution. This step sets us up for success.
-</p>
 
 <h2>Step 2: Solve with words</h2>
 <p>
   It's time to try and find <i>a</i> solution. Not <i>the</i> solution, <em>any</em> solution. When solving a question for the first time, it's much easier to improve a working answer than it is to wait for the <i>perfect</i> answer.
 </p>
 <p>
-  We are just going to focus on coming up with any logically working strategy by using our words. <em>Do not code yet</em>. Think about how you would solve the problem as a human first. What I mean by that is, if I literally told you to do this without a computer what would you do?
+  <em>Do not code yet</em>. Think about how you would solve the problem as a human first. What I mean by that is, if I literally told you to do this without a computer, what would you do?
 </p>
 <h3>The human solution</h3>
 <p>
-  If I was asked by someone to look at a word and say a random letter, how would I do it? If I was handed an empty word, I'd say nothing. But if I got a real word, I would look at each letter of the word, then to "randomize" it, I would sort of ping-pong between them for a bit, then I would just say one.
+  If I was asked by someone to look at a word and say a random letter, what would I do? If I was handed an empty word, I'd say nothing. But if I got a real word, I would look at each letter of the word, then to "randomize" it, I would sort of ping-pong between them for a bit, then I would just say one.
 </p>
 <p>
-  Broken into a list:
+  In other words:
 </p>
 
 <ul class="list">
@@ -151,7 +143,7 @@ A</pre>
 
 <h2>Convert to pseudo-code</h2>
 <p>
-  OK! That human solve part of this step is <i>critical</i> because it means that if we could come up with an answer, so could a robot! Now all we have to do is think about the steps we took as a human and turn them into <em>pseudo code</em>. We still aren't coding yet, just using general jargon. No need for syntax; only rough ideas.
+  OK! Since we found the answer as a human, that means there <i>is</i> a solution, and we just need to translate it to <em>pseudo code</em>! We still aren't coding yet, we're sticking with general jargon. No need for syntax; only rough ideas.
 </p>
 
 <h3>"Read the word"</h3>
@@ -161,28 +153,28 @@ A</pre>
 
 <h3>"If it's empty..."</h3>
 <p>
-  Alright, so how does a computer know a word is empty? Well, all strings have length right? So, an empty string probably has a length of 0. Alright, so we check if the string has a length of 0 and if it does, then lets "say nothing" by returning an empty string. That's what the prompt asked for, and the return lets us avoid the rest of the function. Second step is "Check if there's a length, return the empty string if not."
+  How does a computer know a word is empty? Well, all strings have length right? Let's check if the string has a length of 0 and if it does, then let's "say nothing" by returning an empty string. That's what the prompt asked for, and the return lets us avoid the rest of the function. Second step is "Check if there's a length, return the empty string if not."
 </p>
 
 <h3>"Read it an pick a random letter"</h3>
 <p>
-  Ok, here's our first real limitation. Computers can't just look at a word and "know" where all the letters are. They would have to iterate through it letter by letter. That seems like a waste of time. We only need to pick a single, random letter. What if we could pick a random index (ie a number) and then return whatever character is there?
+  Ok, here's our first real limitation. Computers can't just look at a word and "know" where all the letters are. They would have to iterate through it letter by letter. But, we only need to pick a <i>single</i>, random letter. What if we could pick a random index (ie a number) and then return whatever character is there?
 </p>
 <p>
-  Ah, but we can't just pick <i>any</i> random number, if we overshoot the last index, I'll return <code>undefined</code>. So, it sounds like what I would need is the ability to pick a random number from 0 to the last index of the word.
+  Ah, but we can't just pick <i>any</i> random number, if we overshoot the last index, we'll return <code>undefined</code>. So, it sounds like what we need is the ability to pick a random number from 0 to the last index of the word.
 </p>
 <p>
-  Hm. I didn't teach that you that did I? That's ok though, because the ability to "pick a random number between 0 and the last index" seems like something a computer could absolutely do. Let's assume it can for now, and move on.
+  Hm. I didn't teach that you that did I? That's ok, because the ability to "pick a random number between 0 and the last index" seems like something a computer could absolutely do. Let's assume it can for now, and move on.
 </p>
 <h3>"Say the letter"</h3>
 <p>
-  This is easy, whatever number we picked randomly, we'll just return the value at that index of the string. Done! Ok, so let's see our "code" answer below:
+  This is easy, whatever number we picked randomly, we'll just return the value at that index of the string. Done! Ok, so let's see our "code" answer below compared to our "human" solution:
 </p>
 
 <table>
   <thead>
     <th>Human solution</th>
-    <th>Robot solution</th>
+    <th>Pseudo Code</th>
   </thead>
   <tbody>
     <tr>
@@ -206,15 +198,12 @@ A</pre>
 
 <h3>Move on to solving</h3>
 <p>
-  There you go! That's more than enough to get us going. It's ok that we don't even know how to actually solve that, because we can just Google things for this challenge.
+  There you go! That's more than enough to get us going. Time can be a factor with code challenges, so all you're looking for is a <i>rough</i> plan.
 </p>
 
 <h2>Step 3: Make Checkpoints</h2>
 <p>
-  Now that we have a plan, we need to set some markers so we know we're making progress. This is important because we want to show our interviewer that even if we didn't make it to the end, at least we were on some path.
-</p>
-<p>
-  When determining a checkpoint, you want each one to build on the last. Each checkpoint should really return or log some concrete value so you can track progress.
+  Now that we have that plan, we need to set some markers so track our progress. When deciding on checkpoints, focus on coming up with little goals that will give you mental momentum. Small, but achievable. Each checkpoint should return or log some concrete value, even if it's not the final answer. Here are the ones I came up with.
 </p>
 
 <table>
@@ -225,7 +214,7 @@ A</pre>
   <tbody>
     <tr>
       <td>Call the function, and always return the word</td>
-      <td>We see a return value of the word</td>
+      <td>We see a return value and spelled everything right</td>
     </tr>
     <tr>
       <td>Return "" for empty words, <code>false</code> otherwise</td>
@@ -244,31 +233,31 @@ A</pre>
 
 <h2>Step 4: Code!</h2>
 <p>
-  Pretty crazy that we don't touch the keyboard until step 4 right? Well that's because if you do it right, the coding isn't the hard part. If you come up with a logical solution, then the coding is only translating and debugging.
+  Pretty crazy that we don't touch the keyboard until step 4 right? Well that's because if you do it correctly, the coding isn't the hard part. If you come up with a logical solution, then the coding is only translating and debugging.
 </p>
 
 <h3>Checkpoint 1</h3>
 <p>
-  To prove it, let's knock out our first checkpoint. We'll call the function with some different inputs so we can make sure we spelled everything correctly and have some info for the later steps. Each test should tell us something about our function, I've noted the end goals next to the logs here.
+  To prove coding isn't the hard part, let's knock out our first checkpoint. We'll call the function with some different inputs so we can make sure we spelled everything correctly and have some info for the later steps. Each log is like a test, and it should tell us something about our function, I've noted the <i>end</i> goals next to the logs here.
 </p>
 
 <pre><code class="language-js">const ouija = (word) => {
   return word
 }
 
-console.log(ouija("abc")) // a lowercase letter
-console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("abc")) // lowercase letter
+console.log(ouija("ABC")) // uppercase letter
 console.log(ouija("")) // ""
 console.log(ouija("A")) // A
 </code></pre>
 
 <p>
-  Some of our examples may be outputting the wrong thing, but we've got good cases to text with. Also, I put the comments there since this is a tutorial, but don't feel like you have to literally write things down if you don't want. There's only 4 tests so it should be easy to track outputs.
+  Some of our examples will be outputting the wrong thing for now, but that's ok.
 </p>
 
 <h3>checkpoint 2</h3>
 <p>
-  Now, let's add a conditional check to only return the word if there's no length and <code>false</code> otherwise. That's a wrong return value, but that's ok, it's not sticking around. We just need to see that we log "" (which looks like nothing) correctly, compared to false.
+  Now, let's add a conditional check to only return the word if there's no length and <code>false</code> otherwise. The <code>false</code> won't stick around, we just need to see that we log "" OR <code>false</code>, you could use any other value.
 </p>
 
 <pre><code class="language-js">const ouija = (word) => {
@@ -278,129 +267,131 @@ console.log(ouija("A")) // A
   return false
 }
 
-console.log(ouija("abc")) // a lowercase letter
-console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("abc")) // lowercase letter
+console.log(ouija("ABC")) // uppercase letter
 console.log(ouija("")) // ""
 console.log(ouija("A")) // A
 </code></pre>
 
 <p>
-  Does that answer make sense to you? <code>word.length</code> will only be 0 if it's empty. That's also the only <code>falsy</code> number. Conditionals only fire for <code>true</code> though, so that's why we use the bang operator to flip it. If that's confusing to you, go check out lesson 3 again. Specifically: truthy and falsy numbers, inverting boolean values, and not needing else cases with return.
+  Does that answer make sense to you? <code>word.length</code> will only be 0 if it's empty. That's also the only <code>falsy</code> number. Conditionals only fire for <code>true</code>, so that's why we use the bang operator to flip it. If that's confusing, go check out lesson 3 again. Specifically: truthy and falsy, inverting booleans, and not needing else cases with return.
 </p>
 
 <h3>checkpoint 3</h3>
 <p>
-  We'll have to put a pin in this, because this is the checkpoint were we don't know what to do! So now it's time to Google! Obviously, if you were in an interview where Googling is not allowed, then you'd have to find another solution. But for Marcy, as stated, GOOGLING IS TOTALLY FINE. You may not need it for the application questions, but you it's still a crucial skill to have, so let's talk about it!
+  We'll have to put a pin in this, because this is the checkpoint were we don't know what to do. That means it's time to Google. You may not need it for the application questions, but you it's still a crucial skill!
 </p>
 
 <h2>How to Google Questions</h2>
 <p>
-  When it comes to googling questions, the name of the game is specificity. You want to ask very focused questions, so that you don't get lost in the internet. So let's talk about formatting. If our question in normal-speak is:
+  When it comes to googling questions, the name of the game is specificity. You want to ask very focused questions, so that you don't get lost in the internet. If our question in normal-speak is:
 </p>
 
 <blockquote>How do I make a random number in javascript between 0 and one less than the final length of the sting?</blockquote>
 
 <p>
-  So let's edit that. Our final goal is this format:
+  Our final goal is this format:
 </p>
 
-<pre><code class="language-js">[Language] | how to | short question</code></pre>
+<blockquote>[Language] | how to | short question</blockquote>
 
 <p>
-  The trickiest part is "shortening" our question. So "how do I make a random number" becomes "get random number", ditch the "in javascript" because we put that at the start. And "between 0 and one less than the length of the string" needs some work. Let's think about it. Technically, "one less than the length of the string" just boils down to a number. so what we're really asking is "Between 0 and another number." And actually, we don't care about 0 either. Yes, we know that we'll need it for our problem, but if we can find a random number between 2 numbers, then we could just swap the first for 0 and the second for length - 1. So we <i>really</i> only need "between 2 numbers.""
+  The trickiest part is "shortening" our question. So "how do I make a random number" becomes "get random number", ditch the "in javascript" because we put that at the start. But "between 0 and one less than the length of the string" needs some work. Let's think about it.
+</p>
+<p>
+  "one less than the length of the string" is really just a number. So, what we're asking is "Between 0 and another number." Actually, we don't care about 0 either. We'll need it for our problem, but if we can find a random number between 2 numbers, then we could just swap the first for 0. We <i>really</i> only need "between 2 numbers."
 </p>
 <p>
   Whew! Ok let's see what we got:
 </p>
-<pre><code class="language-js">js how to get random number between 2 numbers</code></pre>
+<blockquote>js how to get random number between 2 numbers</blockquote>
 
 <p>
-  Look how much shorter that is! And just a little tip from a pro: "between 2 numbers" has a fancy name in programming, it's called <em>a range</em>. So, if we really wanted we'd do:
+  Look how much shorter that is! And just a little tip from a pro: "between 2 numbers" has a fancy name in programming, it's called <em>a range</em>:
 </p>
 
-<pre><code class="language-js">js how to get random number from range </code></pre>
+<blockquote>js how to get random number from range </blockquote>
 
 <h3>Finding the answer</h3>
 <p>
-  Either way, we'd plug that into Google, and come up with a few search results. Don't always go for the first result, take a look at the first few titles, but basically keep going until you get your answer. I'm going with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">official MDN docs</a>, which gives me this snippet of code:
+  Either way, we'd plug that into Google, and come up with a few search results. Don't always go for the first result, take a look at the first few titles. I'm going with the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">official MDN docs</a>, which gives me this snippet of code:
 </p>
 
 <pre><code class="language-js">Math.floor(Math.random() * num)</code></pre>
 
 <p>
-  Here's a fun challenge. Instead of me explaining that, why don't you try reading the docs figure it out? Here's a different <a href="https://www.educative.io/answers/how-to-generate-a-random-number-between-a-range-in-javascript">blog explaining .random()</a> as well. Does the code make sense now?
+  Here's a fun challenge. Instead of me explaining, why don't you try reading the docs figure it out? Here's a different <a href="https://www.educative.io/answers/how-to-generate-a-random-number-between-a-range-in-javascript">blog explaining .random()</a> as well. Does the code make sense now?
 </p>
 
-<h3>Copying vs understanding</h3>
+<h3>Back to checkpoint 3</h3>
 <p>
-  When you first start out, it's ok for code you find to confuse you. The only really important thing is that you <i>mostly</i> understand every piece you put into your code base. Don't just mindlessly copy things, actually read the code and alter it as necessary. Case in point, I had to replace <code>num</code> with <code>word.length</code> in order to get it to work. You <i>will</i> be asked about your code, so be sure whatever you copy is something you could explain to an interviewer.
-</p>
-<p>
-  For instance if you did use that line but didn't fully get it, an acceptable level of understanding would be, "I'm not exactly sure how floor() works, but combined with random(), it gives me a random number every time."
-</p>
-
-
-<h3>Back to check 3</h3>
-<p>
-  With my new code, my second to last checkpoint becomes
+  Our second to last checkpoint is to put that code in (broken into 2 lines for mobile readers), and then log the index temporarily to check our work.
 </p>
 
 <pre><code class="language-js">const ouija = (word) => {
   if (!word.length) {
     return word
   }
-  let index = Math.floor(Math.random() * word.length)
+  let randomNum = Math.random() * word.length
+  let index = Math.floor(randomNum)
+  console.log('index:', index)
   return false
 }
 
-console.log(ouija("abc")) // a lowercase letter
-console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("abc")) // lowercase letter
+console.log(ouija("ABC")) // uppercase letter
 console.log(ouija("")) // ""
 console.log(ouija("A")) // A
 </code></pre>
 
+<h3>Copying vs understanding</h3>
+<p>
+  It's ok for copied code to confuse you for now. The only important thing is that you <i>mostly</i> understand it. Don't mindlessly copy things, read the code and alter it as necessary. Case in point, I had to replace <code>num</code> with <code>word.length</code> in order to get it to work.
+</p>
+<p>
+  You <i>will</i> be asked about your code, so be sure you can talk about any aspect of it. For instance, an acceptable level of understanding would be, "I'm not exactly sure how floor() works, but combined with random(), it gives me a random number every time."
+</p>
+
 <h3>Checkpoint 4</h3>
 <p>
-  And finally, the last step is easy once we have our random number. Just return the value at the index!
+  The last step is easy now, just return the value at the index!
 </p>
 
 <pre><code class="language-js">const ouija = (word) => {
   if (!word.length) {
     return word
   }
-  let index = Math.floor(Math.random() * word.length)
+  let randomNum = Math.random() * word.length
+  let index = Math.floor(randomNum)
   return word[index]
 }
 
-console.log(ouija("abc")) // a lowercase letter
-console.log(ouija("ABC")) // an uppercase letter
+console.log(ouija("abc")) // lowercase letter
+console.log(ouija("ABC")) // uppercase letter
 console.log(ouija("")) // ""
 console.log(ouija("A")) // A
 </code></pre>
 
 <h2>Wrapping up</h2>
 <p>
-  WHEW, that was a doozy of a lesson, but it's important to go slow now, so we can go fast later. And I don't want you to get hung up on these exact steps. As you get more advanced, things will morph and join together. Like I move so quickly between the "human" and "robot" solution it's kind of just the same step.
-</p>
-<p>
-  This is like training wheels. Once you understand the patterns, feel free to move and change them to what works for you.
+  There's a quote I really like, "Slow is smooth and smooth is fast." I know it can be a pain to take all this time to plan when you just want to <i>code</i>, but that's a trap. By slowing down to take time to understand the problem and come up with a plan, you'll save time in the long run.
 </p>
 
-<h3>A final note on debugging</h3>
+<h3>A note on debugging</h3>
 <p>
-  Obviously, things are going to break while you're working. People tend to think of problems like a house fire: everything is chaos, and it only gets solved all at once with a specific solution (a firehose). But real debugging is like a broken chain. There can be one or many broken links, some total some partial, all are a problem.
+  People think of errors like a house fire: everything is chaos, and it gets solved all at once with an obvious fix. But real debugging is like a broken chain. The way to fix a chain is to start at a link you know is correct, and then inspect each one until you find the problems.
 </p>
 <p>
-  But the way to fix a broken chain is to start at a link you know is correct, and then inspect each one until you find the problem links. When you have a problem with your code, take a step back, find the parts that you <i>know</i> work, and then move forward each step. That's why coding with checkpoints is so critical. it keeps problems from getting too big, because each piece only adds a little logic at a time.
+  When you have a problem with your code, take a step back, find the parts that you <i>know</i> work, and then move on from there. That's why coding with checkpoints is so critical. It keeps problems from getting too big, because each piece only adds a little logic at a time.
 </p>
 
 <h3>Good Luck!</h3>
 <p>
-  And that's all we have for now! Feel free to check out the resources section for a list on good sites and videos, but you're ready for the challenges now! If you still want some more practice, give the problems below a try, and then check the answer Replit.
+  You're ready for the challenges! If you still want some more practice, give the problems below a try, but some of the <i>real</i> challenges are technically easier.
 </p>
 
 <h3>Practice Code Challenge</h3>
-<div id="question-1">
+<div>
   <h3>Question 1: overflowWord()</h3>
   <blockquote>
     <p>
@@ -440,7 +431,7 @@ Splendif...</pre>
 </div>
 <hr class="divider" />
 
-<div id="question-2">
+<div>
   <h3>Question 2: triangleSlices()</h3>
   <blockquote>
     <p>
