@@ -18,13 +18,14 @@
       <li><a href="./1-variables.html">&larr; Variables</a></li>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./3-flow-control.html">Flow Control &rarr;</a></li>
-      <li class="mobl-nav"><a href="./0-getting-started.html" rel="noopener noreferrer">Lesson 0: Getting Started</a></li>
-      <li class="mobl-nav"><a href="./1-variables.html" rel="noopener noreferrer">Lesson 1: Variables</a></li>
-      <li class="mobl-nav"><a href="./2-functions.html" rel="noopener noreferrer">Lesson 2: Functions</a></li>
-      <li class="mobl-nav"><a href="./3-flow-control.html" rel="noopener noreferrer">Lesson 3: Flow Control</a></li>
-      <li class="mobl-nav"><a href="./4-strings.html" rel="noopener noreferrer">Lesson 4: Strings</a></li>
-      <li class="mobl-nav"><a href="./5-loops.html" rel="noopener noreferrer">Lesson 5: Loops</a></li>
-      <li class="mobl-nav"><a href="./application-questions.html" rel="noopener noreferrer">Application Questions</a></li>
+      <li class="mobl-nav"><a href="./0-getting-started.html">Lesson 0: Getting Started</a></li>
+      <li class="mobl-nav"><a href="./1-variables.html">Lesson 1: Variables</a></li>
+      <li class="mobl-nav"><a href="./2-functions.html">Lesson 2: Functions</a></li>
+      <li class="mobl-nav"><a href="./3-flow-control.html">Lesson 3: Flow Control</a></li>
+      <li class="mobl-nav"><a href="./4-strings.html">Lesson 4: Strings</a></li>
+      <li class="mobl-nav"><a href="./5-loops.html">Lesson 5: Loops</a></li>
+      <li class="mobl-nav"><a href="./application-questions.html">Application Questions</a></li>
+      <li class="mobl-nav"><a href="./resources.html">Resources</a></li>
     </ul>
   </nav>
 </header>
@@ -160,13 +161,13 @@ Ok now that we know how to call existing functions, let's learn how to write our
     <p>
       There's an older way to define a function using a special <code> function</code> keyword, but it has some secret baggage we don't want to deal with right now. So, we won't use it yet. But, in case you see it in online tutorials, here's how to convert it into the modern <em>Arrow Function</em> syntax.
     </p>
-    <pre><code class="language-js">function myOlderFunction (myParameter) {
-  return myParameter
+    <pre><code class="language-js">function oldFunction (myParam) {
+  return myParam
 }
 
 // Which is the same as this
-const myNewFunction = (myParameter) => {
-  return myParameter
+const newFunction = (myParam) => {
+  return myParam
 }</code></pre>
     <p>
       Fun fact, it's called an arrow function because we use a little arrow (<em>=></em>) to define them.
@@ -494,7 +495,7 @@ console.log(repeat())
   <a href="./3-flow-control.html">Flow Control &rarr;</a>
 </nav>
 <div id="resources">
-  <h2>More Resources</h2>
+  <h2 id="r-h">More Resources</h2>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions">The Official Docs for Arrow functions (Article)</a>
   <a href="https://www.youtube.com/watch?v=h33Srr5J9nY">WebDevSimplified's Arrow Function tutorial (Video)</a>
   <a href="https://dev.to/samanthaming/es6-arrow-functions-cheatsheet-1cn">An Arrow Function Cheat Sheet (Article)</a>

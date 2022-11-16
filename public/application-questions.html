@@ -17,13 +17,14 @@
       <li><a href="./5-loops.html">&larr; Loops</a></li>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./resources.html">Resources &rarr; </a></li>
-      <li class="mobl-nav"><a href="./0-getting-started.html" rel="noopener noreferrer">Lesson 0: Getting Started</a></li>
-      <li class="mobl-nav"><a href="./1-variables.html" rel="noopener noreferrer">Lesson 1: Variables</a></li>
-      <li class="mobl-nav"><a href="./2-functions.html" rel="noopener noreferrer">Lesson 2: Functions</a></li>
-      <li class="mobl-nav"><a href="./3-flow-control.html" rel="noopener noreferrer">Lesson 3: Flow Control</a></li>
-      <li class="mobl-nav"><a href="./4-strings.html" rel="noopener noreferrer">Lesson 4: Strings</a></li>
-      <li class="mobl-nav"><a href="./5-loops.html" rel="noopener noreferrer">Lesson 5: Loops</a></li>
-      <li class="mobl-nav"><a href="./application-questions.html" rel="noopener noreferrer">Application Questions</a></li>
+      <li class="mobl-nav"><a href="./0-getting-started.html">Lesson 0: Getting Started</a></li>
+      <li class="mobl-nav"><a href="./1-variables.html">Lesson 1: Variables</a></li>
+      <li class="mobl-nav"><a href="./2-functions.html">Lesson 2: Functions</a></li>
+      <li class="mobl-nav"><a href="./3-flow-control.html">Lesson 3: Flow Control</a></li>
+      <li class="mobl-nav"><a href="./4-strings.html">Lesson 4: Strings</a></li>
+      <li class="mobl-nav"><a href="./5-loops.html">Lesson 5: Loops</a></li>
+      <li class="mobl-nav"><a href="./application-questions.html">Application Questions</a></li>
+      <li class="mobl-nav"><a href="./resources.html">Resources</a></li>
     </ul>
   </nav>
 </header>
@@ -31,6 +32,30 @@
 <article>
 <h1>Interview Questions </h1>
 <h2 id='sub-title'>Do your best!</h2>
+
+<p>
+  Here we are, the final questions! This might seem like a lot, but just remember, everything you need to know was in the lessons you just took. And before you get started, we just want you to know we're proud of you for making it this far. You have <i>officially</i> begun your journey to becoming an engineer.
+</p>
+<p>
+  Remember, we are not looking for perfection; we are looking for your best effort and problem solving skills. <em> We do not expect you to get every question right, just attempt as many as you can.</em>
+</p>
+
+<h2>How to submit</h2>
+
+<p>
+  Below are 5 challenges, and each challenge describes one function. Your task is to add <i>working</i> versions of these functions into a Replit project (like you learned about in <a href="./0-getting-started.html">Lesson 0</a>). Each function's name should match the prompt so we know which is which.
+</p>
+
+<p>
+  Once you're done, copy the Replit link into <a href="https://airtable.com/shrc5Y43z28cQPhdP" target="_blank" rel="noopener noreferrer">The Application Submission Form</a>.
+</p>
+
+<p>
+  Please see the FAQ section at the very bottom of this page for more information. Good luck everyone!
+</p>
+<br/>
+<hr class="divider" />
+
 <div id="question-1">
 
 <h3>Question 1: greet()</h3>
@@ -75,17 +100,16 @@ Hello Jerry, how are you?</pre>
 
   <h3>Question 2: getRating()</h3>
   <blockquote>
-    <p>Write a function <code class="snip">getRating</code> that takes 2 arguments: a <code class="snip">String</code> argument, <code class="snip">movieTitle</code>, and a <code class="snip">String</code> argument, <code class="snip">review</code>. The function should <em>LOG</em> two lines. On the first line should be either stars or "???", depending on the review, and the second line should be a string "Movie: [DYNAMIC-MOVIE-TITLE]".
+    <p>Write a function <code class="snip">getRating</code> that takes 2 arguments: a <code class="snip">String</code> argument, <code class="snip">movieTitle</code>, and a <code class="snip">String</code> argument, <code class="snip">review</code>. The function should <em>LOG</em> two lines. On the first line should be either asterisks or "???", depending on the <code>review</code> passed in. The second line should be a string "Movie: [DYNAMIC-MOVIE-TITLE]".
     </p>
     <p>The function has no return value.</p>
     Here's how to decide what stars to show:
     <ul class="list">
-      <li>'bad' or 'awful': ☆</li>
-      <li>'good': ☆☆</li>
-      <li>'great': ☆☆☆</li>
+      <li>'bad' or 'awful': *</li>
+      <li>'good': **</li>
+      <li>'great': ***</li>
       <li>Literally anything other string: '???'</li>
     </ul>
-    <p>Feel free to copy the emojis for the stars, or use an asterisk *</p>
   </blockquote>
 
   <table>
@@ -117,10 +141,10 @@ Hello Jerry, how are you?</pre>
       <hr />
       <p>Below are some functions and their output</p>
       <pre><code class="language-js">getRating('Cats', 'bad')</code></pre>
-      <pre class="code-output">☆
+      <pre class="code-output">*
 Movie: Cats</pre>
       <pre><code class="language-js">getRating('Cars', 'good')</code></pre>
-      <pre class="code-output">☆☆
+      <pre class="code-output">**
 Movie: Cars</pre>
       <pre><code class="language-js">getRating('Gravity', 'odd')</code></pre>
 <pre class="code-output">???
@@ -136,10 +160,10 @@ Movie: Gravity</pre>
 
   <h3>Question 3: hideAndSeekCounter()</h3>
   <blockquote>
-    <p>Write a function <code class="snip">hideAndSeekCounter</code> that takes a <code class="snip">Number</code> argument, <code class="snip">endNumber</code>, which will be bigger than 0.
-  The function should <em>LOG</em> several strings. First, it should count up to the given number starting from 1, with "..." after each number. Then, on the final number, it should add "!" to it instead. Finally, one last line of "Ready or not, here I come!"
+    <p>Write a function <code class="snip">hideAndSeekCounter</code> that takes a <code class="snip">Number</code> argument, <code class="snip">endNumber</code>, which will be at least as big as 3.
+  The function should <em>LOG</em> several strings. First, it should count up to the given number starting from 1, with "..." after each number. But on the final number it should add "!" instead. Finally, one last line of "Ready or not, here I come!"
     </p>
-    <p>See the code examples below if you're confused</p>
+    <p>See the code examples below.</p>
   </blockquote>
 
   <table>
@@ -181,9 +205,9 @@ Ready or not, here I come!</pre>
   <h3>Question 4: cheer()</h3>
   <blockquote>
     <p>Write a function <code class="snip">cheer</code> that takes a <code class="snip">String</code> argument, <code class="snip">word</code>.</p>
-  <p>The function should <em>LOG</em> several strings. For every letter of <code class="snip">word</code> make a line print: "Give me a [UPPERCASED-LETTER]", where the letter has been uppercased. Once the entire word has been shouted, print the line "What's it spell?" and then one last line, where you repeat the word three times, each with an exclamation point and all uppercase.
+  <p>The function should <em>LOG</em> several strings. For every letter of <code class="snip">word</code> make a line print: "Give me a [UPPERCASE-LETTER]!", where the letter has been set to uppercase. Once the entire word has been shouted, print the line "What's it spell?" and then one last line, where you repeat the word three times, each with an exclamation point and all uppercase.
     </p>
-    <p>See the code examples below if you're confused</p>
+    <p>See the code example below.</p>
   </blockquote>
 
   <table>
@@ -216,11 +240,12 @@ What's it spell?
 WIN! WIN! WIN!</pre>
     </aside>
   </div>
-  <h3>Question 5: cheer() <em>IMPROVED</em></h3>
+  <h3>Question 5: betterCheer()</h3>
   <p>
-    That output looks a little odd right? "Give me a I!" Wouldn't that sound better as "Give me <em>an</em> I!" Your challenge, should you choose to accept it, is to use "an" instead of "a" on the following letters: <em>aefhilmnorsx</em>. If your curious <i>why</i> those letters, fun fact it's because when pronouncing them, they start with a vowel sound.
+    That output looks a little odd right? "Give me a I!" Wouldn't that sound better as "Give me <em>an</em> I!" Your challenge, should you choose to accept it, is to use "an" instead of "a" on the following letters: <em>aefhilmnorsx</em>. If your curious <i>why</i> those letters, it's because when pronouncing them, they start with a vowel sound. Other than using an or a, the function is the same as <code>cheer</code>.
+  </p>
 
-    <pre><code class="language-js">cheer('victory')</code></pre>
+    <pre><code class="language-js">betterCheer('victory')</code></pre>
     <pre class="code-output">Give me a V!
 Give me an I!
 Give me a C!
@@ -230,10 +255,65 @@ Give me an R!
 Give me a Y!
 What's it spell?
 VICTORY! VICTORY! VICTORY!</pre>
-  </p>
 </div>
 
 <hr class="divider" />
+
+<h2>FAQs</h2>
+<p>
+  Tap or click open any question that you'd like to learn more about
+</p>
+
+<details>
+  <summary>What would an example answer look like?</summary>
+  <p>
+    We basically just want the function definition. So if we asked you to define a function called <code>add</code>, in the Replit project it would look like this:
+  </p>
+  <pre><code class="language-js">const add = (num1, num2) => {
+  return num1 + num2
+}</code></pre>
+  <p>
+    You don't have to call the function or anything, though it's ok if you do for testing. This is also fine:
+  </p>
+  <pre><code class="language-js">const add = (num1, num2) => {
+  return num1 + num2
+}
+
+console.log(add(4,5))
+</code></pre>
+
+  <p>
+    All that matters is that you have the functions defined so that we can call them when grading.
+  </p>
+</details>
+
+<details>
+  <summary>What if we don't complete every function?</summary>
+  <p>
+    That's ok! Just try to get through as many as you can. We would definitely like you to try to complete at least one though, as are trying to gauge your problem solving skills. The important part is just that you are able to talk to your interviewer about your code.
+  </p>
+  <p>
+    You can also submit partially completed functions if you know how to do a certain part, but not the whole thing. We just want to see how you think and approach problems.
+  </p>
+</details>
+
+<details>
+  <summary>How will I be graded</summary>
+  <p>
+    There are some specific things we're looking for, like properly defined functions and return values, but that's not the main point. Our real interest is talking with you about how you learn and problem solve. Were there parts of the lessons you found interesting? Confusing? The whole interview process is designed to see how you think things through.
+  </p>
+</details>
+
+<details>
+  <summary>What are the next steps?</summary>
+  <p>
+    After you fill out the <a href="https://airtable.com/shrc5Y43z28cQPhdP" target="_blank" rel="noopener noreferrer">submission form</a>, we'll schedule an interview with you. The interviews will have 2 sections: a general and technical. In the general section we'll talk about your coding journey so far, how you like to study, and other things about <i>you</i> as a person. In the technical section, a developer will talk with you about your code and go over your submission. This part is all about how well you communicate your technical ideas and how well you can collaborate.
+  </p>
+  <p>
+    No new coding challenges will be given to you. The most we might do is repair broken functionality in your submission or go over how we might refactor or add new features to an existing challenge. This is <i>not</i> a white boarding challenge, and at no point will we spring an algorithm question on you. We're going to be talking about coding in a low stress environment.
+  </p>
+</details>
+
 </article>
 </main>
 <nav id="bottom-nav">
